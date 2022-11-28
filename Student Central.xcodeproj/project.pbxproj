@@ -19,7 +19,7 @@
 		65D3F2B7293548D500B00B91 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2AF293548D500B00B91 /* Maps.swift */; };
 		65D3F2B8293548D500B00B91 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B0293548D500B00B91 /* Settings.swift */; };
 		65D3F2B9293548D500B00B91 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B1293548D500B00B91 /* Home.swift */; };
-		65D3F2BA293548D500B00B91 /* Contact Counselor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B2293548D500B00B91 /* Contact Counselor.swift */; };
+		65D3F2BA293548D500B00B91 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B2293548D500B00B91 /* Contact.swift */; };
 		65D3F2BB293548D500B00B91 /* Student Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B3293548D500B00B91 /* Student Help.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		65D3F2AF293548D500B00B91 /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
 		65D3F2B0293548D500B00B91 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		65D3F2B1293548D500B00B91 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		65D3F2B2293548D500B00B91 /* Contact Counselor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contact Counselor.swift"; sourceTree = "<group>"; };
+		65D3F2B2293548D500B00B91 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		65D3F2B3293548D500B00B91 /* Student Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student Help.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +80,7 @@
 				65D3F2B0293548D500B00B91 /* Settings.swift */,
 				65D3F2AF293548D500B00B91 /* Maps.swift */,
 				65D3F2AD293548D500B00B91 /* Schedule.swift */,
-				65D3F2B2293548D500B00B91 /* Contact Counselor.swift */,
+				65D3F2B2293548D500B00B91 /* Contact.swift */,
 				65D3F2AE293548D500B00B91 /* Quick Links.swift */,
 				65D3F2B3293548D500B00B91 /* Student Help.swift */,
 				65D3F28A2935345600B00B91 /* Main.storyboard */,
@@ -162,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65D3F2BA293548D500B00B91 /* Contact Counselor.swift in Sources */,
+				65D3F2BA293548D500B00B91 /* Contact.swift in Sources */,
 				65D3F2B4293548D500B00B91 /* Notifications.swift in Sources */,
 				65D3F2892935345600B00B91 /* ViewController.swift in Sources */,
 				65D3F2B8293548D500B00B91 /* Settings.swift in Sources */,
