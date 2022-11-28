@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Contact_Counselor: UIViewController {
+class CounselorViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

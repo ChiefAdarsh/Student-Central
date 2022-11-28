@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Quick_Links: UIViewController {
+class LinksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
