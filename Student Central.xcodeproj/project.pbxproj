@@ -13,6 +13,14 @@
 		65D3F28C2935345600B00B91 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D3F28A2935345600B00B91 /* Main.storyboard */; };
 		65D3F28E2935345700B00B91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65D3F28D2935345700B00B91 /* Assets.xcassets */; };
 		65D3F2912935345700B00B91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65D3F28F2935345700B00B91 /* LaunchScreen.storyboard */; };
+		65D3F2B4293548D500B00B91 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2AC293548D500B00B91 /* Notifications.swift */; };
+		65D3F2B5293548D500B00B91 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2AD293548D500B00B91 /* Schedule.swift */; };
+		65D3F2B6293548D500B00B91 /* Quick Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2AE293548D500B00B91 /* Quick Links.swift */; };
+		65D3F2B7293548D500B00B91 /* Maps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2AF293548D500B00B91 /* Maps.swift */; };
+		65D3F2B8293548D500B00B91 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B0293548D500B00B91 /* Settings.swift */; };
+		65D3F2B9293548D500B00B91 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B1293548D500B00B91 /* Home.swift */; };
+		65D3F2BA293548D500B00B91 /* Contact Counselor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B2293548D500B00B91 /* Contact Counselor.swift */; };
+		65D3F2BB293548D500B00B91 /* Student Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B3293548D500B00B91 /* Student Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		65D3F28D2935345700B00B91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65D3F2902935345700B00B91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65D3F2922935345700B00B91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D3F2AC293548D500B00B91 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		65D3F2AD293548D500B00B91 /* Schedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		65D3F2AE293548D500B00B91 /* Quick Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Quick Links.swift"; sourceTree = "<group>"; };
+		65D3F2AF293548D500B00B91 /* Maps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Maps.swift; sourceTree = "<group>"; };
+		65D3F2B0293548D500B00B91 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		65D3F2B1293548D500B00B91 /* Home.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		65D3F2B2293548D500B00B91 /* Contact Counselor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contact Counselor.swift"; sourceTree = "<group>"; };
+		65D3F2B3293548D500B00B91 /* Student Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student Help.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +79,14 @@
 				65D3F28D2935345700B00B91 /* Assets.xcassets */,
 				65D3F28F2935345700B00B91 /* LaunchScreen.storyboard */,
 				65D3F2922935345700B00B91 /* Info.plist */,
+				65D3F2B2293548D500B00B91 /* Contact Counselor.swift */,
+				65D3F2B1293548D500B00B91 /* Home.swift */,
+				65D3F2AF293548D500B00B91 /* Maps.swift */,
+				65D3F2AC293548D500B00B91 /* Notifications.swift */,
+				65D3F2AE293548D500B00B91 /* Quick Links.swift */,
+				65D3F2AD293548D500B00B91 /* Schedule.swift */,
+				65D3F2B0293548D500B00B91 /* Settings.swift */,
+				65D3F2B3293548D500B00B91 /* Student Help.swift */,
 			);
 			path = "Student Central";
 			sourceTree = "<group>";
@@ -138,8 +162,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65D3F2BA293548D500B00B91 /* Contact Counselor.swift in Sources */,
+				65D3F2B4293548D500B00B91 /* Notifications.swift in Sources */,
 				65D3F2892935345600B00B91 /* ViewController.swift in Sources */,
+				65D3F2B8293548D500B00B91 /* Settings.swift in Sources */,
+				65D3F2B7293548D500B00B91 /* Maps.swift in Sources */,
+				65D3F2B9293548D500B00B91 /* Home.swift in Sources */,
+				65D3F2BB293548D500B00B91 /* Student Help.swift in Sources */,
+				65D3F2B6293548D500B00B91 /* Quick Links.swift in Sources */,
 				65D3F2852935345600B00B91 /* AppDelegate.swift in Sources */,
+				65D3F2B5293548D500B00B91 /* Schedule.swift in Sources */,
 				65D3F2872935345600B00B91 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
