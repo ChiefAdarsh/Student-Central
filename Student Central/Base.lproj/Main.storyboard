@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EaJ-iU-rS6">
     <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -55,10 +55,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5w-L0-OVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1452" y="1363"/>
+            <point key="canvasLocation" x="1488" y="1637"/>
+        </scene>
+        <!--Calendar View Controller-->
+        <scene sceneID="2uG-tQ-NYd">
+            <objects>
+                <viewController id="EaJ-iU-rS6" customClass="CalendarViewController" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hBM-Pc-fk0">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="RDI-IS-orU">
+                                <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LW-qn-o1B">
+                                <rect key="frame" x="451" y="63" width="210" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="bi7-JZ-bhy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Calendar" translatesAutoresizingMaskIntoConstraints="NO" id="5rj-R1-UBa">
+                                <rect key="frame" x="-315" y="214" width="1742" height="567"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BEd-GQ-g9k">
+                                <rect key="frame" x="10" y="156" width="1092" height="3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="MYn-jz-Sa5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OGo-D9-HUr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6LW-qn-o1B" firstAttribute="top" secondItem="OGo-D9-HUr" secondAttribute="top" constant="43" id="3Mw-wK-PGD"/>
+                            <constraint firstItem="RDI-IS-orU" firstAttribute="centerX" secondItem="hBM-Pc-fk0" secondAttribute="centerX" id="3UM-KV-HuW"/>
+                            <constraint firstItem="RDI-IS-orU" firstAttribute="top" secondItem="hBM-Pc-fk0" secondAttribute="top" id="5EP-Wc-jxb"/>
+                            <constraint firstItem="5rj-R1-UBa" firstAttribute="top" secondItem="BEd-GQ-g9k" secondAttribute="bottom" constant="55" id="7kh-LL-8XZ"/>
+                            <constraint firstItem="5rj-R1-UBa" firstAttribute="centerX" secondItem="hBM-Pc-fk0" secondAttribute="centerX" id="DdM-9P-eAG"/>
+                            <constraint firstItem="BEd-GQ-g9k" firstAttribute="top" secondItem="6LW-qn-o1B" secondAttribute="bottom" constant="33" id="Eyb-AI-s4i"/>
+                            <constraint firstItem="RDI-IS-orU" firstAttribute="leading" secondItem="OGo-D9-HUr" secondAttribute="leading" id="Pxd-mJ-7Ef"/>
+                            <constraint firstItem="RDI-IS-orU" firstAttribute="bottom" secondItem="OGo-D9-HUr" secondAttribute="bottom" id="Uba-qN-YMW"/>
+                            <constraint firstItem="BEd-GQ-g9k" firstAttribute="leading" secondItem="hBM-Pc-fk0" secondAttribute="leading" constant="10" id="V9c-dS-ND0"/>
+                            <constraint firstAttribute="trailing" secondItem="BEd-GQ-g9k" secondAttribute="trailing" constant="10" id="aLg-pY-cP5"/>
+                            <constraint firstItem="6LW-qn-o1B" firstAttribute="centerX" secondItem="hBM-Pc-fk0" secondAttribute="centerX" id="bAD-Uy-TzM"/>
+                            <constraint firstItem="RDI-IS-orU" firstAttribute="trailing" secondItem="OGo-D9-HUr" secondAttribute="trailing" id="p0E-Qp-r3U"/>
+                            <constraint firstItem="BEd-GQ-g9k" firstAttribute="centerX" secondItem="hBM-Pc-fk0" secondAttribute="centerX" id="vOJ-W8-hMC"/>
+                            <constraint firstItem="OGo-D9-HUr" firstAttribute="bottom" secondItem="5rj-R1-UBa" secondAttribute="bottom" constant="53" id="zcL-Pi-Fzf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s41-0z-MxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1485.4316546762591" y="2394.9640287769785"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Background" width="937" height="702.5"/>
+        <image name="Calendar" width="1742" height="2274"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
