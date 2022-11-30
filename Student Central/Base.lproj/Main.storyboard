@@ -548,6 +548,29 @@
             </objects>
             <point key="canvasLocation" x="734" y="2346"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="NZe-Xq-NUV">
+            <objects>
+                <viewController id="Lty-2M-6hS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DpV-at-KM9">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-IT-7NS">
+                                <rect key="frame" x="569" y="483" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HJm-dU-zkc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ja-XX-xgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="2345"/>
+        </scene>
     </scenes>
     <resources>
         <image name="band" width="862" height="526"/>
