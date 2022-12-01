@@ -27,11 +27,3 @@ class ScheduleViewController: UIViewController {
     */
 
 }
-
-class CalendarViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-}
