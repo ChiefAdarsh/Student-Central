@@ -11,7 +11,6 @@
         <!--Home View Controller Scene-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController title="Home View Controller Scene" id="BYZ-38-t0r" customClass="ViewController" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yTE-Gu-UHA">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
@@ -234,13 +233,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="2Wb-vf-RTq"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="734" y="1637"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sy4-q6-gPn">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nAu-7E-Unl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hBh-NT-q8s" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6gE-ZU-4oB">
@@ -252,6 +251,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lmK-9X-59O"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nAu-7E-Unl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="734.35251798561148" y="890.64748201438852"/>
         </scene>
@@ -303,6 +303,69 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYh-tJ-Ry4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1462" y="1637"/>
+        </scene>
+        <!--Med Care View Controller-->
+        <scene sceneID="uZG-7N-2PW">
+            <objects>
+                <viewController id="MUA-nX-soz" customClass="MedCareViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e58-Pn-8RQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NA3-fn-ydQ">
+                                <rect key="frame" x="173" y="175" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="General Health" cornerStyle="small">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J6c-Ho-6NJ">
+                                <rect key="frame" x="456" y="175" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="AIDS and HIV" cornerStyle="small">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peb-bY-t0s">
+                                <rect key="frame" x="741" y="175" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Mental Health" cornerStyle="small">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AN-eX-2nz">
+                                <rect key="frame" x="328" y="413" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pregnancy" cornerStyle="small">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZg-T5-tMu">
+                                <rect key="frame" x="594" y="413" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Substance Abuse" cornerStyle="small">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                    <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xpl-hM-TKG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="M8E-si-4Iu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wzl-Ar-kRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1454" y="2345"/>
         </scene>
         <!--Notifications Table View Controller-->
         <scene sceneID="zGN-EJ-M8F">
@@ -521,6 +584,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Medical Care" cornerStyle="small">
                                     <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="MUA-nX-soz" kind="show" id="FiP-9L-dhu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whw-Te-01F">
                                 <rect key="frame" x="845" y="223" width="200" height="200"/>
@@ -549,30 +615,29 @@
             <point key="canvasLocation" x="734" y="2346"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="NZe-Xq-NUV">
+        <scene sceneID="AhU-fY-rm3">
             <objects>
-                <viewController id="Lty-2M-6hS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DpV-at-KM9">
+                <viewController id="zwn-YA-sbf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UHi-H7-QP4">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmC-IT-7NS">
-                                <rect key="frame" x="569" y="483" width="67" height="31"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="IMG_9719" translatesAutoresizingMaskIntoConstraints="NO" id="wrd-34-neW">
+                                <rect key="frame" x="372" y="-29" width="500" height="703"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                            </button>
+                            </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="HJm-dU-zkc"/>
+                        <viewLayoutGuide key="safeArea" id="nzW-QU-dJl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6ja-XX-xgJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LuY-Vi-nog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="100" y="2345"/>
+            <point key="canvasLocation" x="726" y="3029"/>
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_9719" width="500" height="703"/>
         <image name="band" width="862" height="526"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="cross.circle.fill" catalog="system" width="128" height="121"/>
