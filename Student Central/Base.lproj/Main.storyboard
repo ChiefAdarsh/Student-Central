@@ -63,14 +63,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vRR-Lp-ytl">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="vRR-Lp-ytl">
                                 <rect key="frame" x="121" y="185" width="890" height="568"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8td-VB-sD7" userLabel="ClassScheduleButton">
                                         <rect key="frame" x="0.0" y="0.0" width="890" height="124"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="124" id="Kjw-qb-yWn"/>
-                                            <constraint firstAttribute="width" constant="890" id="i2B-SG-mIG"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="124" id="1Rh-uW-Lkd"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="Schedules"/>
                                         <buttonConfiguration key="configuration" style="filled" title="" cornerStyle="large">
@@ -80,8 +79,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjC-Vp-l0u">
                                         <rect key="frame" x="0.0" y="148" width="890" height="124"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="124" id="Ar6-TX-gPj"/>
-                                            <constraint firstAttribute="width" constant="890" id="aB1-3A-YMS"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="124" id="Ar6-TX-gPj"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="" cornerStyle="large">
@@ -91,8 +89,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrK-R9-2P5">
                                         <rect key="frame" x="0.0" y="296" width="890" height="124"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="124" id="Bh1-Jg-M1T"/>
-                                            <constraint firstAttribute="width" constant="890" id="KLd-5E-fb1"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="124" id="Bh1-Jg-M1T"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="" cornerStyle="large">
@@ -102,8 +99,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C58-rw-MbW">
                                         <rect key="frame" x="0.0" y="444" width="890" height="124"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="124" id="PqH-te-SBq"/>
-                                            <constraint firstAttribute="width" constant="890" id="nEp-Fe-C8I"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="124" id="PqH-te-SBq"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="" cornerStyle="large">
@@ -111,6 +107,11 @@
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="AjC-Vp-l0u" firstAttribute="top" secondItem="8td-VB-sD7" secondAttribute="bottom" constant="24" id="4v2-2b-MUG"/>
+                                    <constraint firstItem="CrK-R9-2P5" firstAttribute="top" secondItem="AjC-Vp-l0u" secondAttribute="bottom" constant="24" id="RYf-TK-kFp"/>
+                                    <constraint firstItem="C58-rw-MbW" firstAttribute="top" secondItem="CrK-R9-2P5" secondAttribute="bottom" constant="24" id="yCj-ZU-cAe"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="nwl-gl-QLK">
                                 <rect key="frame" x="133" y="185" width="544" height="559"/>
