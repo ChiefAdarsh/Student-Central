@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hBh-NT-q8s">
+
     <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -262,6 +264,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="eXM-DJ-o1o">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="IJj-4F-zm6">
                             <rect key="frame" x="0.0" y="110.5" width="1112" height="44"/>
@@ -359,12 +362,26 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xpl-hM-TKG"/>
+
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mbF-lB-dVh" firstAttribute="trailing" secondItem="vRR-Lp-ytl" secondAttribute="trailing" constant="101" id="BjE-5e-hYg"/>
+                            <constraint firstItem="PWy-85-wBJ" firstAttribute="centerX" secondItem="7vW-a2-8Fn" secondAttribute="centerX" id="Mb2-65-9iS"/>
+                            <constraint firstItem="vRR-Lp-ytl" firstAttribute="leading" secondItem="mbF-lB-dVh" secondAttribute="leading" constant="121" id="OLm-HC-tMi"/>
+                            <constraint firstItem="nwl-gl-QLK" firstAttribute="leading" secondItem="mbF-lB-dVh" secondAttribute="leading" constant="133" id="Q9z-fZ-pDu"/>
+                            <constraint firstItem="mbF-lB-dVh" firstAttribute="bottom" secondItem="XIE-rl-BGn" secondAttribute="bottom" constant="89" id="RIY-Qw-2ez"/>
+                            <constraint firstItem="vRR-Lp-ytl" firstAttribute="top" secondItem="PWy-85-wBJ" secondAttribute="bottom" constant="32" id="iwx-a8-NY1"/>
+                            <constraint firstItem="mbF-lB-dVh" firstAttribute="bottom" secondItem="vRR-Lp-ytl" secondAttribute="bottom" constant="81" id="nGe-BR-fCQ"/>
+                            <constraint firstItem="mbF-lB-dVh" firstAttribute="bottom" secondItem="nwl-gl-QLK" secondAttribute="bottom" constant="90" id="oIg-Gn-7N2"/>
+                            <constraint firstItem="nwl-gl-QLK" firstAttribute="top" secondItem="PWy-85-wBJ" secondAttribute="bottom" constant="32" id="pmW-FP-1sB"/>
+                            <constraint firstItem="PWy-85-wBJ" firstAttribute="top" secondItem="mbF-lB-dVh" secondAttribute="top" constant="61" id="pyz-dM-SbR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="M8E-si-4Iu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wzl-Ar-kRB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+
             <point key="canvasLocation" x="1454" y="2345"/>
         </scene>
         <!--Notifications Table View Controller-->
@@ -661,6 +678,7 @@
         <image name="safari.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
