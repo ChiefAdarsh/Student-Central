@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hBh-NT-q8s">
     <device id="ipad10_5" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,21 +8,240 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Links View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LinksViewController" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5O-P8-QnM">
+                                <rect key="frame" x="429.5" y="48" width="253.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Sdt-gF-AJ4">
+                                <rect key="frame" x="155.5" y="201.5" width="801" height="431"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-nM-AAM">
+                                        <rect key="frame" x="0.0" y="0.0" width="403" height="431"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r45-8t-g1N">
+                                                <rect key="frame" x="0.0" y="0.0" width="403" height="215.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="cxg-W6-tZb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="om4-O1-Idc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="MySchoolBucks1"/>
+                                                                <connections>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="INt-3e-IN1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My School Bucks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9o-sh-NBF">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="3B2-e0-tPr">
+                                                        <rect key="frame" x="204" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-af-iqK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="KCBY1"/>
+                                                                <connections>
+                                                                    <action selector="KCBYLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AVz-Is-mYr"/>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cf9-ug-dzT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KCBY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWx-68-cvL">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZTP-Ly-2Q3">
+                                                <rect key="frame" x="0.0" y="215.5" width="403" height="215.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="znh-oN-3vt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-ct-7aH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="Help Desk1"/>
+                                                                <connections>
+                                                                    <action selector="helpDeskLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AHu-DT-lk9"/>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="057-yP-uUt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CISD Help Desk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QG2-fG-8HS">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="sGv-aF-lbz">
+                                                        <rect key="frame" x="204" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dvr-UU-jGI">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="HAC1"/>
+                                                                <connections>
+                                                                    <action selector="hacLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HcO-Eg-KEz"/>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6QD-kZ-1Cm"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HAC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR6-DG-Wf5">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZIx-oQ-wta">
+                                        <rect key="frame" x="403" y="0.0" width="398" height="431"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOj-ji-wVs">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="215.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="381-RN-6eN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tZ-IV-cxk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="Sidekick1"/>
+                                                                <connections>
+                                                                    <action selector="MediaLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QYa-PJ-Tkh"/>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JSZ-W4-k4A"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sidekick" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62E-ar-UQ6">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="328-UE-VWf">
+                                                        <rect key="frame" x="199" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sL8-ee-tIh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="Lunch Menu1"/>
+                                                                <connections>
+                                                                    <action selector="menuLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ad1-LK-Z02"/>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wV6-76-IjU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunch Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyN-7P-ydW">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhJ-uK-iIA">
+                                                <rect key="frame" x="0.0" y="215.5" width="398" height="215.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="aLp-eI-lbd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAb-4F-8F1">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="Clever1"/>
+                                                                <connections>
+                                                                    <action selector="cleverLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dY-Ca-F6H"/>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VKX-AO-0IZ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clever" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpR-f1-njK">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="zfR-DB-fp8">
+                                                        <rect key="frame" x="199" y="0.0" width="199" height="215.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6h-Kj-nrb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="199" height="189"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" image="Coppell ISD1"/>
+                                                                <connections>
+                                                                    <action selector="cisdLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1tq-dh-Ymj"/>
+                                                                    <action selector="schoolBucksLink:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K2r-eM-ndj"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coppell ISD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Esk-m4-GoI">
+                                                                <rect key="frame" x="0.0" y="189" width="199" height="26.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sdt-gF-AJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aeg-zc-crb"/>
+                            <constraint firstItem="Sdt-gF-AJ4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bv8-hc-VYc"/>
+                            <constraint firstItem="V5O-P8-QnM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="48" id="uGS-KP-3Oo"/>
+                            <constraint firstItem="V5O-P8-QnM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zCs-Vb-uEE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2Wb-vf-RTq"/>
+                    <connections>
+                        <outlet property="Clever" destination="aAb-4F-8F1" id="3UA-lm-Csp"/>
+                        <outlet property="KCBY" destination="Ne4-af-iqK" id="u39-5Y-e3M"/>
+                        <outlet property="Sidekick" destination="2tZ-IV-cxk" id="XeG-Ne-vz0"/>
+                        <outlet property="coppellISD" destination="F6h-Kj-nrb" id="Nly-ID-kow"/>
+                        <outlet property="helpDesk" destination="Rbe-ct-7aH" id="4R7-Fa-uHo"/>
+                        <outlet property="homeAccessCenter" destination="Dvr-UU-jGI" id="GMP-NO-Big"/>
+                        <outlet property="lunchMenu" destination="sL8-ee-tIh" id="h18-f1-bsQ"/>
+                        <outlet property="mySchoolBucks" destination="om4-O1-Idc" id="o1A-Lv-Ajg"/>
+                        <outlet property="stackView" destination="Sdt-gF-AJ4" id="Gkb-ey-PRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734" y="1637"/>
+            <point key="canvasLocation" x="733.8129496402878" y="1636.6906474820146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sy4-q6-gPn">
@@ -59,6 +278,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Clever1" width="175" height="175"/>
+        <image name="Coppell ISD1" width="175" height="175"/>
+        <image name="HAC1" width="175" height="175"/>
+        <image name="Help Desk1" width="175" height="175"/>
+        <image name="KCBY1" width="175" height="175"/>
+        <image name="Lunch Menu1" width="175" height="175"/>
+        <image name="MySchoolBucks1" width="175" height="175"/>
+        <image name="Sidekick1" width="175" height="175"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
