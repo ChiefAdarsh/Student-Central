@@ -45,7 +45,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHS Student Central" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZC-LK-PmR">
-                                <rect key="frame" x="331.5" y="75" width="449.5" height="54"/>
+                                <rect key="frame" x="331.5" y="80" width="449.5" height="54"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="muN-Yo-3H6"/>
                                     <constraint firstAttribute="width" constant="449.5" id="oT7-gf-pr7"/>
@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-Td-IZV">
-                                <rect key="frame" x="199" y="149" width="714" height="42"/>
+                                <rect key="frame" x="199" y="154" width="714" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="714" id="20F-rd-Hy9"/>
                                 </constraints>
@@ -226,7 +226,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nvA-y4-pBW" firstAttribute="top" secondItem="eXW-w8-Zfu" secondAttribute="top" constant="-30" id="IqY-nn-Ugp"/>
-                            <constraint firstItem="tZC-LK-PmR" firstAttribute="top" secondItem="eXW-w8-Zfu" secondAttribute="top" constant="5" id="Knc-0A-k8M"/>
+                            <constraint firstItem="tZC-LK-PmR" firstAttribute="top" secondItem="eXW-w8-Zfu" secondAttribute="top" constant="10" id="Knc-0A-k8M"/>
                             <constraint firstItem="KQZ-Td-IZV" firstAttribute="top" secondItem="tZC-LK-PmR" secondAttribute="bottom" constant="20" id="NRI-b5-qSW"/>
                             <constraint firstItem="KQZ-Td-IZV" firstAttribute="centerX" secondItem="yTE-Gu-UHA" secondAttribute="centerX" id="VPb-91-Uoe"/>
                             <constraint firstItem="uMA-Xf-DWs" firstAttribute="top" secondItem="eXW-w8-Zfu" secondAttribute="top" constant="-30" id="dlP-Tn-Wjn"/>
@@ -496,6 +496,7 @@
         <!--Student Help View Controller-->
         <scene sceneID="cVi-NC-I4A">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LTS-1I-Rer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Student Help View Controller" id="Fkw-mr-P6m" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5wm-kD-Sc3">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
@@ -622,7 +623,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="za5-Xh-7LC"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LTS-1I-Rer" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="734" y="2346"/>
         </scene>
