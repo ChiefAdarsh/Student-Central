@@ -34,18 +34,45 @@ class CounselorViewController: UIViewController {
 import UIKit
 import MessageUI
 class TeacherViewController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
+    @IBOutlet var sv: UIStackView!
     
     func rotation() {
-        if UIDevice.current.orientation.isLandscape {
-            let lvc = self.storyboard?.instantiateViewController(withIdentifier: "LandscapeVC") as! TeacherViewController
-            self.navigationController?.pushViewController(lvc, animated: true)
+        let size = UIScreen.main.bounds.size
+        if size.height < size.width {
+            sv.axis = .horizontal
+        } else {
+            sv.axis = .vertical
         }
-        else
-        {
-            let pvc = self.storyboard?.instantiateViewController(withIdentifier: "portraitViewController") as! TeacherViewController
-            self.navigationController?.pushViewController(pvc, animated: true)
-        }
+        
+//        let navCtr = (self.storyboard!.instantiateViewController(withIdentifier: "navCtr") as! UINavigationController)
+//        let controllers = navCtr.viewControllers
+//        if size.height < size.width {
+//            print(controllers)
+//            if let vc = controllers[controllers.count-1] as? TeacherViewController {
+//                print("here")
+//                vc.removeFromParent()
+//            }
+//            print(navCtr.viewControllers)
+//
+//            let lvc = self.storyboard!.instantiateViewController(withIdentifier: "LandscapeVC") as! TeacherViewController
+//            navCtr.pushViewController(lvc, animated: true)
+//        } else {
+//            if let vc = controllers[controllers.count-1] as? TeacherViewController {
+//                vc.removeFromParent()
+//            }
+//
+//            let pvc = self.storyboard!.instantiateViewController(withIdentifier: "portraitViewController") as! TeacherViewController
+//            navCtr.pushViewController(pvc, animated: true)
+//        }
     }
+    
+    // Change layout of in and out of school buttons to vertical
+    // or horizontal based on device orientation
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        rotation()
+    }
+    
     @IBOutlet weak var mailOne: UILabel!
     @IBOutlet weak var mailTwo: UILabel!
     @IBOutlet weak var mailThree: UILabel!
@@ -174,6 +201,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        rotation()
         // Do any additional setup after loading the view.
     }
 
