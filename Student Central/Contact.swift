@@ -35,13 +35,23 @@ import UIKit
 import MessageUI
 class TeacherViewController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
     @IBOutlet var sv: UIStackView!
+    @IBOutlet var teacher1Label: UILabel!
+    @IBOutlet var mail1Label: UILabel!
+    @IBOutlet var teacher2Label: UILabel!
+    
     
     func rotation() {
         let size = UIScreen.main.bounds.size
         if size.height < size.width {
             sv.axis = .horizontal
+            sv.spacing = 66
+            teacher1Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail1Label.font = .systemFont(ofSize: 20, weight: .bold)
         } else {
             sv.axis = .vertical
+            sv.spacing = 0
+            teacher1Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail1Label.font = .systemFont(ofSize: 15, weight: .bold)
         }
         
 //        let navCtr = (self.storyboard!.instantiateViewController(withIdentifier: "navCtr") as! UINavigationController)
@@ -68,6 +78,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     // Change layout of in and out of school buttons to vertical
     // or horizontal based on device orientation
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         rotation()
