@@ -27,10 +27,30 @@ import UIKit
 //fileprivate func categoryType()
 
 var myIndex = 0
+var myIndexInOut = 0
+var myIndexCounseling = 0
+var myIndexEating = 0
+var myIndexAlchohol = 0
+var myIndexSpecialty = 0
+var myIndexViolence = 0
+var myIndexPsychiatrists = 0
+var myIndexFamily = 0
+var myIndexSupport = 0
 var count = 0
 var counter = 0
 var tempArrayLength = 0
 var mySection = 0
+
+class resourcesViewControllerSelector: UIViewController {
+
+    override func viewDidLoad() {
+        myIndex = 0
+        super.viewDidLoad()
+         
+        // Do any additional setup after loading the view.
+    }
+
+}
 class resourcesCrisisViewController: UITableViewController {
     var backTitle: String!
     var resources = [
@@ -235,7 +255,7 @@ class resourcesInOutViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexInOut = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -365,7 +385,7 @@ class resourcesCounselingViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexCounseling = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -490,7 +510,7 @@ class resourcesEatingDisorderViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexEating = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -618,7 +638,7 @@ class resourcesAlchoholViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexAlchohol = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -754,7 +774,7 @@ class resourcesSpecialtyViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexSpecialty = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -882,7 +902,7 @@ class resourcesDomesticViolenceViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexViolence = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -1005,7 +1025,7 @@ class resourcesPsychiatristsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexPsychiatrists = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -1129,7 +1149,7 @@ class resourcesFamilyAssistanceViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexFamily = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -1267,7 +1287,7 @@ class resourcesSupportViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        myIndexSupport = indexPath.row
         mySection = indexPath.section
         //performSegue(withIdentifier: "resIden", sender: self)
         
@@ -1475,14 +1495,14 @@ class specificResourceInOutViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceInOut.myArray[mySection][myIndex].address
-    var ci = ResourceInOut.myArray[mySection][myIndex].city
-    var st = ResourceInOut.myArray[mySection][myIndex].state
-    var zi = ResourceInOut.myArray[mySection][myIndex].zip
+    var ad = ResourceInOut.myArray[mySection][myIndexInOut].address
+    var ci = ResourceInOut.myArray[mySection][myIndexInOut].city
+    var st = ResourceInOut.myArray[mySection][myIndexInOut].state
+    var zi = ResourceInOut.myArray[mySection][myIndexInOut].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourceInOut.myArray[mySection][myIndex].name
+        self.backTitle = ResourceInOut.myArray[mySection][myIndexInOut].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -1491,12 +1511,12 @@ class specificResourceInOutViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceInOut.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceInOut.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceInOut.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceInOut.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceInOut.myArray[mySection][myIndex].contact
-        if(ResourceInOut.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourceInOut.myArray[mySection][myIndexInOut].name
+        resCatLabel.text = ResourceInOut.myArray[mySection][myIndexInOut].category
+        resDescLabel.text = ResourceInOut.myArray[mySection][myIndexInOut].addInfo
+        resWebLabel.text = ResourceInOut.myArray[mySection][myIndexInOut].website
+        resContLabel.text = ResourceInOut.myArray[mySection][myIndexInOut].contact
+        if(ResourceInOut.myArray[mySection][myIndexInOut].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
@@ -1552,14 +1572,14 @@ class specificResourceCounselingViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceCounseling.myArray[mySection][myIndex].address
-    var ci = ResourceCounseling.myArray[mySection][myIndex].city
-    var st = ResourceCounseling.myArray[mySection][myIndex].state
-    var zi = ResourceCounseling.myArray[mySection][myIndex].zip
+    var ad = ResourceCounseling.myArray[mySection][myIndexCounseling].address
+    var ci = ResourceCounseling.myArray[mySection][myIndexCounseling].city
+    var st = ResourceCounseling.myArray[mySection][myIndexCounseling].state
+    var zi = ResourceCounseling.myArray[mySection][myIndexCounseling].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourceCounseling.myArray[mySection][myIndex].name
+        self.backTitle = ResourceCounseling.myArray[mySection][myIndexCounseling].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -1568,12 +1588,12 @@ class specificResourceCounselingViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceCounseling.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceCounseling.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceCounseling.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceCounseling.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceCounseling.myArray[mySection][myIndex].contact
-        if(ResourceCounseling.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourceCounseling.myArray[mySection][myIndexCounseling].name
+        resCatLabel.text = ResourceCounseling.myArray[mySection][myIndexCounseling].category
+        resDescLabel.text = ResourceCounseling.myArray[mySection][myIndexCounseling].addInfo
+        resWebLabel.text = ResourceCounseling.myArray[mySection][myIndexCounseling].website
+        resContLabel.text = ResourceCounseling.myArray[mySection][myIndexCounseling].contact
+        if(ResourceCounseling.myArray[mySection][myIndexCounseling].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
@@ -1626,14 +1646,14 @@ class specificResourceEatingDisorderViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceEatingDisorder.myArray[mySection][myIndex].address
-    var ci = ResourceEatingDisorder.myArray[mySection][myIndex].city
-    var st = ResourceEatingDisorder.myArray[mySection][myIndex].state
-    var zi = ResourceEatingDisorder.myArray[mySection][myIndex].zip
+    var ad = ResourceEatingDisorder.myArray[mySection][myIndexEating].address
+    var ci = ResourceEatingDisorder.myArray[mySection][myIndexEating].city
+    var st = ResourceEatingDisorder.myArray[mySection][myIndexEating].state
+    var zi = ResourceEatingDisorder.myArray[mySection][myIndexEating].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = Resource.myArray[mySection][myIndex].name
+        self.backTitle = Resource.myArray[mySection][myIndexEating].name
         
             /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -1642,12 +1662,12 @@ class specificResourceEatingDisorderViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceEatingDisorder.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceEatingDisorder.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceEatingDisorder.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceEatingDisorder.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceEatingDisorder.myArray[mySection][myIndex].contact
-        if(ResourceEatingDisorder.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourceEatingDisorder.myArray[mySection][myIndexEating].name
+        resCatLabel.text = ResourceEatingDisorder.myArray[mySection][myIndexEating].category
+        resDescLabel.text = ResourceEatingDisorder.myArray[mySection][myIndexEating].addInfo
+        resWebLabel.text = ResourceEatingDisorder.myArray[mySection][myIndexEating].website
+        resContLabel.text = ResourceEatingDisorder.myArray[mySection][myIndexEating].contact
+        if(ResourceEatingDisorder.myArray[mySection][myIndexEating].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
@@ -1703,14 +1723,14 @@ class specificResourceAlchoholViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceAlchohol.myArray[mySection][myIndex].address
-    var ci = ResourceAlchohol.myArray[mySection][myIndex].city
-    var st = ResourceAlchohol.myArray[mySection][myIndex].state
-    var zi = ResourceAlchohol.myArray[mySection][myIndex].zip
+    var ad = ResourceAlchohol.myArray[mySection][myIndexAlchohol].address
+    var ci = ResourceAlchohol.myArray[mySection][myIndexAlchohol].city
+    var st = ResourceAlchohol.myArray[mySection][myIndexAlchohol].state
+    var zi = ResourceAlchohol.myArray[mySection][myIndexAlchohol].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourceAlchohol.myArray[mySection][myIndex].name
+        self.backTitle = ResourceAlchohol.myArray[mySection][myIndexAlchohol].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -1719,12 +1739,12 @@ class specificResourceAlchoholViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceAlchohol.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceAlchohol.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceAlchohol.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceAlchohol.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceAlchohol.myArray[mySection][myIndex].contact
-        if(ResourceAlchohol.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourceAlchohol.myArray[mySection][myIndexAlchohol].name
+        resCatLabel.text = ResourceAlchohol.myArray[mySection][myIndexAlchohol].category
+        resDescLabel.text = ResourceAlchohol.myArray[mySection][myIndexAlchohol].addInfo
+        resWebLabel.text = ResourceAlchohol.myArray[mySection][myIndexAlchohol].website
+        resContLabel.text = ResourceAlchohol.myArray[mySection][myIndexAlchohol].contact
+        if(ResourceAlchohol.myArray[mySection][myIndexAlchohol].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
@@ -1788,14 +1808,14 @@ class specificResourceSpecialtyViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceSpecialty.myArray[mySection][myIndex].address
-    var ci = ResourceSpecialty.myArray[mySection][myIndex].city
-    var st = ResourceSpecialty.myArray[mySection][myIndex].state
-    var zi = ResourceSpecialty.myArray[mySection][myIndex].zip
+    var ad = ResourceSpecialty.myArray[mySection][myIndexSpecialty].address
+    var ci = ResourceSpecialty.myArray[mySection][myIndexSpecialty].city
+    var st = ResourceSpecialty.myArray[mySection][myIndexSpecialty].state
+    var zi = ResourceSpecialty.myArray[mySection][myIndexSpecialty].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourceSpecialty.myArray[mySection][myIndex].name
+        self.backTitle = ResourceSpecialty.myArray[mySection][myIndexSpecialty].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -1804,12 +1824,12 @@ class specificResourceSpecialtyViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceSpecialty.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceSpecialty.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceSpecialty.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceSpecialty.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceSpecialty.myArray[mySection][myIndex].contact
-        if(ResourceSpecialty.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourceSpecialty.myArray[mySection][myIndexSpecialty].name
+        resCatLabel.text = ResourceSpecialty.myArray[mySection][myIndexSpecialty].category
+        resDescLabel.text = ResourceSpecialty.myArray[mySection][myIndexSpecialty].addInfo
+        resWebLabel.text = ResourceSpecialty.myArray[mySection][myIndexSpecialty].website
+        resContLabel.text = ResourceSpecialty.myArray[mySection][myIndexSpecialty].contact
+        if(ResourceSpecialty.myArray[mySection][myIndexSpecialty].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
@@ -1864,14 +1884,14 @@ class specificResourceDomesticViolenceViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceDomesticViolence.myArray[mySection][myIndex].address
-    var ci = ResourceDomesticViolence.myArray[mySection][myIndex].city
-    var st = ResourceDomesticViolence.myArray[mySection][myIndex].state
-    var zi = ResourceDomesticViolence.myArray[mySection][myIndex].zip
+    var ad = ResourceDomesticViolence.myArray[mySection][myIndexViolence].address
+    var ci = ResourceDomesticViolence.myArray[mySection][myIndexViolence].city
+    var st = ResourceDomesticViolence.myArray[mySection][myIndexViolence].state
+    var zi = ResourceDomesticViolence.myArray[mySection][myIndexViolence].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourceDomesticViolence.myArray[mySection][myIndex].name
+        self.backTitle = ResourceDomesticViolence.myArray[mySection][myIndexViolence].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -1880,12 +1900,12 @@ class specificResourceDomesticViolenceViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceDomesticViolence.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceDomesticViolence.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceDomesticViolence.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceDomesticViolence.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceDomesticViolence.myArray[mySection][myIndex].contact
-        if(ResourceDomesticViolence.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourceDomesticViolence.myArray[mySection][myIndexViolence].name
+        resCatLabel.text = ResourceDomesticViolence.myArray[mySection][myIndexViolence].category
+        resDescLabel.text = ResourceDomesticViolence.myArray[mySection][myIndexViolence].addInfo
+        resWebLabel.text = ResourceDomesticViolence.myArray[mySection][myIndexViolence].website
+        resContLabel.text = ResourceDomesticViolence.myArray[mySection][myIndexViolence].contact
+        if(ResourceDomesticViolence.myArray[mySection][myIndexViolence].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
@@ -1936,14 +1956,14 @@ class specificResourcePsychiatristsViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourcePsychiatrists.myArray[mySection][myIndex].address
-    var ci = ResourcePsychiatrists.myArray[mySection][myIndex].city
-    var st = ResourcePsychiatrists.myArray[mySection][myIndex].state
-    var zi = ResourcePsychiatrists.myArray[mySection][myIndex].zip
+    var ad = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].address
+    var ci = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].city
+    var st = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].state
+    var zi = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourcePsychiatrists.myArray[mySection][myIndex].name
+        self.backTitle = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -1952,12 +1972,12 @@ class specificResourcePsychiatristsViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourcePsychiatrists.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourcePsychiatrists.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourcePsychiatrists.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourcePsychiatrists.myArray[mySection][myIndex].website
-        resContLabel.text = ResourcePsychiatrists.myArray[mySection][myIndex].contact
-        if(ResourcePsychiatrists.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].name
+        resCatLabel.text = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].category
+        resDescLabel.text = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].addInfo
+        resWebLabel.text = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].website
+        resContLabel.text = ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].contact
+        if(ResourcePsychiatrists.myArray[mySection][myIndexPsychiatrists].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
@@ -2009,14 +2029,14 @@ class specificResourceFamilyAssistanceViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceFamilyAssistance.myArray[mySection][myIndex].address
-    var ci = ResourceFamilyAssistance.myArray[mySection][myIndex].city
-    var st = ResourceFamilyAssistance.myArray[mySection][myIndex].state
-    var zi = ResourceFamilyAssistance.myArray[mySection][myIndex].zip
+    var ad = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].address
+    var ci = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].city
+    var st = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].state
+    var zi = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourceFamilyAssistance.myArray[mySection][myIndex].name
+        self.backTitle = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -2025,11 +2045,11 @@ class specificResourceFamilyAssistanceViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndex].contact
+        resNameLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].name
+        resCatLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].category
+        resDescLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].addInfo
+        resWebLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].website
+        resContLabel.text = ResourceFamilyAssistance.myArray[mySection][myIndexFamily].contact
         if(ResourceFamilyAssistance.myArray[mySection][myIndex].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
@@ -2096,14 +2116,14 @@ class specificResourceSupportViewController: UIViewController {
     @IBOutlet var resWebLabel: UILabel!
     @IBOutlet var resContLabel: UILabel!
     @IBOutlet var resAddressLabel: UILabel!
-    var ad = ResourceSupport.myArray[mySection][myIndex].address
-    var ci = ResourceSupport.myArray[mySection][myIndex].city
-    var st = ResourceSupport.myArray[mySection][myIndex].state
-    var zi = ResourceSupport.myArray[mySection][myIndex].zip
+    var ad = ResourceSupport.myArray[mySection][myIndexSupport].address
+    var ci = ResourceSupport.myArray[mySection][myIndexSupport].city
+    var st = ResourceSupport.myArray[mySection][myIndexSupport].state
+    var zi = ResourceSupport.myArray[mySection][myIndexSupport].zip
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.backTitle = ResourceSupport.myArray[mySection][myIndex].name
+        self.backTitle = ResourceSupport.myArray[mySection][myIndexSupport].name
         
         /*if let ctrs = self.navigationController?.viewControllers, ctrs.count > 1 {
             let viewController = ctrs[ctrs.count - 2] as! BackTitle
@@ -2112,12 +2132,12 @@ class specificResourceSupportViewController: UIViewController {
             self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
         }*/
         
-        resNameLabel.text = ResourceSupport.myArray[mySection][myIndex].name
-        resCatLabel.text = ResourceSupport.myArray[mySection][myIndex].category
-        resDescLabel.text = ResourceSupport.myArray[mySection][myIndex].addInfo
-        resWebLabel.text = ResourceSupport.myArray[mySection][myIndex].website
-        resContLabel.text = ResourceSupport.myArray[mySection][myIndex].contact
-        if(ResourceSupport.myArray[mySection][myIndex].category == "Crisis Lines"){
+        resNameLabel.text = ResourceSupport.myArray[mySection][myIndexSupport].name
+        resCatLabel.text = ResourceSupport.myArray[mySection][myIndexSupport].category
+        resDescLabel.text = ResourceSupport.myArray[mySection][myIndexSupport].addInfo
+        resWebLabel.text = ResourceSupport.myArray[mySection][myIndexSupport].website
+        resContLabel.text = ResourceSupport.myArray[mySection][myIndexSupport].contact
+        if(ResourceSupport.myArray[mySection][myIndexSupport].category == "Crisis Lines"){
             resAddressLabel.text = "";
         }
         else{
