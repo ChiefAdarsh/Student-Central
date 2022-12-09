@@ -38,7 +38,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     @IBOutlet var teacher1Label: UILabel!
     @IBOutlet var mail1Label: UILabel!
     @IBOutlet var teacher2Label: UILabel!
-    
+    @IBOutlet var mail2Label: UILabel!
+    @IBOutlet var teacher3Label: UILabel!
+    @IBOutlet var mail3Label: UILabel!
+    @IBOutlet var teacher4Label: UILabel!
+    @IBOutlet var mail4Label: UILabel!
+    @IBOutlet var teacher5Label: UILabel!
+    @IBOutlet var mail5Label: UILabel!
+    @IBOutlet var teacher6Label: UILabel!
+    @IBOutlet var mail6Label: UILabel!
+    @IBOutlet var teacher7Label: UILabel!
+    @IBOutlet var mail7Label: UILabel!
+    @IBOutlet var teacher8Label: UILabel!
+    @IBOutlet var mail8Label: UILabel!
     
     func rotation() {
         let size = UIScreen.main.bounds.size
@@ -47,11 +59,39 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             sv.spacing = 66
             teacher1Label.font = .systemFont(ofSize: 35, weight: .bold)
             mail1Label.font = .systemFont(ofSize: 20, weight: .bold)
+            teacher2Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail2Label.font = .systemFont(ofSize: 20, weight: .bold)
+            teacher3Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail3Label.font = .systemFont(ofSize: 20, weight: .bold)
+            teacher4Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail4Label.font = .systemFont(ofSize: 20, weight: .bold)
+            teacher5Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail5Label.font = .systemFont(ofSize: 20, weight: .bold)
+            teacher6Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail6Label.font = .systemFont(ofSize: 20, weight: .bold)
+            teacher7Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail7Label.font = .systemFont(ofSize: 20, weight: .bold)
+            teacher8Label.font = .systemFont(ofSize: 35, weight: .bold)
+            mail8Label.font = .systemFont(ofSize: 20, weight: .bold)
         } else {
             sv.axis = .vertical
             sv.spacing = 0
             teacher1Label.font = .systemFont(ofSize: 20, weight: .bold)
             mail1Label.font = .systemFont(ofSize: 15, weight: .bold)
+            teacher2Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail2Label.font = .systemFont(ofSize: 15, weight: .bold)
+            teacher3Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail3Label.font = .systemFont(ofSize: 15, weight: .bold)
+            teacher4Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail4Label.font = .systemFont(ofSize: 15, weight: .bold)
+            teacher5Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail5Label.font = .systemFont(ofSize: 15, weight: .bold)
+            teacher6Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail6Label.font = .systemFont(ofSize: 15, weight: .bold)
+            teacher7Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail7Label.font = .systemFont(ofSize: 15, weight: .bold)
+            teacher8Label.font = .systemFont(ofSize: 20, weight: .bold)
+            mail8Label.font = .systemFont(ofSize: 15, weight: .bold)
         }
         
 //        let navCtr = (self.storyboard!.instantiateViewController(withIdentifier: "navCtr") as! UINavigationController)
@@ -93,7 +133,35 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     @IBOutlet weak var mailSeven: UILabel!
     @IBOutlet weak var mailEight: UILabel!
     
+    
     @IBAction func buttonOne(_ sender: UIButton) {
+        guard teacher1Label.text! != "TEACHER #1" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 1st period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher1Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailOne.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode([self.teacher1Label.text, self.mailOne.text]),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                }
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -108,6 +176,26 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     @IBAction func buttonTwo(_ sender: UIButton) {
+        guard teacher2Label.text! != "TEACHER #2" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 2nd period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher2Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailTwo.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -122,6 +210,26 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     @IBAction func buttonThree(_ sender: UIButton) {
+        guard teacher3Label.text! != "TEACHER #3" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 3rd period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher3Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailThree.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -136,6 +244,26 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     @IBAction func buttonFour(_ sender: UIButton) {
+        guard teacher4Label.text! != "TEACHER #4" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 4th period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher4Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailFour.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -150,6 +278,26 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     @IBAction func buttonFive(_ sender: UIButton) {
+        guard teacher5Label.text! != "TEACHER #5" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 5th period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher5Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailFive.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -164,6 +312,26 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     @IBAction func buttonSix(_ sender: UIButton) {
+        guard teacher6Label.text! != "TEACHER #6" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 6th period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher6Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailSix.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -178,6 +346,26 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     @IBAction func buttonSeven(_ sender: UIButton) {
+        guard teacher7Label.text! != "TEACHER #7" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 7th period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher7Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailSeven.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -192,6 +380,26 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     @IBAction func buttonEight(_ sender: UIButton) {
+        guard teacher8Label.text! != "TEACHER #8" else {
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 8th period teacher name", preferredStyle: .alert)
+            alertController.addTextField { textField in
+                textField.placeholder = "Enter Teacher Name"
+            }
+            let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                let txt = textField.text!.lowercased()
+                
+                self.teacher8Label.text = txt.capitalized
+                let index = txt.index(after: txt.firstIndex(of: " ")!)
+                self.mailEight.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+            
+            alertController.addAction(saveAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
@@ -209,12 +417,220 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         controller.dismiss(animated: true)
     }
     
+    @IBOutlet var view1: UIView!
+    @IBOutlet var view2: UIView!
+    @IBOutlet var view3: UIView!
+    @IBOutlet var view4: UIView!
+    @IBOutlet var view5: UIView!
+    @IBOutlet var view6: UIView!
+    @IBOutlet var view7: UIView!
+    @IBOutlet var view8: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         rotation()
+        let tapGesture1 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap1(sender:)))
+        tapGesture1.numberOfTouchesRequired = 1
+        tapGesture1.minimumPressDuration = 0.5
+        view1.addGestureRecognizer(tapGesture1)
+        
+        let tapGesture2 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap2(sender:)))
+        tapGesture2.numberOfTouchesRequired = 1
+        tapGesture2.minimumPressDuration = 0.5
+        view2.addGestureRecognizer(tapGesture2)
+        
+        let tapGesture3 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap3(sender:)))
+        tapGesture3.numberOfTouchesRequired = 1
+        tapGesture3.minimumPressDuration = 0.5
+        view3.addGestureRecognizer(tapGesture3)
+        
+        let tapGesture4 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap4(sender:)))
+        tapGesture4.numberOfTouchesRequired = 1
+        tapGesture4.minimumPressDuration = 0.5
+        view4.addGestureRecognizer(tapGesture4)
+        
+        let tapGesture5 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap5(sender:)))
+        tapGesture5.numberOfTouchesRequired = 1
+        tapGesture5.minimumPressDuration = 0.5
+        view5.addGestureRecognizer(tapGesture5)
+        
+        let tapGesture6 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap6(sender:)))
+        tapGesture6.numberOfTouchesRequired = 1
+        tapGesture6.minimumPressDuration = 0.5
+        view6.addGestureRecognizer(tapGesture6)
+        
+        let tapGesture7 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap7(sender:)))
+        tapGesture7.numberOfTouchesRequired = 1
+        tapGesture7.minimumPressDuration = 0.5
+        view7.addGestureRecognizer(tapGesture7)
+        
+        let tapGesture8 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap8(sender:)))
+        tapGesture8.numberOfTouchesRequired = 1
+        tapGesture8.minimumPressDuration = 0.5
+        view8.addGestureRecognizer(tapGesture8)
+        
         // Do any additional setup after loading the view.
     }
+    @objc func handleTap1(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 1st period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher1Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailOne.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
+    
+    @objc func handleTap2(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 2nd period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher2Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailTwo.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
+    
+    @objc func handleTap3(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 3rd period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher3Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailThree.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
+    
+    @objc func handleTap4(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 4th period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher4Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailFour.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
+    
+    @objc func handleTap5(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 5th period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher5Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailFive.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
+    
+    @objc func handleTap6(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 6th period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher6Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailSix.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
+    
+    @objc func handleTap7(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 7th period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher7Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailSeven.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
+    
+    @objc func handleTap8(sender: UILongPressGestureRecognizer) {
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 8th period teacher name", preferredStyle: .alert)
+        alertController.addTextField { textField in
+            textField.placeholder = "Enter Teacher Name"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let textField = alertController.textFields![0] as UITextField
+            let txt = textField.text!.lowercased()
+            
+            self.teacher8Label.text = txt.capitalized
+            let index = txt.index(after: txt.firstIndex(of: " ")!)
+            self.mailEight.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
+        
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+        }
 
     /*
     // MARK: - Navigation
