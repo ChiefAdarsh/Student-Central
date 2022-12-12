@@ -9,13 +9,33 @@ import UIKit
 
 class MapsViewController: UIViewController {
 
+    @IBOutlet var toggle: UISwitch!
+    @IBOutlet var inOrOut: UILabel!
+    @IBOutlet var maps: UIImageView!
+    @IBOutlet var outsideMaps: UIImageView!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        outsideMaps.isHidden = true
+        maps.isHidden = false
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func togglePressed(_ sender: UISwitch) {
+        if sender.isOn {
+            maps.isHidden = false
+            outsideMaps.isHidden = true
+            inOrOut.text = "In School"
+        } else {
+            maps.isHidden = true
+            outsideMaps.isHidden = false
+            inOrOut.text = "Out of School"
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
