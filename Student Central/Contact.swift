@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class CounselorViewController: UIViewController {
 
@@ -31,8 +32,6 @@ class CounselorViewController: UIViewController {
 
 }
 
-import UIKit
-import MessageUI
 class TeacherViewController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
     @IBOutlet var sv: UIStackView!
     @IBOutlet var teacher1Label: UILabel!
@@ -51,6 +50,32 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     @IBOutlet var mail7Label: UILabel!
     @IBOutlet var teacher8Label: UILabel!
     @IBOutlet var mail8Label: UILabel!
+    
+    var teacherLabels: [UILabel?] {
+        return [
+            teacher1Label,
+            teacher2Label,
+            teacher3Label,
+            teacher4Label,
+            teacher5Label,
+            teacher6Label,
+            teacher7Label,
+            teacher8Label
+        ]
+    }
+    
+    var teacherMails: [UILabel?] {
+        return [
+            mail1Label,
+            mail2Label,
+            mail3Label,
+            mail4Label,
+            mail5Label,
+            mail6Label,
+            mail7Label,
+            mail8Label
+        ]
+    }
     
     func rotation() {
         let size = UIScreen.main.bounds.size
@@ -133,6 +158,16 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     @IBOutlet weak var mailSeven: UILabel!
     @IBOutlet weak var mailEight: UILabel!
     
+    var archiveURLs: [URL] = []
+    
+    let documentsDirectory =
+       FileManager.default.urls(for: .documentDirectory,
+       in: .userDomainMask).first!
+    
+    struct Teacher: Codable {
+        let name: String
+        let email: String
+    }
     
     @IBAction func buttonOne(_ sender: UIButton) {
         guard teacher1Label.text! != "TEACHER #1" else {
@@ -148,10 +183,14 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailOne.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
                 
+                let newTeacher = Teacher(name: self.teacher1Label.text!, email: self.mailOne.text!)
                 let jsonEncoder = JSONEncoder()
-                if let jsonData = try? jsonEncoder.encode([self.teacher1Label.text, self.mailOne.text]),
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
                     let jsonString = String(data: jsonData, encoding: .utf8) {
                     print(jsonString)
+                    
+                    try? jsonData.write(to: self.archiveURLs[0],
+                       options: .noFileProtection)
                 }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
@@ -188,6 +227,16 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 self.teacher2Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailTwo.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let newTeacher = Teacher(name: self.teacher2Label.text!, email: self.mailTwo.text!)
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                    
+                    try? jsonData.write(to: self.archiveURLs[1],
+                       options: .noFileProtection)
+                }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
             
@@ -222,6 +271,15 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 self.teacher3Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailThree.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let newTeacher = Teacher(name: self.teacher3Label.text!, email: self.mailThree.text!)
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                                    
+                    try? jsonData.write(to: self.archiveURLs[2], options: .noFileProtection)
+                }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
             
@@ -256,6 +314,15 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 self.teacher4Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailFour.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let newTeacher = Teacher(name: self.teacher4Label.text!, email: self.mailFour.text!)
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                                    
+                    try? jsonData.write(to: self.archiveURLs[3], options: .noFileProtection)
+                }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
             
@@ -290,6 +357,15 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 self.teacher5Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailFive.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let newTeacher = Teacher(name: self.teacher5Label.text!, email: self.mailFive.text!)
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                                    
+                    try? jsonData.write(to: self.archiveURLs[4], options: .noFileProtection)
+                }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
             
@@ -324,6 +400,15 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 self.teacher6Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailSix.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let newTeacher = Teacher(name: self.teacher6Label.text!, email: self.mailSix.text!)
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                                    
+                    try? jsonData.write(to: self.archiveURLs[5], options: .noFileProtection)
+                }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
             
@@ -358,6 +443,15 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 self.teacher7Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailSeven.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let newTeacher = Teacher(name: self.teacher7Label.text!, email: self.mailSeven.text!)
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                                    
+                    try? jsonData.write(to: self.archiveURLs[6], options: .noFileProtection)
+                }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
             
@@ -392,6 +486,15 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
                 self.teacher8Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
                 self.mailEight.text = String(txt[txt.startIndex]) + txt[index..<txt.endIndex] + "@coppellisd.com"
+                
+                let newTeacher = Teacher(name: self.teacher8Label.text!, email: self.mailEight.text!)
+                let jsonEncoder = JSONEncoder()
+                if let jsonData = try? jsonEncoder.encode(newTeacher),
+                    let jsonString = String(data: jsonData, encoding: .utf8) {
+                    print(jsonString)
+                                    
+                    try? jsonData.write(to: self.archiveURLs[7], options: .noFileProtection)
+                }
             })
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {(action : UIAlertAction!) -> Void in })
             
@@ -428,6 +531,22 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for i in 0..<8 {
+            archiveURLs.append(documentsDirectory.appendingPathComponent("teacher\(i + 1)")
+               .appendingPathExtension("plist"))
+            
+            let jsonDecoder = JSONDecoder()
+            if let retrievedData = try? Data(contentsOf: archiveURLs[i]),
+                let decodedData = try?
+               jsonDecoder.decode(Teacher.self,
+               from: retrievedData) {
+                print(decodedData)
+                
+                teacherLabels[i]!.text = decodedData.name
+                teacherMails[i]!.text = decodedData.email
+            }
+        }
 
         rotation()
         let tapGesture1 = UILongPressGestureRecognizer(target: self, action: #selector(handleTap1(sender:)))
