@@ -8,7 +8,7 @@
 import UIKit
 
 class ClassScheduleViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +43,7 @@ class ShuttleViewController: UIViewController {
             sv.spacing = 50
         }
     }
+    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
