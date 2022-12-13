@@ -1532,7 +1532,7 @@
         <!--Class Schedule View Controller-->
         <scene sceneID="oJo-jl-4rT">
             <objects>
-                <viewController id="MV6-Tw-Nkk" customClass="ClassScheduleViewController" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MV6-Tw-Nkk" customClass="ClassScheduleViewController" customModule="Student_Central" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cSi-nZ-h4Q">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1544,15 +1544,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CT6-7t-cux">
-                                <rect key="frame" x="-37949" y="193" width="835" height="32"/>
+                                <rect key="frame" x="137" y="193" width="835" height="32"/>
                                 <segments>
                                     <segment title="A Day"/>
                                     <segment title="B Day"/>
                                     <segment title="C Day"/>
                                 </segments>
-                                <connections>
-                                    <segue destination="SDs-kg-gP1" kind="show" id="vwc-WJ-XZc"/>
-                                </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="pEC-ee-qkM" userLabel="A-B day Stack View">
                                 <rect key="frame" x="98.5" y="322" width="915" height="356"/>
@@ -1870,8 +1867,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="aJ3-oW-Ffg"/>
                     <connections>
-                        <outlet property="aDay" destination="CT6-7t-cux" id="w3y-0N-h8w"/>
-                        <outlet property="bDay" destination="CT6-7t-cux" id="XEe-DM-LFR"/>
+                        <outlet property="sv" destination="pEC-ee-qkM" id="SK0-BX-9l3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AP8-st-agy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2366,7 +2362,7 @@
                 </view>
                 <navigationItem id="TMl-uo-Stc"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="537"/>
+            <point key="canvasLocation" x="-61" y="409"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="VTy-ue-M1f">
@@ -2422,40 +2418,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jjg-lP-rSo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-582" y="1637"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hH6-2G-soe">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EYg-6L-XT8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="SDs-kg-gP1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YaY-RN-qlt">
-                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Class Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdV-nj-TXC">
-                                <rect key="frame" x="335" y="90" width="424.5" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lsa-Nk-bEE">
-                                <rect key="frame" x="128" y="176" width="835" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="A Day"/>
-                                    <segment title="B Day"/>
-                                    <segment title="C Day"/>
-                                </segments>
-                            </segmentedControl>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="qaL-1r-iMa"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zh9-PO-qTq"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-1051" y="581"/>
         </scene>
     </scenes>
     <resources>
