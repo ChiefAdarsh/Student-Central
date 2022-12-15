@@ -7,9 +7,9 @@
 
 import UIKit
 
+var currentUser = User(id: 42948, firstName: "Adarsh", lastName: "Goura", username: "axg1559", schedule: [Class(period: 1, name: "Class1", teacher: "Ms. Teacher", roomNumber: "C153")])
+
 class HomeViewController: UIViewController {
-    
-    var currentUser = User(id: 42948, firstName: "Adarsh", lastName: "Goura", username: "axg1559", schedule: [Class(period: 1, name: "Class1", teacher: "Ms. Teacher", roomNumber: "C153")])
 
     @IBOutlet var UserLbl: UILabel!
     @IBOutlet var NotifBtn: UIButton!
