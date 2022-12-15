@@ -206,6 +206,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailOne.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -250,6 +251,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailTwo.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -293,6 +295,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailThree.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -336,6 +339,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailFour.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -379,6 +383,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailFive.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -422,6 +427,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailSix.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -465,6 +471,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailSeven.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -508,6 +515,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailEight.text!
             message.setToRecipients([mailTo])
+            present(UINavigationController(rootViewController: message), animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)

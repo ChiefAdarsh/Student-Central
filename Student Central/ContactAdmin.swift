@@ -10,7 +10,7 @@ import SafariServices
 import MessageUI
 import Foundation
 
-class CounselorContactsTableViewController: UITableViewController {
+class CounselorContactsTableViewController: UITableViewController, MFMailComposeViewControllerDelegate, UINavigationControllerDelegate {
     var backTitle: String!
     
     override func viewDidLoad() {
@@ -61,8 +61,20 @@ class CounselorContactsTableViewController: UITableViewController {
     }
 }
 
-class AdminInfoViewController: UIViewController {
+class AdminInfoViewController: UIViewController, UINavigationControllerDelegate {
     var backTitle: String!
+    @IBOutlet var stackView: UIStackView!
+    
+    func rotation() {
+        let size = UIScreen.main.bounds.size
+        if size.height < size.width {
+            stackView.axis = .horizontal
+            stackView.spacing = 66
+        } else {
+            stackView.axis = .vertical
+            stackView.spacing = 0
+        }
+    }
     
     @IBOutlet var EmailBtn: UIButton!
     @IBOutlet var AdminLbl: UILabel!
@@ -71,23 +83,55 @@ class AdminInfoViewController: UIViewController {
         super.viewDidLoad()
         AdminLbl.text = "\(selectedAdmin.fullName), \(selectedAdmin.adminTypeDetailed)"
         AdminPic.image = UIImage(named: selectedAdmin.imgStr!)
-        
+        rotation()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func email(_ sender: Any) {
-        let email = selectedAdmin.email
-        if let url = URL(string: "mailto:\(email)") {
-          if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url)
-          } else {
-            UIApplication.shared.openURL(url)
-            print("oh noo")
-          }
+        if MFMailComposeViewController.canSendMail() {
+            let message = MFMailComposeViewController()
+            message.delegate = self
+            let mailTo = AdminLbl.text!
+            
+            let index = mailTo.index(after: mailTo.firstIndex(of: " ")!)
+            let address = String(mailTo[mailTo.startIndex]) + mailTo[index..<mailTo.endIndex] + "@coppellisd.com"
+            //print(address)
+            message.setToRecipients([address])
+            present(UINavigationController(rootViewController: message), animated: true)
+            
+        } else {
+            let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alertController, animated: true, completion: nil)
+        }
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            controller.dismiss(animated: true)
         }
     }
+    @IBOutlet var requestInp: UITextField!
     
-    
+    @IBAction func requestButPress(_ sender: UIButton) {
+        if MFMailComposeViewController.canSendMail() {
+            let message = MFMailComposeViewController()
+            message.delegate = self
+            let mailTo = AdminLbl.text!
+            
+            let index = mailTo.index(after: mailTo.firstIndex(of: " ")!)
+            let address = String(mailTo[mailTo.startIndex]) + mailTo[index..<mailTo.endIndex] + "@coppellisd.com"
+            //print(address)
+            message.setToRecipients([address])
+            message.setMessageBody("Student Request: \n \(requestInp.text!)", isHTML: false)
+            present(UINavigationController(rootViewController: message), animated: true)
+            
+        } else {
+            let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+            present(alertController, animated: true, completion: nil)
+        }
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            controller.dismiss(animated: true)
+        }
+    }
 }
 
 class RequestItemsViewController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
