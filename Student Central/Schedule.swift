@@ -10,9 +10,34 @@ import UIKit
 class ClassScheduleViewController: UIViewController {
     @IBOutlet var segue: UISegmentedControl!
     @IBOutlet var sv: UIStackView!
+    @IBOutlet var sv2: UIStackView!
+    @IBOutlet var viewContainer: UIView!
+    @IBOutlet var svView1: UIView!
+    @IBOutlet var svView2: UIView!
+    
+    @IBAction func seguePressed(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print(1)
+            viewContainer.bringSubviewToFront(svView2)
+            break;
+        case 1:
+            print(2)
+            viewContainer.bringSubviewToFront(svView2)
+            break;
+        case 2:
+            print(3)
+            viewContainer.bringSubviewToFront(svView1
+            )
+            break;
+        default:
+            break;
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewContainer.bringSubviewToFront(svView2)
     }
 }
 
@@ -31,7 +56,6 @@ class ShuttleViewController: UIViewController {
             sv.spacing = 50
         }
     }
-    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
