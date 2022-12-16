@@ -30,6 +30,8 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var class48: UITextField!
     @IBOutlet var teacher48: UITextField!
     
+    var isA: Bool = true
+    
     // A Day
     var classesA: [String]!
     var teachersA: [String]!
@@ -62,6 +64,31 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var teacher4C: UITextField!
     @IBOutlet var class8C: UITextField!
     @IBOutlet var teacher8C: UITextField!
+    var classesC: [String] {
+        return [
+            class1C.text!,
+            class2C.text!,
+            class3C.text!,
+            class4C.text!,
+            class5C.text!,
+            class6C.text!,
+            class7C.text!,
+            class8C.text!
+        ]
+    }
+    var teachersC: [String] {
+        return [
+            teacher1C.text!,
+            teacher2C.text!,
+            teacher3C.text!,
+            teacher4C.text!,
+            teacher5C.text!,
+            teacher6C.text!,
+            teacher7C.text!,
+            teacher8C.text!
+        ]
+    }
+    var lunchTypeC: String!
     
     // A & B Day Closures
     lazy var placeholderClosureAB = { [self](action: UIAction) in
@@ -70,6 +97,7 @@ class ClassScheduleViewController: UIViewController {
         lunchStart.text = "--------"
         lunchEnd.text = "--------"
         start37.text = "12:10 PM"
+        isA ? (lunchTypeA = "Select Lunch") : (lunchTypeB = "Select Lunch")
         
         return
     }
@@ -81,16 +109,19 @@ class ClassScheduleViewController: UIViewController {
             lunchStart.text = "12:05 PM"
             lunchEnd.text = "12:35 PM"
             start37.text = "12:40 PM"
+            isA ? (lunchTypeA = "A Lunch") : (lunchTypeB = "A Lunch")
             break;
         case "B Lunch":
             lunchStart.text = "12:45 PM"
             lunchEnd.text = "1:15 PM"
             start37.text = "1:20 PM"
+            isA ? (lunchTypeA = "B Lunch") : (lunchTypeB = "B Lunch")
             break;
         default:
             lunchStart.text = "1:25 PM"
             lunchEnd.text = "1:55 PM"
             start37.text = "2:00 PM"
+            isA ? (lunchTypeA = "C Lunch") : (lunchTypeB = "C Lunch")
             break;
         }
         
@@ -104,6 +135,7 @@ class ClassScheduleViewController: UIViewController {
         lunchStartC.text = "--------"
         lunchEndC.text = "--------"
         start3C.text = "12:10 PM"
+        lunchTypeC = "Select Lunch"
         
         return
     }
@@ -115,23 +147,26 @@ class ClassScheduleViewController: UIViewController {
             lunchStartC.text = "12:05 PM"
             lunchEndC.text = "12:35 PM"
             start3C.text = "12:35 PM"
+            lunchTypeC = "A Lunch"
             break;
         case "B Lunch":
             lunchStartC.text = "12:20 PM"
             lunchEndC.text = "1:10 PM"
             start3C.text = "1:10 PM"
+            lunchTypeC = "B Lunch"
             break;
         default:
             lunchStartC.text = "1:15 PM"
             lunchEndC.text = "1:45 PM"
             start3C.text = "1:45 PM"
+            lunchTypeC = "C Lunch"
             break;
         }
         
         return
     }
     
-    func reloadData(isA: Bool) {
+    func reloadDataAB() {
         var lunchType = ""
         if isA {
             class15.text = classesA[0]
@@ -184,17 +219,84 @@ class ClassScheduleViewController: UIViewController {
         }
     }
     
+    @IBAction func class15Edited(_ sender: UITextField) {
+        if(isA) {
+            classesA[0] = sender.text!
+        } else {
+            classesB[0] = sender.text!
+        }
+    }
+    
+    @IBAction func class26Edited(_ sender: UITextField) {
+        if(isA) {
+            classesA[1] = sender.text!
+        } else {
+            classesB[1] = sender.text!
+        }
+    }
+    
+    @IBAction func class37Edited(_ sender: UITextField) {
+        if(isA) {
+            classesA[2] = sender.text!
+        } else {
+            classesB[2] = sender.text!
+        }
+    }
+    
+    @IBAction func class48Edited(_ sender: UITextField) {
+        if(isA) {
+            classesA[3] = sender.text!
+        } else {
+            classesB[3] = sender.text!
+        }
+    }
+    
+    @IBAction func teacher15Edited(_ sender: UITextField) {
+        if(isA) {
+            teachersA[0] = sender.text!
+        } else {
+            teachersB[0] = sender.text!
+        }
+    }
+    
+    @IBAction func teacher26Edited(_ sender: UITextField) {
+        if(isA) {
+            teachersA[1] = sender.text!
+        } else {
+            teachersB[1] = sender.text!
+        }
+    }
+    
+    @IBAction func teacher37Edited(_ sender: UITextField) {
+        if(isA) {
+            teachersA[2] = sender.text!
+        } else {
+            teachersB[2] = sender.text!
+        }
+    }
+    
+    @IBAction func teacher48Edited(_ sender: UITextField) {
+        if(isA) {
+            teachersA[3] = sender.text!
+        } else {
+            teachersB[3] = sender.text!
+        }
+    }
+    
     @IBAction func seguePressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
+            isA = true
             viewContainer.bringSubviewToFront(svView2)
-            reloadData(isA: true)
+            reloadDataAB()
             break;
         case 1:
+            isA = false
             viewContainer.bringSubviewToFront(svView2)
-            reloadData(isA: false)
+            reloadDataAB()
             break;
         case 2:
+            isA = false
             viewContainer.bringSubviewToFront(svView1)
             break;
         default:
@@ -237,7 +339,7 @@ class ClassScheduleViewController: UIViewController {
         ])
         
         // Reload data
-        reloadData(isA: true)
+        reloadDataAB()
     }
 }
 

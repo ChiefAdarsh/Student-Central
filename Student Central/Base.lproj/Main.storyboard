@@ -2067,11 +2067,17 @@
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="40"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="class15Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="qwJ-Tv-V3b"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-yL-vZr">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="40"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="teacher15Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="hkV-Fv-JOC"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:50 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flt-ON-Xsj">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="40"/>
@@ -2106,11 +2112,17 @@
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="40.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="class26Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="LHs-Vr-2qD"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MVO-mT-2H4">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="40.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="teacher26Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="Gtd-M6-zED"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19d-97-pvh">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="40.5"/>
@@ -2196,11 +2208,17 @@
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="40"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="class37Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="Ovy-lM-1in"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCx-Sj-vyL">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="40"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="teacher37Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="6P8-fy-Ang"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:10 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcw-PL-ln0">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="40"/>
@@ -2235,11 +2253,17 @@
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="40.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="class48Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="cA7-12-ZUo"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eHS-cm-ZHn">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="40.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="teacher48Edited:" destination="MV6-Tw-Nkk" eventType="editingDidEnd" id="4nf-bQ-Xgt"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:45 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftI-r3-fEw">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="40.5"/>
