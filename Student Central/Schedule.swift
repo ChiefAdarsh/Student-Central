@@ -15,6 +15,44 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var svView1: UIView!
     @IBOutlet var svView2: UIView!
     
+    // A-B day elements
+    @IBOutlet var class15: UITextField!
+    @IBOutlet var teacher15: UITextField!
+    @IBOutlet var class26: UITextField!
+    @IBOutlet var teacher26: UITextField!
+    @IBOutlet var end26: UILabel!
+    @IBOutlet var lunchDropdown: UIButton!
+    @IBOutlet var lunchStart: UILabel!
+    @IBOutlet var lunchEnd: UILabel!
+    @IBOutlet var class37: UITextField!
+    @IBOutlet var teacher37: UITextField!
+    @IBOutlet var start37: UILabel!
+    @IBOutlet var class48: UITextField!
+    @IBOutlet var teacher48: UITextField!
+    
+    // C Day elements
+    @IBOutlet var class1C: UITextField!
+    @IBOutlet var teacher1C: UITextField!
+    @IBOutlet var class5C: UITextField!
+    @IBOutlet var teacher5C: UITextField!
+    @IBOutlet var class2C: UITextField!
+    @IBOutlet var teacher2C: UITextField!
+    @IBOutlet var class6C: UITextField!
+    @IBOutlet var teacher6C: UITextField!
+    @IBOutlet var end6C: UILabel!
+    @IBOutlet var lunchDropdownC: UIButton!
+    @IBOutlet var lunchStartC: UILabel!
+    @IBOutlet var lunchEndC: UILabel!
+    @IBOutlet var class3C: UITextField!
+    @IBOutlet var teacher3C: UITextField!
+    @IBOutlet var start3C: UILabel!
+    @IBOutlet var class7C: UITextField!
+    @IBOutlet var teacher7C: UITextField!
+    @IBOutlet var class4C: UITextField!
+    @IBOutlet var teacher4C: UITextField!
+    @IBOutlet var class8C: UITextField!
+    @IBOutlet var teacher8C: UITextField!
+    
     @IBAction func seguePressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
