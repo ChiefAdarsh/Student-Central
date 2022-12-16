@@ -104,24 +104,22 @@ class ClassScheduleViewController: UIViewController {
     lazy var optionClosureAB = { [self](action: UIAction) in
         self.lunchDropdown.setTitleColor(.black, for: .normal)
         
+        isA ? (lunchTypeA = action.title) : (lunchTypeB = action.title)
         switch(action.title) {
         case "A Lunch":
             lunchStart.text = "12:05 PM"
             lunchEnd.text = "12:35 PM"
             start37.text = "12:40 PM"
-            isA ? (lunchTypeA = "A Lunch") : (lunchTypeB = "A Lunch")
             break;
         case "B Lunch":
             lunchStart.text = "12:45 PM"
             lunchEnd.text = "1:15 PM"
             start37.text = "1:20 PM"
-            isA ? (lunchTypeA = "B Lunch") : (lunchTypeB = "B Lunch")
             break;
         default:
             lunchStart.text = "1:25 PM"
             lunchEnd.text = "1:55 PM"
             start37.text = "2:00 PM"
-            isA ? (lunchTypeA = "C Lunch") : (lunchTypeB = "C Lunch")
             break;
         }
         
@@ -142,24 +140,22 @@ class ClassScheduleViewController: UIViewController {
     lazy var optionClosureC = { [self](action: UIAction) in
         self.lunchDropdownC.setTitleColor(.black, for: .normal)
         
+        lunchTypeC = action.title
         switch(action.title) {
         case "A Lunch":
             lunchStartC.text = "12:05 PM"
             lunchEndC.text = "12:35 PM"
             start3C.text = "12:35 PM"
-            lunchTypeC = "A Lunch"
             break;
         case "B Lunch":
             lunchStartC.text = "12:20 PM"
             lunchEndC.text = "1:10 PM"
             start3C.text = "1:10 PM"
-            lunchTypeC = "B Lunch"
             break;
         default:
             lunchStartC.text = "1:15 PM"
             lunchEndC.text = "1:45 PM"
             start3C.text = "1:45 PM"
-            lunchTypeC = "C Lunch"
             break;
         }
         
@@ -281,6 +277,40 @@ class ClassScheduleViewController: UIViewController {
         } else {
             teachersB[3] = sender.text!
         }
+    }
+    
+    @IBAction func class1CEdited(_ sender: UITextField) {
+    }
+    @IBAction func class5CEdited(_ sender: UITextField) {
+    }
+    @IBAction func class2CEdited(_ sender: UITextField) {
+    }
+    @IBAction func class6CEdited(_ sender: UITextField) {
+    }
+    @IBAction func class3CEdited(_ sender: UITextField) {
+    }
+    @IBAction func class7CEdited(_ sender: UITextField) {
+    }
+    @IBAction func class4CEdited(_ sender: UITextField) {
+    }
+    @IBAction func class8CEdited(_ sender: UITextField) {
+    }
+    
+    @IBAction func teacher1CEdited(_ sender: UITextField) {
+    }
+    @IBAction func teacher5CEdited(_ sender: UITextField) {
+    }
+    @IBAction func teacher2CEdited(_ sender: UITextField) {
+    }
+    @IBAction func teacher6CEdited(_ sender: UITextField) {
+    }
+    @IBAction func teacher3CEdited(_ sender: UITextField) {
+    }
+    @IBAction func teacher7CEdited(_ sender: UITextField) {
+    }
+    @IBAction func teacher4CEdited(_ sender: UITextField) {
+    }
+    @IBAction func teacher8CEdited(_ sender: UITextField) {
     }
     
     @IBAction func seguePressed(_ sender: UISegmentedControl) {
