@@ -30,6 +30,16 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var class48: UITextField!
     @IBOutlet var teacher48: UITextField!
     
+    // A Day
+    var classesA: [String]!
+    var teachersA: [String]!
+    var lunchTypeA: String!
+    
+    // B Day
+    var classesB: [String]!
+    var teachersB: [String]!
+    var lunchTypeB: String!
+    
     // C Day elements
     @IBOutlet var class1C: UITextField!
     @IBOutlet var teacher1C: UITextField!
@@ -72,6 +82,96 @@ class ClassScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewContainer.bringSubviewToFront(svView2)
+        
+        // A & B Day Lunch Dropdown
+        
+        lunchDropdown.showsMenuAsPrimaryAction = true
+        lunchDropdown.changesSelectionAsPrimaryAction = true
+        
+        let placeholderClosure = { [self](action: UIAction) in
+            self.lunchDropdown.setTitleColor(.link, for: .normal)
+            
+            lunchStart.text = "--------"
+            lunchEnd.text = "--------"
+            start37.text = "12:10 PM"
+            
+            return
+        }
+        let optionClosureAB = { [self](action: UIAction) in
+            self.lunchDropdown.setTitleColor(.black, for: .normal)
+            
+            switch(action.title) {
+            case "A Lunch":
+                lunchStart.text = "12:05 PM"
+                lunchEnd.text = "12:35 PM"
+                start37.text = "12:40 PM"
+                break;
+            case "B Lunch":
+                lunchStart.text = "12:45 PM"
+                lunchEnd.text = "1:15 PM"
+                start37.text = "1:20 PM"
+                break;
+            default:
+                lunchStart.text = "1:25 PM"
+                lunchEnd.text = "1:55 PM"
+                start37.text = "2:00 PM"
+                break;
+            }
+            
+            return
+        }
+        
+        lunchDropdown.menu = UIMenu(children: [
+            UIAction(title: "Select Lunch", state: .on, handler: placeholderClosure),
+            UIAction(title: "A Lunch", handler: optionClosureAB),
+            UIAction(title: "B Lunch", handler: optionClosureAB),
+            UIAction(title: "C Lunch", handler: optionClosureAB)
+        ])
+        
+        // C Day Lunch Dropdown
+        
+        lunchDropdownC.showsMenuAsPrimaryAction = true
+        lunchDropdownC.changesSelectionAsPrimaryAction = true
+        
+        let placeholderClosureC = { [self](action: UIAction) in
+            self.lunchDropdownC.setTitleColor(.link, for: .normal)
+            
+            lunchStartC.text = "--------"
+            lunchEndC.text = "--------"
+            start3C.text = "12:10 PM"
+            
+            return
+        }
+        let optionClosureC = { [self](action: UIAction) in
+            self.lunchDropdownC.setTitleColor(.black, for: .normal)
+            
+            switch(action.title) {
+            case "A Lunch":
+                lunchStartC.text = "12:05 PM"
+                lunchEndC.text = "12:35 PM"
+                start3C.text = "12:35 PM"
+                break;
+            case "B Lunch":
+                lunchStartC.text = "12:20 PM"
+                lunchEndC.text = "1:10 PM"
+                start3C.text = "1:10 PM"
+                break;
+            default:
+                lunchStartC.text = "1:15 PM"
+                lunchEndC.text = "1:45 PM"
+                start3C.text = "1:45 PM"
+                break;
+            }
+            
+            return
+        }
+        
+        lunchDropdownC.menu = UIMenu(children: [
+            UIAction(title: "Select Lunch", state: .on, handler: placeholderClosureC),
+            UIAction(title: "A Lunch", handler: optionClosureC),
+            UIAction(title: "B Lunch", handler: optionClosureC),
+            UIAction(title: "C Lunch", handler: optionClosureC)
+        ])
     }
 }
 
