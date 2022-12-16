@@ -18,17 +18,13 @@ class ClassScheduleViewController: UIViewController {
     @IBAction func seguePressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            print(1)
             viewContainer.bringSubviewToFront(svView2)
             break;
         case 1:
-            print(2)
             viewContainer.bringSubviewToFront(svView2)
             break;
         case 2:
-            print(3)
-            viewContainer.bringSubviewToFront(svView1
-            )
+            viewContainer.bringSubviewToFront(svView1)
             break;
         default:
             break;
