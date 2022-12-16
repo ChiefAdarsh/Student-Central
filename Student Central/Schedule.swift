@@ -31,6 +31,10 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var teacher48: UITextField!
     
     var isA: Bool = true
+    var archiveURLs: [URL] = []
+    let documentsDirectory =
+       FileManager.default.urls(for: .documentDirectory,
+       in: .userDomainMask).first!
     
     // A Day
     var classesA: [String]!
@@ -64,31 +68,16 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var teacher4C: UITextField!
     @IBOutlet var class8C: UITextField!
     @IBOutlet var teacher8C: UITextField!
-    var classesC: [String] {
-        return [
-            class1C.text!,
-            class2C.text!,
-            class3C.text!,
-            class4C.text!,
-            class5C.text!,
-            class6C.text!,
-            class7C.text!,
-            class8C.text!
-        ]
-    }
-    var teachersC: [String] {
-        return [
-            teacher1C.text!,
-            teacher2C.text!,
-            teacher3C.text!,
-            teacher4C.text!,
-            teacher5C.text!,
-            teacher6C.text!,
-            teacher7C.text!,
-            teacher8C.text!
-        ]
-    }
+    var classesC: [String]!
+    var teachersC: [String]!
     var lunchTypeC: String!
+    
+    struct Day: Codable {
+        let type: String
+        let classes: [String]
+        let teachers: [String]
+        let lunchType: String
+    }
     
     // A & B Day Closures
     lazy var placeholderClosureAB = { [self](action: UIAction) in
@@ -97,14 +86,19 @@ class ClassScheduleViewController: UIViewController {
         lunchStart.text = "--------"
         lunchEnd.text = "--------"
         start37.text = "12:10 PM"
-        isA ? (lunchTypeA = "Select Lunch") : (lunchTypeB = "Select Lunch")
+        if isA {
+            lunchTypeA = "Select Lunch"
+            updateDataA()
+        } else {
+            lunchTypeB = "Select Lunch"
+            updateDataB()
+        }
         
         return
     }
     lazy var optionClosureAB = { [self](action: UIAction) in
         self.lunchDropdown.setTitleColor(.black, for: .normal)
         
-        isA ? (lunchTypeA = action.title) : (lunchTypeB = action.title)
         switch(action.title) {
         case "A Lunch":
             lunchStart.text = "12:05 PM"
@@ -123,6 +117,14 @@ class ClassScheduleViewController: UIViewController {
             break;
         }
         
+        if isA {
+            lunchTypeA = action.title
+            updateDataA()
+        } else {
+            lunchTypeB = action.title
+            updateDataB()
+        }
+        
         return
     }
     
@@ -134,13 +136,13 @@ class ClassScheduleViewController: UIViewController {
         lunchEndC.text = "--------"
         start3C.text = "12:10 PM"
         lunchTypeC = "Select Lunch"
+        updateDataC()
         
         return
     }
     lazy var optionClosureC = { [self](action: UIAction) in
         self.lunchDropdownC.setTitleColor(.black, for: .normal)
         
-        lunchTypeC = action.title
         switch(action.title) {
         case "A Lunch":
             lunchStartC.text = "12:05 PM"
@@ -158,6 +160,9 @@ class ClassScheduleViewController: UIViewController {
             start3C.text = "1:45 PM"
             break;
         }
+        
+        lunchTypeC = action.title
+        updateDataC()
         
         return
     }
@@ -215,102 +220,230 @@ class ClassScheduleViewController: UIViewController {
         }
     }
     
+    func reloadDataC() {
+        class1C.text = classesC[0]
+        class2C.text = classesC[1]
+        class3C.text = classesC[2]
+        class4C.text = classesC[3]
+        class5C.text = classesC[4]
+        class6C.text = classesC[5]
+        class7C.text = classesC[6]
+        class8C.text = classesC[7]
+        
+        teacher1C.text = teachersC[0]
+        teacher2C.text = teachersC[1]
+        teacher3C.text = teachersC[2]
+        teacher4C.text = teachersC[3]
+        teacher5C.text = teachersC[4]
+        teacher6C.text = teachersC[5]
+        teacher7C.text = teachersC[6]
+        teacher8C.text = teachersC[7]
+        
+        var actionArr: [UIAction] = []
+        if "Select Lunch" != lunchTypeC {
+            actionArr.append(UIAction(title: "Select Lunch", handler: placeholderClosureC))
+        }
+        if "A Lunch" != lunchTypeC {
+            actionArr.append(UIAction(title: "A Lunch", handler: optionClosureC))
+        }
+        if "B Lunch" != lunchTypeC {
+            actionArr.append(UIAction(title: "B Lunch", handler: optionClosureC))
+        }
+        if "C Lunch" != lunchTypeC {
+            actionArr.append(UIAction(title: "C Lunch", handler: optionClosureC))
+        }
+        
+        let newAction = UIAction(title: lunchTypeC, state: .on, handler: lunchTypeC == "Select Lunch" ? placeholderClosureC : optionClosureC)
+        actionArr.append(newAction)
+        lunchDropdownC.menu = UIMenu(children: actionArr)
+        
+        if(lunchTypeC == "Select Lunch") {
+            placeholderClosureC(newAction)
+        } else {
+            optionClosureC(newAction)
+        }
+    }
+    
+    func updateDataA() {
+        let newDay = Day(type: "A", classes: classesA, teachers: teachersA, lunchType: lunchTypeA)
+        let jsonEncoder = JSONEncoder()
+        if let jsonData = try? jsonEncoder.encode(newDay),
+            let jsonString = String(data: jsonData, encoding: .utf8) {
+            print(jsonString)
+            
+            try? jsonData.write(to: self.archiveURLs[0],
+               options: .noFileProtection)
+        }
+    }
+    
+    func updateDataB() {
+        let newDay = Day(type: "B", classes: classesB, teachers: teachersB, lunchType: lunchTypeB)
+        let jsonEncoder = JSONEncoder()
+        if let jsonData = try? jsonEncoder.encode(newDay),
+            let jsonString = String(data: jsonData, encoding: .utf8) {
+            print(jsonString)
+            
+            try? jsonData.write(to: self.archiveURLs[1],
+               options: .noFileProtection)
+        }
+    }
+    
+    func updateDataC() {
+        let newDay = Day(type: "C", classes: classesC, teachers: teachersC, lunchType: lunchTypeC)
+        let jsonEncoder = JSONEncoder()
+        if let jsonData = try? jsonEncoder.encode(newDay),
+            let jsonString = String(data: jsonData, encoding: .utf8) {
+            print(jsonString)
+            
+            try? jsonData.write(to: self.archiveURLs[2],
+               options: .noFileProtection)
+        }
+    }
+    
     @IBAction func class15Edited(_ sender: UITextField) {
         if(isA) {
             classesA[0] = sender.text!
+            updateDataA()
         } else {
             classesB[0] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func class26Edited(_ sender: UITextField) {
         if(isA) {
             classesA[1] = sender.text!
+            updateDataA()
         } else {
             classesB[1] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func class37Edited(_ sender: UITextField) {
         if(isA) {
             classesA[2] = sender.text!
+            updateDataA()
         } else {
             classesB[2] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func class48Edited(_ sender: UITextField) {
         if(isA) {
             classesA[3] = sender.text!
+            updateDataA()
         } else {
             classesB[3] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func teacher15Edited(_ sender: UITextField) {
         if(isA) {
             teachersA[0] = sender.text!
+            updateDataA()
         } else {
             teachersB[0] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func teacher26Edited(_ sender: UITextField) {
         if(isA) {
             teachersA[1] = sender.text!
+            updateDataA()
         } else {
             teachersB[1] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func teacher37Edited(_ sender: UITextField) {
         if(isA) {
             teachersA[2] = sender.text!
+            updateDataA()
         } else {
             teachersB[2] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func teacher48Edited(_ sender: UITextField) {
         if(isA) {
             teachersA[3] = sender.text!
+            updateDataA()
         } else {
             teachersB[3] = sender.text!
+            updateDataB()
         }
     }
     
     @IBAction func class1CEdited(_ sender: UITextField) {
+        classesC[0] = class1C.text!
+        updateDataC()
     }
     @IBAction func class5CEdited(_ sender: UITextField) {
+        classesC[4] = class5C.text!
+        updateDataC()
     }
     @IBAction func class2CEdited(_ sender: UITextField) {
+        classesC[1] = class2C.text!
+        updateDataC()
     }
     @IBAction func class6CEdited(_ sender: UITextField) {
+        classesC[5] = class6C.text!
+        updateDataC()
     }
     @IBAction func class3CEdited(_ sender: UITextField) {
+        classesC[2] = class3C.text!
+        updateDataC()
     }
     @IBAction func class7CEdited(_ sender: UITextField) {
+        classesC[6] = class7C.text!
+        updateDataC()
     }
     @IBAction func class4CEdited(_ sender: UITextField) {
+        classesC[3] = class4C.text!
+        updateDataC()
     }
     @IBAction func class8CEdited(_ sender: UITextField) {
+        classesC[7] = class8C.text!
+        updateDataC()
     }
     
     @IBAction func teacher1CEdited(_ sender: UITextField) {
+        teachersC[0] = teacher1C.text!
+        updateDataC()
     }
     @IBAction func teacher5CEdited(_ sender: UITextField) {
+        teachersC[4] = teacher5C.text!
+        updateDataC()
     }
     @IBAction func teacher2CEdited(_ sender: UITextField) {
+        teachersC[1] = teacher2C.text!
+        updateDataC()
     }
     @IBAction func teacher6CEdited(_ sender: UITextField) {
+        teachersC[5] = teacher6C.text!
+        updateDataC()
     }
     @IBAction func teacher3CEdited(_ sender: UITextField) {
+        teachersC[2] = teacher3C.text!
+        updateDataC()
     }
     @IBAction func teacher7CEdited(_ sender: UITextField) {
+        teachersC[6] = teacher7C.text!
+        updateDataC()
     }
     @IBAction func teacher4CEdited(_ sender: UITextField) {
+        teachersC[3] = teacher4C.text!
+        updateDataC()
     }
     @IBAction func teacher8CEdited(_ sender: UITextField) {
+        teachersC[7] = teacher8C.text!
+        updateDataC()
     }
     
     @IBAction func seguePressed(_ sender: UISegmentedControl) {
@@ -346,6 +479,10 @@ class ClassScheduleViewController: UIViewController {
         teachersB = ["Teacher 5", "Teacher 6", "Teacher 7", "Teacher 8"]
         lunchTypeB = "Select Lunch"
         
+        classesC = ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8"]
+        teachersC = ["Teacher 1", "Teacher 2", "Teacher 3", "Teacher 4", "Teacher 5", "Teacher 6", "Teacher 7", "Teacher 8"]
+        lunchTypeC = "Select Lunch"
+        
         // A & B Day Lunch Dropdown
         
         lunchDropdown.showsMenuAsPrimaryAction = true
@@ -368,8 +505,41 @@ class ClassScheduleViewController: UIViewController {
             UIAction(title: "C Lunch", handler: optionClosureC)
         ])
         
+        for i in 0..<3 {
+            let url = documentsDirectory.appendingPathComponent("day\(i + 1)")
+                .appendingPathExtension("plist")
+            archiveURLs.append(url)
+            
+            let jsonDecoder = JSONDecoder()
+            if let retrievedData = try? Data(contentsOf: url),
+                let decodedData = try?
+               jsonDecoder.decode(Day.self,
+               from: retrievedData) {
+                print(decodedData)
+                
+                switch(decodedData.type) {
+                case "A":
+                    classesA = decodedData.classes
+                    teachersA = decodedData.teachers
+                    lunchTypeA = decodedData.lunchType
+                    break;
+                case "B":
+                    classesB = decodedData.classes
+                    teachersB = decodedData.teachers
+                    lunchTypeB = decodedData.lunchType
+                    break;
+                default:
+                    classesC = decodedData.classes
+                    teachersC = decodedData.teachers
+                    lunchTypeC = decodedData.lunchType
+                    break;
+                }
+            }
+        }
+        
         // Reload data
         reloadDataAB()
+        reloadDataC()
     }
 }
 
