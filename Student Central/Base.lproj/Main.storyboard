@@ -584,11 +584,11 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqd-2D-4lG">
-                                <rect key="frame" x="471" y="64" width="191.5" height="41"/>
+                                <rect key="frame" x="468.5" y="64" width="196.5" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="bGw-u9-MB2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
