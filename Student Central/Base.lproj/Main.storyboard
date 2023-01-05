@@ -516,7 +516,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jBF-y0-p1M">
-                                <rect key="frame" x="126" y="211.5" width="860" height="180"/>
+                                <rect key="frame" x="126" y="211.5" width="860" height="179.99999999999994"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-rg-8H2">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="180"/>
@@ -4408,26 +4408,26 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZH1-0y-iWi"/>
                     <connections>
-                        <outlet property="dep1" destination="5Vg-p7-5vv" id="ugO-Dg-qTa"/>
-                        <outlet property="dep2" destination="38v-Xs-tUk" id="1aH-tu-WFI"/>
-                        <outlet property="dep3" destination="cCV-Gu-lMx" id="BiG-Gf-HGL"/>
-                        <outlet property="dep4" destination="581-BA-CK0" id="QG9-Mw-Xye"/>
-                        <outlet property="dep5" destination="AqC-if-y0i" id="BEB-Dm-MP4"/>
-                        <outlet property="dep6" destination="Jln-eW-CaZ" id="2gh-Oe-VD0"/>
-                        <outlet property="dep7" destination="Yug-zW-ZuZ" id="Cwz-2F-Vdv"/>
-                        <outlet property="dep8" destination="Yug-zW-ZuZ" id="0Bd-uu-esu"/>
-                        <outlet property="p1" destination="u11-a1-RJM" id="R15-YZ-mO1"/>
-                        <outlet property="p2" destination="8IP-I8-cQz" id="NzA-jC-wY4"/>
-                        <outlet property="p3" destination="0gV-5V-Whb" id="o2j-2A-SVD"/>
-                        <outlet property="p4" destination="mV8-2v-E6q" id="QF9-aB-HHU"/>
-                        <outlet property="p5" destination="YZU-T7-fy8" id="fdc-0i-iyr"/>
-                        <outlet property="p6" destination="1mb-Wd-YZ1" id="0nN-Er-vm9"/>
-                        <outlet property="p7" destination="1Bb-ol-T2X" id="9O4-GD-yFo"/>
-                        <outlet property="p8" destination="cYB-NC-M31" id="b62-kJ-MM7"/>
+                        <outlet property="departure1" destination="5Vg-p7-5vv" id="fNS-bk-tFb"/>
+                        <outlet property="departure2" destination="38v-Xs-tUk" id="9aI-t3-uy9"/>
+                        <outlet property="departure3" destination="cCV-Gu-lMx" id="Rx5-71-yp9"/>
+                        <outlet property="departure4" destination="581-BA-CK0" id="VCX-cR-ucI"/>
+                        <outlet property="departure5" destination="AqC-if-y0i" id="Yxk-5e-fEK"/>
+                        <outlet property="departure6" destination="Jln-eW-CaZ" id="BaA-Wg-YbQ"/>
+                        <outlet property="departure7" destination="NQq-ol-6n6" id="hA2-DC-2Nw"/>
+                        <outlet property="departure8" destination="Yug-zW-ZuZ" id="JSj-46-g79"/>
+                        <outlet property="period1" destination="u11-a1-RJM" id="a2O-g5-8eo"/>
+                        <outlet property="period2" destination="8IP-I8-cQz" id="pwH-4O-Jc4"/>
+                        <outlet property="period3" destination="mV8-2v-E6q" id="1xX-lj-K9n"/>
+                        <outlet property="period4" destination="mV8-2v-E6q" id="eqk-hT-Yfn"/>
+                        <outlet property="period5" destination="YZU-T7-fy8" id="HUA-Un-2W3"/>
+                        <outlet property="period6" destination="1mb-Wd-YZ1" id="iat-IQ-fBZ"/>
+                        <outlet property="period7" destination="1Bb-ol-T2X" id="QQW-3F-0TH"/>
+                        <outlet property="period8" destination="cYB-NC-M31" id="vWF-hD-evb"/>
                         <outlet property="route1" destination="GGd-Is-P6u" id="TK7-ll-ImQ"/>
                         <outlet property="route2" destination="h0M-er-DSs" id="jPw-dQ-vSm"/>
+                        <outlet property="scheduleSwitch" destination="2Ak-Qq-9Dn" id="YDY-gy-CEJ"/>
                         <outlet property="sv" destination="37O-hy-aKe" id="TEI-GI-Dpo"/>
-                        <outlet property="switchViewAction" destination="2Ak-Qq-9Dn" id="cou-21-V1I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u4r-Uw-ebu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -547,6 +547,27 @@ class ShuttleViewController: UIViewController {
     @IBOutlet var route1: UILabel!
     @IBOutlet var sv: UIStackView!
     @IBOutlet var route2: UILabel!
+    @IBOutlet var scheduleSwitch: UISegmentedControl!
+    
+    // Periods
+    @IBOutlet var period1: UILabel!
+    @IBOutlet var period2: UILabel!
+    @IBOutlet var period3: UILabel!
+    @IBOutlet var period4: UILabel!
+    @IBOutlet var period5: UILabel!
+    @IBOutlet var period6: UILabel!
+    @IBOutlet var period7: UILabel!
+    @IBOutlet var period8: UILabel!
+    
+    // Departure Times
+    @IBOutlet var departure1: UILabel!
+    @IBOutlet var departure2: UILabel!
+    @IBOutlet var departure3: UILabel!
+    @IBOutlet var departure4: UILabel!
+    @IBOutlet var departure5: UILabel!
+    @IBOutlet var departure6: UILabel!
+    @IBOutlet var departure7: UILabel!
+    @IBOutlet var departure8: UILabel!
     
     func rotation() {
         let size = UIScreen.main.bounds.size
