@@ -547,6 +547,27 @@ class ShuttleViewController: UIViewController {
     @IBOutlet var route1: UILabel!
     @IBOutlet var sv: UIStackView!
     @IBOutlet var route2: UILabel!
+    @IBOutlet var scheduleSwitch: UISegmentedControl!
+    
+    // Periods
+    @IBOutlet var period1: UILabel!
+    @IBOutlet var period2: UILabel!
+    @IBOutlet var period3: UILabel!
+    @IBOutlet var period4: UILabel!
+    @IBOutlet var period5: UILabel!
+    @IBOutlet var period6: UILabel!
+    @IBOutlet var period7: UILabel!
+    @IBOutlet var period8: UILabel!
+    
+    // Departure Times
+    @IBOutlet var departure1: UILabel!
+    @IBOutlet var departure2: UILabel!
+    @IBOutlet var departure3: UILabel!
+    @IBOutlet var departure4: UILabel!
+    @IBOutlet var departure5: UILabel!
+    @IBOutlet var departure6: UILabel!
+    @IBOutlet var departure7: UILabel!
+    @IBOutlet var departure8: UILabel!
     
     func rotation() {
         let size = UIScreen.main.bounds.size
@@ -558,6 +579,88 @@ class ShuttleViewController: UIViewController {
             sv.spacing = 50
         }
     }
+    
+    func setCHSSchedules() {
+        period1.text = "1/5"
+        period2.text = "2/6"
+        period3.text = "3/7"
+        period4.text = "4/8"
+        
+        period5.text = "1/5"
+        period6.text = "2/6"
+        period7.text = "3/7"
+        period8.text = "4/8"
+        
+        departure1.text = "8:40 AM"
+        departure2.text = "10:20 AM"
+        departure3.text = "11:55 AM"
+        departure4.text = "2:25 PM"
+        
+        departure5.text = "8:40 AM"
+        departure6.text = "10:20 AM"
+        departure7.text = "11:55 AM"
+        departure8.text = "2:25 PM"
+    }
+    
+    func setCHS9Schedules() {
+        period1.text = "2/6"
+        period2.text = "3/7"
+        period3.text = "4/8"
+        period4.text = "School End"
+        
+        period5.text = "1/5"
+        period6.text = "2/6"
+        period7.text = "3/7"
+        period8.text = "4/8"
+        
+        departure1.text = "10:20 AM"
+        departure2.text = "11:55 AM"
+        departure3.text = "2:30 PM"
+        departure4.text = "4:05 PM"
+        
+        departure5.text = "8:40 AM"
+        departure6.text = "10:20 AM"
+        departure7.text = "11:55 AM"
+        departure8.text = "2:30 PM"
+    }
+    
+    func setNewTechSchedules() {
+        period1.text = "2/6"
+        period2.text = "3/7"
+        period3.text = "4/8"
+        period4.text = "School End"
+        
+        period5.text = "2/6"
+        period6.text = "3/7"
+        period7.text = "4/8"
+        period8.text = " "
+        
+        departure1.text = "10:20 AM"
+        departure2.text = "12:00 PM"
+        departure3.text = "2:25 PM"
+        departure4.text = "4:00 PM"
+        
+        departure5.text = "10:20 AM"
+        departure6.text = "12:00 PM"
+        departure7.text = "2:25 PM"
+        departure8.text = " "
+        
+    }
+    
+    @IBAction func scheduleSwitched(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            setCHSSchedules()
+            break;
+        case 1:
+            setCHS9Schedules()
+            break;
+        default:
+            setNewTechSchedules()
+            break;
+        }
+    }
+    
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
