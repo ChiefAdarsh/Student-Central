@@ -512,8 +512,10 @@
                                     <segue destination="sOp-Ac-EOj" kind="show" id="L1L-wY-a6A"/>
                                 </connections>
                             </button>
+
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jBF-y0-p1M">
                                 <rect key="frame" x="126" y="155" width="860" height="150"/>
+
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-rg-8H2">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="150"/>
@@ -4246,6 +4248,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vKC-bd-bTb">
                                 <rect key="frame" x="137" y="191" width="835" height="32"/>
                                 <segments>
+
                                     <segment title="A Day"/>
                                     <segment title="B Day"/>
                                     <segment title="C Day"/>
@@ -4253,6 +4256,7 @@
                                 <connections>
                                     <action selector="seguePressed:" destination="Qnv-xs-MpD" eventType="valueChanged" id="EUw-4w-D24"/>
                                     <action selector="seguePressed:" destination="r2A-uC-XD7" eventType="valueChanged" id="YGi-b2-Pcm"/>
+
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWd-Z7-ITm">
@@ -4299,6 +4303,7 @@
                                                             </label>
                                                         </subviews>
                                                         <constraints>
+
                                                             <constraint firstItem="rfm-Ve-95i" firstAttribute="height" secondItem="nZH-xP-mMM" secondAttribute="height" id="81s-Nv-yH9"/>
                                                             <constraint firstItem="H5c-y1-yhX" firstAttribute="height" secondItem="nZH-xP-mMM" secondAttribute="height" id="9Ra-Z1-KwH"/>
                                                             <constraint firstItem="Q81-eL-vmy" firstAttribute="height" secondItem="nZH-xP-mMM" secondAttribute="height" id="GkT-f6-7Wm"/>
