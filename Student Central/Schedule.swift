@@ -580,6 +580,88 @@ class ShuttleViewController: UIViewController {
         }
     }
     
+    func setCHSSchedules() {
+        period1.text = "1/5"
+        period2.text = "2/6"
+        period3.text = "3/7"
+        period4.text = "4/8"
+        
+        period5.text = "1/5"
+        period6.text = "2/6"
+        period7.text = "3/7"
+        period8.text = "4/8"
+        
+        departure1.text = "8:40 AM"
+        departure2.text = "10:20 AM"
+        departure3.text = "11:55 AM"
+        departure4.text = "2:25 PM"
+        
+        departure5.text = "8:40 AM"
+        departure6.text = "10:20 AM"
+        departure7.text = "11:55 AM"
+        departure8.text = "2:25 PM"
+    }
+    
+    func setCHS9Schedules() {
+        period1.text = "2/6"
+        period2.text = "3/7"
+        period3.text = "4/8"
+        period4.text = "School End"
+        
+        period5.text = "1/5"
+        period6.text = "2/6"
+        period7.text = "3/7"
+        period8.text = "4/8"
+        
+        departure1.text = "10:20 AM"
+        departure2.text = "11:55 AM"
+        departure3.text = "2:30 PM"
+        departure4.text = "4:05 PM"
+        
+        departure5.text = "8:40 AM"
+        departure6.text = "10:20 AM"
+        departure7.text = "11:55 AM"
+        departure8.text = "2:30 PM"
+    }
+    
+    func setNewTechSchedules() {
+        period1.text = "2/6"
+        period2.text = "3/7"
+        period3.text = "4/8"
+        period4.text = "School End"
+        
+        period5.text = "2/6"
+        period6.text = "3/7"
+        period7.text = "4/8"
+        period8.text = " "
+        
+        departure1.text = "10:20 AM"
+        departure2.text = "12:00 PM"
+        departure3.text = "2:25 PM"
+        departure4.text = "4:00 PM"
+        
+        departure5.text = "10:20 AM"
+        departure6.text = "12:00 PM"
+        departure7.text = "2:25 PM"
+        departure8.text = " "
+        
+    }
+    
+    @IBAction func scheduleSwitched(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            setCHSSchedules()
+            break;
+        case 1:
+            setCHS9Schedules()
+            break;
+        default:
+            setNewTechSchedules()
+            break;
+        }
+    }
+    
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         rotation()

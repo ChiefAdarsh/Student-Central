@@ -4114,10 +4114,10 @@
                                 <segments>
                                     <segment title="CHS"/>
                                     <segment title="CHS9"/>
-                                    <segment title="NewTech"/>
+                                    <segment title="New Tech"/>
                                 </segments>
                                 <connections>
-                                    <action selector="switchViewAction:" destination="5YO-cp-cJ4" eventType="valueChanged" id="uFn-MA-1on"/>
+                                    <action selector="scheduleSwitched:" destination="5YO-cp-cJ4" eventType="valueChanged" id="eBa-AO-frk"/>
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="97" translatesAutoresizingMaskIntoConstraints="NO" id="37O-hy-aKe">
