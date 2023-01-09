@@ -22,6 +22,7 @@
 		65D3F2BA293548D500B00B91 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B2293548D500B00B91 /* Contact.swift */; };
 		65D3F2BB293548D500B00B91 /* Student Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B3293548D500B00B91 /* Student Help.swift */; };
 		65F16259294B9C5E0090C3C3 /* ContactAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F16258294B9C5E0090C3C3 /* ContactAdmin.swift */; };
+		C9FDC99F29660DCB004C6CAD /* SpriteStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FDC99E29660DCB004C6CAD /* SpriteStuff.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		65D3F2B2293548D500B00B91 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		65D3F2B3293548D500B00B91 /* Student Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student Help.swift"; sourceTree = "<group>"; };
 		65F16258294B9C5E0090C3C3 /* ContactAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAdmin.swift; sourceTree = "<group>"; };
+		C9FDC99E29660DCB004C6CAD /* SpriteStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteStuff.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				65D3F2842935345600B00B91 /* AppDelegate.swift */,
+				C9FDC99E29660DCB004C6CAD /* SpriteStuff.swift */,
 				65D3F2862935345600B00B91 /* SceneDelegate.swift */,
 				65D3F2882935345600B00B91 /* ViewController.swift */,
 				65D3F2B1293548D500B00B91 /* Home.swift */,
@@ -167,6 +170,7 @@
 			files = (
 				65D3F2BA293548D500B00B91 /* Contact.swift in Sources */,
 				65D3F2B4293548D500B00B91 /* Notifications.swift in Sources */,
+				C9FDC99F29660DCB004C6CAD /* SpriteStuff.swift in Sources */,
 				65D3F2892935345600B00B91 /* ViewController.swift in Sources */,
 				65D3F2B8293548D500B00B91 /* Settings.swift in Sources */,
 				65D3F2B7293548D500B00B91 /* Maps.swift in Sources */,

@@ -63,27 +63,29 @@ class CounselorContactsTableViewController: UITableViewController, MFMailCompose
 
 class AdminInfoViewController: UIViewController, UINavigationControllerDelegate {
     var backTitle: String!
-    @IBOutlet var stackView: UIStackView!
+    //@IBOutlet var stackView: UIStackView!
     
-    func rotation() {
-        let size = UIScreen.main.bounds.size
-        if size.height < size.width {
-            stackView.axis = .horizontal
-            stackView.spacing = 66
-        } else {
-            stackView.axis = .vertical
-            stackView.spacing = 0
-        }
-    }
+//    func rotation() {
+//        let size = UIScreen.main.bounds.size
+//        if size.height < size.width {
+//            stackView.axis = .horizontal
+//            stackView.spacing = 66
+//        } else {
+//            stackView.axis = .vertical
+//            stackView.spacing = 0
+//        }
+//    }
     
     @IBOutlet var EmailBtn: UIButton!
     @IBOutlet var AdminLbl: UILabel!
     @IBOutlet var AdminPic: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("full name: \"\(selectedAdmin.fullName)\"")
+        print("image: \"\(selectedAdmin.imgStr!)\"")
         AdminLbl.text = "\(selectedAdmin.fullName), \(selectedAdmin.adminTypeDetailed)"
         AdminPic.image = UIImage(named: selectedAdmin.imgStr!)
-        rotation()
+        //rotation()
         // Do any additional setup after loading the view.
     }
     
