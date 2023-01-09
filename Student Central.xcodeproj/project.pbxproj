@@ -20,6 +20,8 @@
 		172A8A802968B87C0052D04D /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 172A8A7F2968B87C0052D04D /* FirebaseFirestoreSwift */; };
 		172A8A822968B87C0052D04D /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 172A8A812968B87C0052D04D /* FirebasePerformance */; };
 		172A8A842968B87C0052D04D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 172A8A832968B87C0052D04D /* FirebaseStorage */; };
+		17D65E22296C9E6F0033C92F /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 17D65E21296C9E6F0033C92F /* GoogleSignIn */; };
+		17D65E24296C9E6F0033C92F /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 17D65E23296C9E6F0033C92F /* GoogleSignInSwift */; };
 		65D3F2852935345600B00B91 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2842935345600B00B91 /* AppDelegate.swift */; };
 		65D3F2872935345600B00B91 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2862935345600B00B91 /* SceneDelegate.swift */; };
 		65D3F2892935345600B00B91 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2882935345600B00B91 /* ViewController.swift */; };
@@ -66,11 +68,13 @@
 				172A8A822968B87C0052D04D /* FirebasePerformance in Frameworks */,
 				172A8A7C2968B87C0052D04D /* FirebaseDatabaseSwift in Frameworks */,
 				172A8A722968B87C0052D04D /* FirebaseAnalyticsSwift in Frameworks */,
+				17D65E22296C9E6F0033C92F /* GoogleSignIn in Frameworks */,
 				172A8A782968B87C0052D04D /* FirebaseAuthCombine-Community in Frameworks */,
 				172A8A762968B87C0052D04D /* FirebaseAuth in Frameworks */,
 				172A8A842968B87C0052D04D /* FirebaseStorage in Frameworks */,
 				172A8A6E2968B87C0052D04D /* FirebaseAnalytics in Frameworks */,
 				172A8A802968B87C0052D04D /* FirebaseFirestoreSwift in Frameworks */,
+				17D65E24296C9E6F0033C92F /* GoogleSignInSwift in Frameworks */,
 				172A8A7E2968B87C0052D04D /* FirebaseFirestore in Frameworks */,
 				172A8A702968B87C0052D04D /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				172A8A7A2968B87C0052D04D /* FirebaseDatabase in Frameworks */,
@@ -150,6 +154,8 @@
 				172A8A7F2968B87C0052D04D /* FirebaseFirestoreSwift */,
 				172A8A812968B87C0052D04D /* FirebasePerformance */,
 				172A8A832968B87C0052D04D /* FirebaseStorage */,
+				17D65E21296C9E6F0033C92F /* GoogleSignIn */,
+				17D65E23296C9E6F0033C92F /* GoogleSignInSwift */,
 			);
 			productName = "Student Central";
 			productReference = 65D3F2812935345600B00B91 /* Student Central.app */;
@@ -181,6 +187,7 @@
 			mainGroup = 65D3F2782935345600B00B91;
 			packageReferences = (
 				172A8A6C2968B87C0052D04D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				17D65E20296C9E6E0033C92F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 65D3F2822935345600B00B91 /* Products */;
 			projectDirPath = "";
@@ -461,6 +468,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		17D65E20296C9E6E0033C92F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -523,6 +538,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 172A8A6C2968B87C0052D04D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		17D65E21296C9E6F0033C92F /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D65E20296C9E6E0033C92F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		17D65E23296C9E6F0033C92F /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17D65E20296C9E6E0033C92F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
