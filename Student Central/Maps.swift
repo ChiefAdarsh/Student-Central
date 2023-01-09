@@ -7,43 +7,32 @@
 
 import UIKit
 
-class MapsViewController: UIViewController {
-
-    @IBOutlet var toggle: UISwitch!
-    @IBOutlet var inOrOut: UILabel!
-    @IBOutlet var maps: UIImageView!
-    @IBOutlet var outsideMaps: UIImageView!
-    
-   
+class MapsViewController: UIViewController, UIScrollViewDelegate {
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var pick1: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpScrollView()
+        imageView.image = UIImage(named:"Inside Map-1")
         
-        outsideMaps.isHidden = true
-        maps.isHidden = false
-        // Do any additional setup after loading the view.
     }
     
-    @IBAction func togglePressed(_ sender: UISwitch) {
-        if sender.isOn {
-            maps.isHidden = false
-            outsideMaps.isHidden = true
-            inOrOut.text = "In School"
-        } else {
-            maps.isHidden = true
-            outsideMaps.isHidden = false
-            inOrOut.text = "Out of School"
+    func setUpScrollView() {
+        scrollView.delegate = self
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    @IBAction func SegeValueChange(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0{
+            imageView.image = UIImage(named:"Inside Map-1")
         }
+        if sender.selectedSegmentIndex == 1{
+            imageView.image = UIImage(named:"Outside Map-1")
+        }
+        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -682,3 +682,23 @@ class ShuttleViewController: UIViewController {
         route2.attributedText = attributedText2
     }
 }
+
+class CalendarViewController: UIViewController, UIScrollViewDelegate {
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var imageView: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpScrollView()
+        imageView.image = UIImage(named:"calendar")
+    }
+    
+    func setUpScrollView() {
+        scrollView.delegate = self
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+
+}
