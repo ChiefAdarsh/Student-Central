@@ -30,6 +30,7 @@ class CounselorContactsTableViewController: UITableViewController, MFMailCompose
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CounselorCell", for: indexPath)
+        cell.tag = indexPath.row
 
         // Configure the cell...
 
@@ -49,16 +50,26 @@ class CounselorContactsTableViewController: UITableViewController, MFMailCompose
         return cell
     }
     
-    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
-        
-        for i in 0...(counselorList.count - 1) {
-            if indexPath[1] == i {
-                selectedAdmin = counselorList[i]
-                print(selectedAdmin.fullName)
-            }
-        }
+//    override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
+////        tableView.deselectRow(at: indexPath, animated: true)
+//
+//        for i in 0...(counselorList.count - 1) {
+//            if indexPath[1] == i {
+//                selectedAdmin = counselorList[i]
+//                print(selectedAdmin.fullName)
+//                print(indexPath)
+//
+//            }
+//        }
+//
+//
+//    }
+    
+    @IBSegueAction func counselorClicked(_ coder: NSCoder, sender: UITableViewCell?) -> AdminInfoViewController? {
+        selectedAdmin = counselorList[sender!.tag]
+        return AdminInfoViewController(coder: coder)
     }
+    
 }
 
 class AdminInfoViewController: UIViewController, UINavigationControllerDelegate {
@@ -154,8 +165,6 @@ class RequestItemsViewController: UIViewController, UINavigationControllerDelega
          
         // WHOEVER IS DOING THE CODE FOR THIS, MAKE IT COMPOSE AN EMAIL WITH THE BODY, SUBJECT, AND EMAIL
         // IDK HOW TO DO THAT BUT WHOEVER DID IT ON THE REPORT AN ISSUE FOR TEACHER APP DO IT HERE AGAIN
-        
-        
     }
 
 }
