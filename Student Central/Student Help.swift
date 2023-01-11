@@ -217,12 +217,418 @@ class SpecShel: UIViewController {
     }
 }
 
-//
-//  HousingQuestionsViewController.swift
-//  Student Central
-//
-//  Created by Riva Mathur on 12/2/22.
-//
+class genHealthResource: UITableViewController {
+    
+   
+    
+    let genHealth = [    [        "name": "Agape Clinic",        "address": "4104 Junius St, Dallas, TX 75246",        "phone": "972-707-7782",        "hours": "Free 7am-3pm"    ],
+       [        "name": "Baylor Hospital",        "address": "3501 Junius St, Dallas, TX 75246",        "phone": "214-820-0111"    ],
+       [        "name": "Cornerstone Care Center",        "address": "2711 S Ervay St, Dallas, TX 75215",        "phone": "214-426-5468",        "hours": "Free",        "services": "Dental Extractions, Eyeglass clinic (call for appt.), Medical Outreach (Tuesdays 11am-1pm)"    ],
+       [        "name": "Parkland Hospital",        "address": "5200 Harry Hines, Dallas, TX 75235",        "phone": "214-590-8000"    ],
+       [        "name": "QuestCare Clinic",        "address": "9780 LBJ Fwy #124, Dallas, TX 75243",        "phone": "469-317-0028",        "hours": "$10 donation",        "services": "Acute illness"    ]
+    ]
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return genHealth.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
+
+        // Configure the cell...
+        
+        //let resource = resources[indexPath.row]
+        let resource = genHealth[indexPath.row]["name"]
+        cell.textLabel?.text = resource
+
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "genSpec") as? genhSpec{
+            vc.name = (genHealth[indexPath.row]["name"] as? String)!
+            
+            vc.ad = (genHealth[indexPath.row]["address"] as? String)!
+            vc.phon = (genHealth[indexPath.row]["phone"] as? String)!
+
+           self.navigationController?.pushViewController((vc), animated: true)
+        }
+        
+        
+    }
+    
+    
+}
+
+class genhSpec: UIViewController {
+
+    @IBOutlet var Header: UILabel!
+//    @IBOutlet var elig: UILabel!
+//    @IBOutlet var docs: UILabel!
+    @IBOutlet var adi: UILabel!
+    @IBOutlet var phone: UILabel!
+//    @IBOutlet var intake: UILabel!
+//    @IBOutlet var programs: UILabel!
+    
+    var name = ""
+//    var eli = ""
+//    var doc = ""
+    var ad = ""
+    var phon = ""
+//    var intak = ""
+//    var program = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Header.text = name
+//        elig.text = eli
+//        docs.text = doc
+        adi.text = ad
+        phone.text = phon
+//        intake.text = intak
+//        programs.text = program
+    }
+}
+
+class ahResource: UITableViewController {
+    
+   
+    
+    let ahHealth = [    [        "name": "Access and Information Network (AIN)",        "address": "2600 N Stemmons Fwy, Suite 151, Dallas, TX 75027",        "phone": "214-943-4444",        "services": "Transportation, Case Management, Prevention, Outreach, Nutrition, Bi-lingual Services"    ],
+                         [        "name": "Prism Health (South Dallas)",        "address": "4922 Spring Ave, Dallas, TX 75210",        "phone": "214-421-7848",        "services": "Managed Medicaid, Medicare, Outpatient care"    ],
+                         [        "name": "Prism Health (Oak Cliff)",        "address": "219 Sunset Ave, Suite 116-A, Dallas, TX 75208",        "phone": "972-807-7370",        "services": "Managed Medicaid, Medicare, Outpatient care"    ]
+                     ]
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return ahHealth.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
+
+        // Configure the cell...
+        
+        //let resource = resources[indexPath.row]
+        let resource = ahHealth[indexPath.row]["name"]
+        cell.textLabel?.text = resource
+
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ahSpec") as? ahSpec{
+            vc.name = (ahHealth[indexPath.row]["name"] as? String)!
+            
+            vc.ad = (ahHealth[indexPath.row]["address"] as? String)!
+            vc.phon = (ahHealth[indexPath.row]["phone"] as? String)!
+
+           self.navigationController?.pushViewController((vc), animated: true)
+        }
+        
+        
+    }
+    
+    
+}
+
+class ahSpec: UIViewController {
+
+    @IBOutlet var Header: UILabel!
+//    @IBOutlet var elig: UILabel!
+//    @IBOutlet var docs: UILabel!
+    @IBOutlet var adi: UILabel!
+    @IBOutlet var phone: UILabel!
+//    @IBOutlet var intake: UILabel!
+//    @IBOutlet var programs: UILabel!
+    
+    var name = ""
+//    var eli = ""
+//    var doc = ""
+    var ad = ""
+    var phon = ""
+//    var intak = ""
+//    var program = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Header.text = name
+//        elig.text = eli
+//        docs.text = doc
+        adi.text = ad
+        phone.text = phon
+//        intake.text = intak
+//        programs.text = program
+    }
+}
+
+class hResource: UITableViewController {
+    
+   
+    
+    let ahHealth =  [    [        "name": "Green Oaks (Psych Hospital)",        "address": "7808 Clodus Fields Dr, Dallas, TX 75251",        "phone": "972-991-9504",        "services": "Emergency only: For those who are a danger to themselves and others"    ],
+                         [        "name": "IPS Recovery",        "address": "2121 Main St, Suite 100, Dallas, TX 75201",        "phone": "214-331-1200",        "services": "Outpatient Recovery, Anger Management, Mental Health, Drug Testing"    ],
+                         [        "name": "MetroCare",        "address":             "4645 Samuell Blvd, Dallas, TX 75228",  "phone": "214-275-7393"]
+                            
+                         ]
+                         
+
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return ahHealth.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
+
+        // Configure the cell...
+        
+        //let resource = resources[indexPath.row]
+        let resource = ahHealth[indexPath.row]["name"]
+        cell.textLabel?.text = resource as! String
+
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "hSpec") as? hSpec{
+            vc.name = (ahHealth[indexPath.row]["name"] as? String)!
+            
+            vc.ad = (ahHealth[indexPath.row]["address"] as? String)!
+            vc.phon = (ahHealth[indexPath.row]["phone"] as? String)!
+
+           self.navigationController?.pushViewController((vc), animated: true)
+        }
+        
+        
+    }
+    
+    
+}
+
+class hSpec: UIViewController {
+
+    @IBOutlet var Header: UILabel!
+//    @IBOutlet var elig: UILabel!
+//    @IBOutlet var docs: UILabel!
+    @IBOutlet var adi: UILabel!
+    @IBOutlet var phone: UILabel!
+//    @IBOutlet var intake: UILabel!
+//    @IBOutlet var programs: UILabel!
+    
+    var name = ""
+//    var eli = ""
+//    var doc = ""
+    var ad = ""
+    var phon = ""
+//    var intak = ""
+//    var program = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Header.text = name
+//        elig.text = eli
+//        docs.text = doc
+        adi.text = ad
+        phone.text = phon
+//        intake.text = intak
+//        programs.text = program
+    }
+}
+
+class pResource: UITableViewController {
+    
+   
+    
+    let ahHealth = [    [        "name": "The Source for Women",        "address": "525 N Ervay, Dallas, TX 75201",        "phone": "214-969-2433",        "services": "Abortion options counseling, Pregnancy tests, Sonograms"    ],
+        [        "name": "Thrive Women’s Clinic",        "address": "Center Dallas, 6500 Greenville Ave, Suite 600, Dallas, TX 75206",        "phone": "214-343-9263"    ]
+    ]
+                         
+
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return ahHealth.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
+
+        // Configure the cell...
+        
+        //let resource = resources[indexPath.row]
+        let resource = ahHealth[indexPath.row]["name"]
+        cell.textLabel?.text = resource as! String
+
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "pSpec") as? pSpec{
+            vc.name = (ahHealth[indexPath.row]["name"] as? String)!
+            
+            vc.ad = (ahHealth[indexPath.row]["address"] as? String)!
+            vc.phon = (ahHealth[indexPath.row]["phone"] as? String)!
+
+           self.navigationController?.pushViewController((vc), animated: true)
+        }
+        
+        
+    }
+    
+    
+}
+
+class pSpec: UIViewController {
+
+    @IBOutlet var Header: UILabel!
+//    @IBOutlet var elig: UILabel!
+//    @IBOutlet var docs: UILabel!
+    @IBOutlet var adi: UILabel!
+    @IBOutlet var phone: UILabel!
+//    @IBOutlet var intake: UILabel!
+//    @IBOutlet var programs: UILabel!
+    
+    var name = ""
+//    var eli = ""
+//    var doc = ""
+    var ad = ""
+    var phon = ""
+//    var intak = ""
+//    var program = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Header.text = name
+//        elig.text = eli
+//        docs.text = doc
+        adi.text = ad
+        phone.text = phon
+//        intake.text = intak
+//        programs.text = program
+    }
+}
+
+class sResource: UITableViewController {
+    
+   
+    
+    let sHealth = [    [        "name": "APAA",        "address": "3116 MLK Jr Blvd, Dallas, TX 75215",        "phone": "214-634-2722",        "services": "Outpatient substance abuse recovery services"    ],
+                        [        "name": "Dallas 24-Hour Club",        "address": "4636 Ross Ave, Dallas, TX 75024",        "phone": "214-823-3200",        "services": "Length of Stay: 6 months with 3 one-month extensions substance abuse transitional living, Phase 1 $10/day, Phase 2 $15/day"    ],
+                        [        "name": "Dallas Behavioral Healthcare",        "address": "800 Kirnwood Dr, DeSoto, TX 75115",        "phone": "972-982-0900",        "services": "Medicaid, Medicare, Value Options, Dual diagnosis"    ],
+                        [        "name": "Homeward Bound", "phone": "none",          "address": "5300 University Hills Blvd, Dallas, TX 75241",        "services": "Men’s and Women’s Residential Program, Outpatient Services, NTBHA, Medicaid, Detox"    ],
+                        [        "name": "Nexus",        "address": "8733 La Prada Dr, Dallas, TX 75228",        "phone": "214-941-3500",        "services": "Women only, Northstar, Medicaid, Detox"    ],
+                        [        "name": "Turtle Creek",        "address": "2707 Routh St, Dallas, TX 75201",        "phone": "214-871-2483",        "services": "Dual Diagnosis, NTBHA, Medicaid, and Self-Pay"    ]
+                     ]
+
+                         
+
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return sHealth.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
+
+        // Configure the cell...
+        
+        //let resource = resources[indexPath.row]
+        let resource = sHealth[indexPath.row]["name"]
+        cell.textLabel?.text = resource as! String
+
+        return cell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "sSpec") as? sSpec{
+            vc.name = (sHealth[indexPath.row]["name"] as? String)!
+            
+            vc.ad = (sHealth[indexPath.row]["address"] as? String)!
+            vc.phon = (sHealth[indexPath.row]["phone"] as? String)!
+
+           self.navigationController?.pushViewController((vc), animated: true)
+        }
+        
+        
+    }
+    
+    
+}
+
+class sSpec: UIViewController {
+
+    @IBOutlet var Header: UILabel!
+//    @IBOutlet var elig: UILabel!
+//    @IBOutlet var docs: UILabel!
+    @IBOutlet var adi: UILabel!
+    @IBOutlet var phone: UILabel!
+//    @IBOutlet var intake: UILabel!
+//    @IBOutlet var programs: UILabel!
+    
+    var name = ""
+//    var eli = ""
+//    var doc = ""
+    var ad = ""
+    var phon = ""
+//    var intak = ""
+//    var program = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        Header.text = name
+//        elig.text = eli
+//        docs.text = doc
+        adi.text = ad
+        phone.text = phon
+//        intake.text = intak
+//        programs.text = program
+    }
+}
+
 
 import UIKit
 
@@ -2459,183 +2865,5 @@ class specificResourceSupportViewController: UIViewController {
     
 }
 
-class GeneralResource: UITableViewController {
-    
-    @IBOutlet var TV: UITableView!
-    
-    var shelters: [String] = ["Red Cross", "Food Bank"]
-    
-    let organizations = [
-        ["name": "Austin Street Center",
-         "eligibility": ["Men: 45+", "Women: 18+", "No S.O"],
-         "documents": ["ID"],
-         "address": "2929 Hickory St, Dallas, TX 75226",
-         "phone": "214-428-4242",
-         "intake": ["Women: Mon-Sat 2pm, Sun 11am", "Men: Mon-Sat 2pm, Sun 2pm"],
-         "programs": ["Housing-Focused Case Management", "Employment Resource Center", "Food Stamps Assistance", "Social Security Benefits", "ID Assistance", "Mental Health Services", "AA/NA Services"]],
-        ["name": "The Bridge",
-         "eligibility": ["Men: 18+", "Women: 18+"],
-         "documents": ["VL"],
-         "address": "1818 Corsicana St, Dallas, TX 75201",
-         "phone": "214-670-1100",
-         "intake": ["24/7/365"],
-         "programs": ["Meals", "Shelter Day and Night", "Care Management", "MetroCare Services", "Dog Kennel Services", "Designated entry point for singles", "AA Services", "Parkland Health and Hospital System", "Veterans Administration", "Texas Workforce Commission", "Legal Aid of NorthWest Texas"]],
-        ["name": "Center of Hope",
-         "eligibility": ["Women: 18+", "Children"],
-         "documents": ["ID", "SS"],
-         "address": "4815 Cass St, Dallas, TX 75235",
-         "phone": "214-638-2988",
-         "intake": ["Women: Mon-Fri 10am-1pm"],
-         "programs": ["Child Care", "Clinic", "Computer-aided education", "Discipleship", "Job training", "Shelter"]],
-        ["name": "Dallas Life",
-         "eligibility": ["Men: 18+", "Women: 18+", "Children"],
-         "documents": ["ID", "SS"],
-         "address": "1100 Cadiz St, Dallas, TX 75226",
-         "phone": "214-421-1380",
-         "intake": ["4pm-8pm"],
-         "programs": ["10 month Homeless No More/Overcomers Programs", "Pay-to-stay: $12/day"]],
-        ["name": "Family Gateway",
-         "eligibility": ["Men: 18+", "Women: 18+", "Children"],
-         "documents": ["ID", "BC", "SS", "VL"],
-         "address": "711 S Saint Paul St, Dallas, TX 75201",
-         "phone": "888-411-6802",
-         "intake": ["Call 888-411-6802 or complete online assessment at Familygateway.org 24 hours a day / 7 days a week"],
-         "programs": ["Assessment and Diversion", "Emergency Shelter and Supportive Housing", "Case Management", "Adult and Children Services", "Education Program"]],
-        ["name": "The Family Place",
-        "eligibility": ["Men", "Women", "Children"],
-        "documents": ["ID"],
-        "address": "withheld for safety, please call 24 hour crisis hotline at 214-941-1991",
-        "phone": "214-941-1991",
-        "intake": ["24 hour hotline", "Free"],
-        "programs": ["Emergency Shelter", "Transitional Housing", "Legal Help", "Supervised visitation", "Domestic violence and incest counseling", "Batterer’s Intervention groups", "Job Training"]],
-        ["name": "Salvation Army",
-        "eligibility": ["Men", "Women", "Women with Children"],
-        "documents": ["Must obtain ID and TB test within 10 days"],
-        "address": "5302 Harry Hines Blvd, Dallas, TX 75235",
-        "phone": "214-424-7050",
-        "intake": ["First time: (unless full)", "Repeat: 3pm - 3:45pm", "Continuous stay for up to 90 days", "Crisis mats available upon 1st come 1st serve basis for prioritized individuals", "Join a program to stay longer"],
-        "programs": ["90 day Emergency Shelter Program", "Transitional Shelter", "Domestic Violence Program", "Veterans Programs", "Homeless Recovery", "Food Pantry"]],
-        ["name": "Union Gospel Mission",
-        "eligibility": ["Men: 18+"],
-        "documents": ["ID", "VL"],
-        "address": "3211 Irving Blvd, Dallas, TX 75247",
-        "phone": "214-637-6117",
-        "intake": ["3pm - 5pm", "Daily at The Bridge Map: 30", "Free"],
-         "programs": ["Clinic", "Job training", "Long-term discipleship", "Transitional housing", "Veteran programs", "Senior program", "Computer Aided Education", "Shelter"]]]
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return organizations.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EmergencyCell", for: indexPath)
-
-        // Configure the cell...
-
-        let label = cell.viewWithTag(3000) as! UILabel
-        print(type(of: label))
-        for i in 0...(organizations.count - 1) {
-            if indexPath.row == i {
-                label.text = organizations[i]["name"] as? String
-                
-                cell.accessoryType = .disclosureIndicator
-            }
-        }
-        // End of new code block
-        return cell
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "specsh") as? SpecShel{
-            vc.name = (organizations[indexPath.row]["name"] as? String)!
-            
-            for j in 0...(organizations[indexPath.row]["eligibility"] as! [String]).count-1 {
-                if (organizations[indexPath.row]["eligibility"] as! [String]).count - 1 == j   {
-                    vc.eli += (organizations[indexPath.row]["eligibility"] as! [String])[j]
-                } else {
-                    vc.eli += (organizations[indexPath.row]["eligibility"] as! [String])[j] + ",  "
-                }
-                
-            }
-            
-            for j in 0...(organizations[indexPath.row]["documents"] as! [String]).count-1 {
-                if (organizations[indexPath.row]["documents"] as! [String]).count - 1 == j   {
-                    vc.doc += (organizations[indexPath.row]["documents"] as! [String])[j]
-                } else {
-                    vc.doc += (organizations[indexPath.row]["documents"] as! [String])[j] + ",  "
-                }
-                
-            }
-            
-            vc.ad = (organizations[indexPath.row]["address"] as? String)!
-            vc.phon = (organizations[indexPath.row]["phone"] as? String)!
-            
-            
-            for j in 0...(organizations[indexPath.row]["intake"] as! [String]).count-1 {
-                if (organizations[indexPath.row]["intake"] as! [String]).count - 1 == j   {
-                    vc.intak += (organizations[indexPath.row]["intake"] as! [String])[j]
-                } else {
-                    vc.intak += (organizations[indexPath.row]["intake"] as! [String])[j] + ",  "
-                }
-                
-            }
-            for j in 0...(organizations[indexPath.row]["programs"] as! [String]).count-1 {
-                if (organizations[indexPath.row]["programs"] as! [String]).count - 1 == j   {
-                    vc.program += (organizations[indexPath.row]["programs"] as! [String])[j]
-                } else {
-                    vc.program += (organizations[indexPath.row]["programs"] as! [String])[j] + ",  "
-                }
-                
-            }
-//            vc.doc = organizations[indexPath.row]["documents"] as! String
-//            vc.ad = organizations[indexPath.row]["address"] as! String
-//            vc.phon = organizations[indexPath.row]["phone"] as! String
-//            vc.intak = organizations[indexPath.row]["intake"] as! String
-//            vc.program = organizations[indexPath.row]["programs"] as! String
-            
-            
-            self.navigationController?.pushViewController((vc), animated: true)
-        }
-    }
-    
-    
-}
-
-class GenShel: UIViewController {
-
-    @IBOutlet var Header: UILabel!
-    @IBOutlet var elig: UILabel!
-    @IBOutlet var docs: UILabel!
-    @IBOutlet var adi: UILabel!
-    @IBOutlet var phone: UILabel!
-    @IBOutlet var intake: UILabel!
-    @IBOutlet var programs: UILabel!
-    
-    var name = ""
-    var eli = ""
-    var doc = ""
-    var ad = ""
-    var phon = ""
-    var intak = ""
-    var program = ""
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        Header.text = name
-        elig.text = eli
-        docs.text = doc
-        adi.text = ad
-        phone.text = phon
-        intake.text = intak
-        programs.text = program
-    }
-}
