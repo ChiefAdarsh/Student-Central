@@ -18,9 +18,6 @@ class LinksViewController: UIViewController {
     @IBOutlet var Clever: UIButton!
     @IBOutlet var coppellISD: UIButton!
     @IBOutlet var stackView: UIStackView!
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
