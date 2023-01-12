@@ -179,6 +179,7 @@ class ClassScheduleViewController: UIViewController {
             teacher26.text = teachersA[1]
             teacher37.text = teachersA[2]
             teacher48.text = teachersA[3]
+            reloadDataC()
             
             lunchType = lunchTypeA
         } else {
@@ -191,6 +192,8 @@ class ClassScheduleViewController: UIViewController {
             teacher26.text = teachersB[1]
             teacher37.text = teachersB[2]
             teacher48.text = teachersB[3]
+            
+            reloadDataC()
             
             lunchType = lunchTypeB
         }
@@ -221,6 +224,15 @@ class ClassScheduleViewController: UIViewController {
     }
     
     func reloadDataC() {
+        classesC[0] = classesA[0]
+        classesC[1] = classesA[1]
+        classesC[2] = classesA[2]
+        classesC[3] = classesA[3]
+        classesC[4] = classesB[0]
+        classesC[5] = classesB[1]
+        classesC[6] = classesB[2]
+        classesC[7] = classesB[3]
+        
         class1C.text = classesC[0]
         class2C.text = classesC[1]
         class3C.text = classesC[2]
@@ -461,6 +473,7 @@ class ClassScheduleViewController: UIViewController {
         case 2:
             isA = false
             viewContainer.bringSubviewToFront(svView1)
+            reloadDataAB()
             break;
         default:
             break;

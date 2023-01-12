@@ -1305,7 +1305,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sgs-jN-V5w">
-                                <rect key="frame" x="492.5" y="70" width="137.5" height="72"/>
+                                <rect key="frame" x="487.5" y="70" width="137.5" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="72" id="1Ld-k5-Bmx"/>
                                 </constraints>
@@ -1314,10 +1314,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GJQ-FC-d8r">
-                                <rect key="frame" x="101" y="174" width="920" height="631"/>
+                                <rect key="frame" x="101" y="174" width="910" height="631"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-5Z-3Ar" userLabel="ClassScheduleButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="920" height="124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="910" height="124"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="124" id="LOG-UI-3dZ"/>
                                         </constraints>
@@ -1330,7 +1330,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlg-vM-RMc">
-                                        <rect key="frame" x="0.0" y="169" width="920" height="124"/>
+                                        <rect key="frame" x="0.0" y="169" width="910" height="124"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="124" id="5ku-CC-iUk"/>
                                         </constraints>
@@ -1343,7 +1343,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twJ-3p-2vL">
-                                        <rect key="frame" x="0.0" y="338" width="920" height="124"/>
+                                        <rect key="frame" x="0.0" y="338" width="910" height="124"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="124" id="iND-Us-GrG"/>
                                         </constraints>
@@ -1356,7 +1356,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwS-xh-HRM">
-                                        <rect key="frame" x="0.0" y="507" width="920" height="124"/>
+                                        <rect key="frame" x="0.0" y="507" width="910" height="124"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="124" id="EH2-V3-bN7"/>
                                         </constraints>
@@ -1376,13 +1376,13 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JkM-KY-e1W">
-                                <rect key="frame" x="116.5" y="174" width="889" height="632"/>
+                                <rect key="frame" x="116.5" y="174" width="879" height="632"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3cn-gP-cD1">
-                                        <rect key="frame" x="0.0" y="0.0" width="850" height="122"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="850" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFU-Eg-GRP">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="122"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="102" id="3yu-Bx-rf1"/>
                                                     <constraint firstAttribute="height" constant="108" id="HwV-9d-MbY"/>
@@ -1394,10 +1394,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="qym-0n-iHM">
-                                                <rect key="frame" x="117" y="0.0" width="733" height="122"/>
+                                                <rect key="frame" x="117" y="0.0" width="733" height="110"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIp-qp-i7k">
-                                                        <rect key="frame" x="0.0" y="0.0" width="733" height="84"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="733" height="72"/>
                                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Class Schedule">
@@ -1408,7 +1408,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cc-1U-55O">
-                                                        <rect key="frame" x="0.0" y="64" width="733" height="58"/>
+                                                        <rect key="frame" x="0.0" y="52" width="733" height="58"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="58" id="Jl1-jn-Q7M"/>
                                                         </constraints>
@@ -1434,10 +1434,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qXH-CU-91i">
-                                        <rect key="frame" x="0.0" y="170" width="889" height="122"/>
+                                        <rect key="frame" x="0.0" y="174" width="497" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="osl-hG-Akh">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="122"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="108" id="Nzk-op-uRN"/>
                                                     <constraint firstAttribute="width" constant="102" id="UVB-pG-6Uf"/>
@@ -1449,10 +1449,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-Jd-My6">
-                                                <rect key="frame" x="117" y="0.0" width="772" height="122"/>
+                                                <rect key="frame" x="117" y="0.0" width="380" height="110"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJC-lK-fnJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="772" height="72"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="380" height="72"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="72" id="7kC-HU-KTX"/>
                                                         </constraints>
@@ -1466,7 +1466,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9B2-ei-cEq">
-                                                        <rect key="frame" x="0.0" y="52" width="772" height="70"/>
+                                                        <rect key="frame" x="0.0" y="52" width="380" height="58"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="View shuttle bus schedules">
@@ -1487,10 +1487,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DSd-MC-GxY">
-                                        <rect key="frame" x="0.0" y="340" width="889" height="122"/>
+                                        <rect key="frame" x="0.0" y="348" width="507" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8f-xW-HiM">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="122"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="108" id="GVf-HZ-KfY"/>
                                                     <constraint firstAttribute="width" constant="102" id="mvo-b3-Zzj"/>
@@ -1502,10 +1502,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="Gq5-4x-Hzq">
-                                                <rect key="frame" x="117" y="0.0" width="772" height="122"/>
+                                                <rect key="frame" x="117" y="0.0" width="390" height="110"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCP-lA-u3S">
-                                                        <rect key="frame" x="0.0" y="0.0" width="772" height="72"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="390" height="72"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="446" id="h9D-pD-h9w"/>
                                                             <constraint firstAttribute="height" constant="72" id="pRe-zl-68A"/>
@@ -1520,7 +1520,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqU-lF-fJ5">
-                                                        <rect key="frame" x="0.0" y="52" width="772" height="70"/>
+                                                        <rect key="frame" x="0.0" y="52" width="390" height="58"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Email your teachers">
@@ -1539,10 +1539,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WUZ-uM-Eu3">
-                                        <rect key="frame" x="0.0" y="510" width="889" height="122"/>
+                                        <rect key="frame" x="0.0" y="522" width="428" height="110"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prb-Xj-pbv">
-                                                <rect key="frame" x="0.0" y="0.0" width="102" height="122"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="110"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="108" id="1Og-rd-v97"/>
                                                     <constraint firstAttribute="width" constant="102" id="kdV-dZ-cDI"/>
@@ -1554,10 +1554,10 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="VOV-Jt-Stj">
-                                                <rect key="frame" x="117" y="0.0" width="772" height="122"/>
+                                                <rect key="frame" x="117" y="0.0" width="311" height="110"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-6U-0xP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="772" height="72"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="311" height="72"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="72" id="cLz-J6-5H8"/>
                                                         </constraints>
@@ -1571,7 +1571,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPO-no-rVh">
-                                                        <rect key="frame" x="0.0" y="52" width="772" height="70"/>
+                                                        <rect key="frame" x="0.0" y="52" width="311" height="58"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="View 2022-23 calendar">
@@ -1912,13 +1912,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="hBh-9K-BnP">
-                                <rect key="frame" x="89" y="113.5" width="934" height="552"/>
+                                <rect key="frame" x="89" y="113.5" width="934" height="645"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="vDT-sr-s7N">
-                                        <rect key="frame" x="0.0" y="0.0" width="434" height="552"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="434" height="645"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cX-C0-KqY">
-                                                <rect key="frame" x="0.0" y="0.0" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="434" height="176.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDu-Hm-2T5" userLabel="teacherOneBut">
                                                         <rect key="frame" x="20" y="20" width="394" height="113"/>
@@ -1934,19 +1934,19 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12d-Za-LOT">
-                                                        <rect key="frame" x="148" y="34" width="207" height="42"/>
+                                                        <rect key="frame" x="171.5" y="34" width="183.5" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="teacher1@coppellisd.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzG-go-n0t" userLabel="mailOne">
-                                                        <rect key="frame" x="148" y="80" width="233" height="24"/>
+                                                        <rect key="frame" x="171.5" y="80" width="209.5" height="47.5"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.35.29 PM" translatesAutoresizingMaskIntoConstraints="NO" id="8IZ-Xz-Bzs" userLabel="teacherOne">
-                                                        <rect key="frame" x="33" y="33" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="33" width="111.5" height="111.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="8IZ-Xz-Bzs" secondAttribute="height" multiplier="1:1" id="An6-4J-dAT"/>
                                                         </constraints>
@@ -1972,7 +1972,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fc-t4-xpx">
-                                                <rect key="frame" x="0.0" y="133" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="156.5" width="434" height="176"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebx-Kb-e1u" userLabel="teacherTwoBut">
                                                         <rect key="frame" x="20" y="20" width="394" height="113"/>
@@ -1988,13 +1988,13 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.36.15 PM" translatesAutoresizingMaskIntoConstraints="NO" id="FQE-5P-Dfa" userLabel="teacherTwo">
-                                                        <rect key="frame" x="33" y="34" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="34" width="111.5" height="111"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="FQE-5P-Dfa" secondAttribute="height" multiplier="1:1" id="XaK-ft-KPB"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o29-NQ-60a">
-                                                        <rect key="frame" x="148" y="35" width="211.5" height="42"/>
+                                                        <rect key="frame" x="171.5" y="35" width="188" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2023,10 +2023,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggf-Uf-pwZ">
-                                                <rect key="frame" x="0.0" y="266" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="312.5" width="434" height="176.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrC-9S-1hx" userLabel="teacherThreeBut">
-                                                        <rect key="frame" x="20" y="20" width="394" height="113"/>
+                                                        <rect key="frame" x="20" y="20" width="394" height="136.5"/>
                                                         <state key="normal" title="Button" backgroundImage="Screen Shot 2022-11-29 at 12.35.29 PM"/>
                                                         <buttonConfiguration key="configuration" style="gray" cornerStyle="large">
                                                             <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
@@ -2036,13 +2036,13 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.36.23 PM" translatesAutoresizingMaskIntoConstraints="NO" id="lmv-u5-IWp" userLabel="teacherThree">
-                                                        <rect key="frame" x="33" y="34" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="34" width="111.5" height="111.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="lmv-u5-IWp" secondAttribute="height" multiplier="1:1" id="lUz-Xl-8pD"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adH-tt-CeJ">
-                                                        <rect key="frame" x="148" y="35" width="212.5" height="42"/>
+                                                        <rect key="frame" x="171.5" y="35" width="189" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2071,10 +2071,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5a-LB-cyE">
-                                                <rect key="frame" x="0.0" y="399" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="469" width="434" height="176"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmp-Dy-t5Q" userLabel="teacherFourBut">
-                                                        <rect key="frame" x="20" y="20" width="394" height="113"/>
+                                                        <rect key="frame" x="20" y="20" width="394" height="136"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="" cornerStyle="large">
                                                             <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
@@ -2084,13 +2084,13 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.36.32 PM" translatesAutoresizingMaskIntoConstraints="NO" id="io8-mK-UWP" userLabel="teacherFour">
-                                                        <rect key="frame" x="33" y="34" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="34" width="111.5" height="111"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="io8-mK-UWP" secondAttribute="height" multiplier="1:1" id="PK4-8v-5p8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKi-1n-4IA">
-                                                        <rect key="frame" x="148" y="35" width="213" height="42"/>
+                                                        <rect key="frame" x="171.5" y="35" width="189.5" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2121,13 +2121,13 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="dp9-bk-5B7">
-                                        <rect key="frame" x="500" y="0.0" width="434" height="552"/>
+                                        <rect key="frame" x="500" y="0.0" width="434" height="645"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58U-cK-JaG">
-                                                <rect key="frame" x="0.0" y="0.0" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="434" height="176.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ns-Zs-REm" userLabel="teacherFiveBut">
-                                                        <rect key="frame" x="20" y="20" width="394" height="113"/>
+                                                        <rect key="frame" x="20" y="20" width="394" height="136.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" cornerStyle="large">
                                                             <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
@@ -2137,13 +2137,13 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.36.40 PM" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-Sb-Hna" userLabel="teacherFive">
-                                                        <rect key="frame" x="33" y="34" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="34" width="111.5" height="111.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="YLb-Sb-Hna" secondAttribute="height" multiplier="1:1" id="eG8-nf-WJu"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06q-bJ-tDB">
-                                                        <rect key="frame" x="148" y="35" width="212" height="42"/>
+                                                        <rect key="frame" x="171.5" y="35" width="188.5" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2172,10 +2172,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQ9-IG-Qvp">
-                                                <rect key="frame" x="0.0" y="133" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="156.5" width="434" height="176"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8r-4u-60E" userLabel="teacherSixBut">
-                                                        <rect key="frame" x="20" y="20" width="394" height="113"/>
+                                                        <rect key="frame" x="20" y="20" width="394" height="136"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" cornerStyle="large">
                                                             <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
@@ -2185,13 +2185,13 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.36.47 PM" translatesAutoresizingMaskIntoConstraints="NO" id="cGo-VK-9xE" userLabel="teacherSix">
-                                                        <rect key="frame" x="33" y="34" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="34" width="111.5" height="111"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cGo-VK-9xE" secondAttribute="height" multiplier="1:1" id="m3e-vE-JpO"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #6" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5g-RG-YgL">
-                                                        <rect key="frame" x="148" y="35" width="213" height="42"/>
+                                                        <rect key="frame" x="171.5" y="35" width="189.5" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2220,10 +2220,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lt2-Td-o3U">
-                                                <rect key="frame" x="0.0" y="266" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="312.5" width="434" height="176.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaQ-I9-I27" userLabel="teacherSevenBut">
-                                                        <rect key="frame" x="20" y="20" width="394" height="113"/>
+                                                        <rect key="frame" x="20" y="20" width="394" height="136.5"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" cornerStyle="large">
                                                             <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
@@ -2233,13 +2233,13 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.36.53 PM" translatesAutoresizingMaskIntoConstraints="NO" id="O1s-oh-C1n" userLabel="teacherSeven">
-                                                        <rect key="frame" x="33" y="34" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="34" width="111.5" height="111.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="O1s-oh-C1n" secondAttribute="height" multiplier="1:1" id="Plf-UO-nW8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvn-eb-aiD">
-                                                        <rect key="frame" x="148" y="35" width="210.5" height="42"/>
+                                                        <rect key="frame" x="171.5" y="35" width="187" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2268,10 +2268,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-3p-ERN">
-                                                <rect key="frame" x="0.0" y="399" width="434" height="153"/>
+                                                <rect key="frame" x="0.0" y="469" width="434" height="176"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Won-4o-l0j" userLabel="teacherEightBut">
-                                                        <rect key="frame" x="20" y="20" width="394" height="113"/>
+                                                        <rect key="frame" x="20" y="20" width="394" height="136"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" cornerStyle="large">
                                                             <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
@@ -2281,7 +2281,7 @@
                                                         </connections>
                                                     </button>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Screen Shot 2022-11-29 at 12.37.01 PM" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-6g-t1g" userLabel="teacherEight">
-                                                        <rect key="frame" x="33" y="34" width="88" height="88"/>
+                                                        <rect key="frame" x="33" y="34" width="111.5" height="111"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="HHk-6g-t1g" secondAttribute="height" multiplier="1:1" id="DfO-Vk-F16"/>
                                                         </constraints>
@@ -2293,7 +2293,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEACHER #8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6h-bH-kvo">
-                                                        <rect key="frame" x="148" y="35" width="213" height="42"/>
+                                                        <rect key="frame" x="171.5" y="35" width="189.5" height="42"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2326,7 +2326,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOLD BUTTON TO EDIT TEACHER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2u-jl-dnc">
-                                <rect key="frame" x="312" y="673" width="488" height="48"/>
+                                <rect key="frame" x="312" y="766" width="488" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="488" id="3R2-mZ-4V7"/>
                                     <constraint firstAttribute="height" constant="48" id="dGr-Ih-ykT"/>
@@ -4262,7 +4262,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="class15Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="9V0-K0-Zec"/>
+                                                                    <action selector="class15Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="p9E-Mq-NCL"/>
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j50-lN-Zox">
@@ -4270,7 +4270,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="teacher15Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="fWv-EG-xd6"/>
+                                                                    <action selector="teacher15Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="tz0-EQ-uRs"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:50 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qlq-xW-MBx">
@@ -4307,7 +4307,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="class26Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="JHH-op-H7M"/>
+                                                                    <action selector="class26Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="kWP-rU-696"/>
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrJ-Ch-NSG">
@@ -4315,7 +4315,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="teacher26Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="VIA-bO-eM7"/>
+                                                                    <action selector="teacher26Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="X36-CB-pps"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG9-ry-h9Y">
@@ -4403,7 +4403,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="class37Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="GZl-ZQ-xid"/>
+                                                                    <action selector="class37Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="qGi-CW-Vby"/>
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NDy-hb-uBZ">
@@ -4411,7 +4411,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="teacher37Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="6H6-D2-fui"/>
+                                                                    <action selector="teacher37Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="NqF-wN-lOM"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:10 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfK-pB-YOZ">
@@ -4448,7 +4448,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="class48Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="B5w-uV-HQ2"/>
+                                                                    <action selector="class48Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="CVq-a6-KwN"/>
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uzo-c8-ArS">
@@ -4456,7 +4456,7 @@
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="teacher48Edited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="B81-Uh-mEG"/>
+                                                                    <action selector="teacher48Edited:" destination="r2A-uC-XD7" eventType="editingChanged" id="eBO-1g-ZGf"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:45 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzY-hj-Q6b">
@@ -4554,21 +4554,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-3v-aUc">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-3v-aUc">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class1CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="dND-iT-QWb"/>
-                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-cz-BbC">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XEI-cz-BbC">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher1CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="93v-U2-NcY"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8:50 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Aw-yo-tlW">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
@@ -4599,21 +4593,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqw-xm-UE2">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rqw-xm-UE2">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class5CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="fj2-OZ-wIB"/>
-                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-Ec-gfC">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 5" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRR-Ec-gfC">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher5CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="o2t-KJ-Ifh"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:40 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eN-gM-XG5">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
@@ -4644,21 +4632,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-Wp-gGG">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-Wp-gGG">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class2CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="m7U-i6-58V"/>
-                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 2" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lyT-8s-Sxa">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher2CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="Q5L-w9-lYy"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:30 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwS-5v-PkY">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
@@ -4689,21 +4671,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 6" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U68-7o-8R7">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 6" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U68-7o-8R7">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class6CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="upM-RB-CF9"/>
-                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 6" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-4G-mYX">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 6" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-4G-mYX">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher6CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="CQ5-tv-9Rf"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:20 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="env-j9-hwU">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
@@ -4781,21 +4757,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-dY-Zds">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ld8-dY-Zds">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class3CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="hBw-1r-Xzr"/>
-                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeL-YY-atP">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 3" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VeL-YY-atP">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher3CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="H6W-rF-mVU"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:10 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zo2-OR-q1i">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
@@ -4826,21 +4796,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 7" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ZF-Vw-sFF">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 7" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1ZF-Vw-sFF">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class7CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="vYA-jA-daz"/>
-                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 7" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-e9-7wO">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 7" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UJ9-e9-7wO">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher7CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="iQP-1w-WVh"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:50 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-wf-PoH">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
@@ -4871,21 +4835,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrz-RK-Ctn">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xrz-RK-Ctn">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class4CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="fRP-Cj-HjC"/>
-                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMr-5I-Rhb">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 4" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KMr-5I-Rhb">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher4CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="0wI-Kr-8hl"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:40 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i7x-fT-Va7">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
@@ -4916,21 +4874,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 8" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-2J-sb1">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Class 8" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CNd-2J-sb1">
                                                                 <rect key="frame" x="202.5" y="0.0" width="202.5" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="class8CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="AAz-lX-psC"/>
-                                                                </connections>
                                                             </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 8" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-Xf-pvN">
+                                                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Teacher 8" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yqf-Xf-pvN">
                                                                 <rect key="frame" x="405" y="0.0" width="202" height="42"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="teacher8CEdited:" destination="r2A-uC-XD7" eventType="editingDidEnd" id="frQ-KJ-tCW"/>
-                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3:30 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-Ds-gCs">
                                                                 <rect key="frame" x="607" y="0.0" width="202.5" height="42"/>
