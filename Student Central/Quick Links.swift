@@ -37,7 +37,8 @@ class LinksViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         guard let _ = stackView else { return }
         
-        if UIDevice.current.orientation.isLandscape {
+        let size = UIScreen.main.bounds.size
+        if(size.height < size.width) {
             stackView.axis = .horizontal
         } else {
             stackView.axis = .vertical
