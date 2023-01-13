@@ -29,6 +29,12 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var start37: UILabel!
     @IBOutlet var class48: UITextField!
     @IBOutlet var teacher48: UITextField!
+        
+    @IBOutlet var p15: UILabel!
+    @IBOutlet var p26: UILabel!
+    @IBOutlet var p37: UILabel!
+    @IBOutlet var p48: UILabel!
+    
     
     var isA: Bool = true
     var archiveURLs: [URL] = []
@@ -82,7 +88,7 @@ class ClassScheduleViewController: UIViewController {
     // A & B Day Closures
     lazy var placeholderClosureAB = { [self](action: UIAction) in
         self.lunchDropdown.setTitleColor(.link, for: .normal)
-        
+
         lunchStart.text = "--------"
         lunchEnd.text = "--------"
         start37.text = "12:10 PM"
@@ -93,7 +99,7 @@ class ClassScheduleViewController: UIViewController {
             lunchTypeB = "Select Lunch"
             updateDataB()
         }
-        
+
         return
     }
     lazy var optionClosureAB = { [self](action: UIAction) in
@@ -101,17 +107,17 @@ class ClassScheduleViewController: UIViewController {
         
         switch(action.title) {
         case "A Lunch":
-            lunchStart.text = "12:05 PM"
+            lunchStart.text = "12:00 PM"
             lunchEnd.text = "12:35 PM"
             start37.text = "12:40 PM"
             break;
         case "B Lunch":
-            lunchStart.text = "12:45 PM"
+            lunchStart.text = "12:40 PM"
             lunchEnd.text = "1:15 PM"
             start37.text = "1:20 PM"
             break;
         default:
-            lunchStart.text = "1:25 PM"
+            lunchStart.text = "1:20 PM"
             lunchEnd.text = "1:55 PM"
             start37.text = "2:00 PM"
             break;
@@ -127,6 +133,7 @@ class ClassScheduleViewController: UIViewController {
         
         return
     }
+    
     
     // C Day Closures
     lazy var placeholderClosureC = { [self](action: UIAction) in
@@ -150,7 +157,7 @@ class ClassScheduleViewController: UIViewController {
             start3C.text = "12:35 PM"
             break;
         case "B Lunch":
-            lunchStartC.text = "12:20 PM"
+            lunchStartC.text = "12:40 PM"
             lunchEndC.text = "1:10 PM"
             start3C.text = "1:10 PM"
             break;
@@ -167,6 +174,22 @@ class ClassScheduleViewController: UIViewController {
         return
     }
     
+    // Change Period Column Labels for B Day
+    
+    func setPeriodTextA(){
+        p15.text = "1"
+        p26.text = "2"
+        p37.text = "3"
+        p48.text = "4"
+    }
+    
+    func setPeriodTextB(){
+        p15.text = "5"
+        p26.text = "6"
+        p37.text = "7"
+        p48.text = "8"
+    }
+
     func reloadDataAB() {
         var lunchType = ""
         if isA {
@@ -179,6 +202,7 @@ class ClassScheduleViewController: UIViewController {
             teacher26.text = teachersA[1]
             teacher37.text = teachersA[2]
             teacher48.text = teachersA[3]
+            reloadDataC()
             
             lunchType = lunchTypeA
         } else {
@@ -191,6 +215,8 @@ class ClassScheduleViewController: UIViewController {
             teacher26.text = teachersB[1]
             teacher37.text = teachersB[2]
             teacher48.text = teachersB[3]
+            
+            reloadDataC()
             
             lunchType = lunchTypeB
         }
@@ -221,6 +247,15 @@ class ClassScheduleViewController: UIViewController {
     }
     
     func reloadDataC() {
+        classesC[0] = classesA[0]
+        classesC[1] = classesA[1]
+        classesC[2] = classesA[2]
+        classesC[3] = classesA[3]
+        classesC[4] = classesB[0]
+        classesC[5] = classesB[1]
+        classesC[6] = classesB[2]
+        classesC[7] = classesB[3]
+        
         class1C.text = classesC[0]
         class2C.text = classesC[1]
         class3C.text = classesC[2]
@@ -229,6 +264,15 @@ class ClassScheduleViewController: UIViewController {
         class6C.text = classesC[5]
         class7C.text = classesC[6]
         class8C.text = classesC[7]
+        
+        teachersC[0] = teachersA[0]
+        teachersC[1] = teachersA[1]
+        teachersC[2] = teachersA[2]
+        teachersC[3] = teachersA[3]
+        teachersC[4] = teachersB[0]
+        teachersC[5] = teachersB[1]
+        teachersC[6] = teachersB[2]
+        teachersC[7] = teachersB[3]
         
         teacher1C.text = teachersC[0]
         teacher2C.text = teachersC[1]
@@ -451,16 +495,19 @@ class ClassScheduleViewController: UIViewController {
         case 0:
             isA = true
             viewContainer.bringSubviewToFront(svView2)
+            setPeriodTextA()
             reloadDataAB()
             break;
         case 1:
             isA = false
             viewContainer.bringSubviewToFront(svView2)
+            setPeriodTextB()
             reloadDataAB()
             break;
         case 2:
             isA = false
             viewContainer.bringSubviewToFront(svView1)
+            reloadDataAB()
             break;
         default:
             break;

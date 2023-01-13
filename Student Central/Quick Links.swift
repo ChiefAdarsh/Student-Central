@@ -1,10 +1,3 @@
-//
-//  Quick Links.swift
-//  Student Central
-//
-//  Varshith Peddi
-//
-
 import UIKit
 
 class LinksViewController: UIViewController {
@@ -18,9 +11,6 @@ class LinksViewController: UIViewController {
     @IBOutlet var Clever: UIButton!
     @IBOutlet var coppellISD: UIButton!
     @IBOutlet var stackView: UIStackView!
-    
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +27,8 @@ class LinksViewController: UIViewController {
         super.viewWillTransition(to: size, with: coordinator)
         guard let _ = stackView else { return }
         
-        if UIDevice.current.orientation.isLandscape {
+        let size = UIScreen.main.bounds.size
+        if(size.height < size.width) {
             stackView.axis = .horizontal
         } else {
             stackView.axis = .vertical
@@ -90,4 +81,3 @@ class LinksViewController: UIViewController {
     */
 
 }
-

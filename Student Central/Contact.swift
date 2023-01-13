@@ -171,13 +171,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonOne(_ sender: UIButton) {
         guard teacher1Label.text! != "TEACHER #1" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 1st period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 1st period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher1Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -206,7 +212,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailOne.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -217,13 +223,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonTwo(_ sender: UIButton) {
         guard teacher2Label.text! != "TEACHER #2" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 2nd period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 2nd period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher2Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -251,7 +263,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailTwo.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -262,13 +274,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonThree(_ sender: UIButton) {
         guard teacher3Label.text! != "TEACHER #3" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 3rd period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 3rd period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher3Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -295,7 +313,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailThree.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -306,13 +324,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonFour(_ sender: UIButton) {
         guard teacher4Label.text! != "TEACHER #4" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 4th period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 4th period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher4Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -339,7 +363,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailFour.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -350,13 +374,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonFive(_ sender: UIButton) {
         guard teacher5Label.text! != "TEACHER #5" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 5th period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 5th period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher5Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -383,7 +413,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailFive.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -394,13 +424,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonSix(_ sender: UIButton) {
         guard teacher6Label.text! != "TEACHER #6" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 6th period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 6th period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher6Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -427,7 +463,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailSix.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -438,13 +474,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonSeven(_ sender: UIButton) {
         guard teacher7Label.text! != "TEACHER #7" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 7th period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 7th period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher7Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -471,7 +513,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailSeven.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -482,13 +524,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     
     @IBAction func buttonEight(_ sender: UIButton) {
         guard teacher8Label.text! != "TEACHER #8" else {
-            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 8th period teacher name", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 8th period teacher first and last name", preferredStyle: .alert)
             alertController.addTextField { textField in
-                textField.placeholder = "Enter Teacher Name"
+                textField.placeholder = "Enter Teacher First and Last Name"
             }
             let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 let textField = alertController.textFields![0] as UITextField
                 let txt = textField.text!.lowercased()
+                guard let _ = txt.firstIndex(of: " ") else {
+                    let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                    alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                    self.present(alertController2, animated: true, completion: nil)
+                    return
+                }
                 
                 self.teacher8Label.text = txt.capitalized
                 let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -515,7 +563,7 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
             message.delegate = self
             let mailTo = mailEight.text!
             message.setToRecipients([mailTo])
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -600,13 +648,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         // Do any additional setup after loading the view.
     }
     @objc func handleTap1(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 1st period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 1st period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher1Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -630,13 +684,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
     
     @objc func handleTap2(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 2nd period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 2nd period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher2Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -660,13 +720,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
     
     @objc func handleTap3(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 3rd period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 3rd period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher3Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -690,13 +756,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
     
     @objc func handleTap4(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 4th period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 4th period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher4Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -720,13 +792,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
     
     @objc func handleTap5(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 5th period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 5th period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher5Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -750,13 +828,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
     
     @objc func handleTap6(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 6th period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 6th period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher6Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -780,13 +864,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
     
     @objc func handleTap7(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 7th period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 7th period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher7Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)
@@ -810,13 +900,19 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
     
     @objc func handleTap8(sender: UILongPressGestureRecognizer) {
-        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 8th period teacher name", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Teacher Name", message: "Please enter your 8th period teacher first and last name", preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = "Enter Teacher Name"
+            textField.placeholder = "Enter Teacher First and Last Name"
         }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
             let textField = alertController.textFields![0] as UITextField
             let txt = textField.text!.lowercased()
+            guard let _ = txt.firstIndex(of: " ") else {
+                let alertController2 = UIAlertController(title: "Invalid Teacher Name", message: "Please enter a valid teacher name", preferredStyle: .alert)
+                alertController2.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: nil))
+                self.present(alertController2, animated: true, completion: nil)
+                return
+            }
             
             self.teacher8Label.text = txt.capitalized
             let index = txt.index(after: txt.firstIndex(of: " ")!)

@@ -50,12 +50,15 @@ class CounselorContactsTableViewController: UITableViewController, MFMailCompose
     }
     
     override func tableView(_ tableView: UITableView,didSelectRowAt indexPath: IndexPath) {
-//        tableView.deselectRow(at: indexPath, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
         
         for i in 0...(counselorList.count - 1) {
             if indexPath[1] == i {
                 selectedAdmin = counselorList[i]
                 print(selectedAdmin.fullName)
+                var targetViewController = storyboard!.instantiateViewController(withIdentifier: "adminInfoInSchool") as! AdminInfoViewController
+                self.navigationController?.showDetailViewController(targetViewController, sender: self)
+//                self.navigationController?.pushViewController(targetViewController, animated: true)
             }
         }
     }
@@ -63,65 +66,67 @@ class CounselorContactsTableViewController: UITableViewController, MFMailCompose
 
 class AdminInfoViewController: UIViewController, UINavigationControllerDelegate {
     var backTitle: String!
-    @IBOutlet var stackView: UIStackView!
+    //@IBOutlet var stackView: UIStackView!
     
-    func rotation() {
-        let size = UIScreen.main.bounds.size
-        if size.height < size.width {
-            stackView.axis = .horizontal
-            stackView.spacing = 66
-        } else {
-            stackView.axis = .vertical
-            stackView.spacing = 0
-        }
-    }
+//    func rotation() {
+//        let size = UIScreen.main.bounds.size
+//        if size.height < size.width {
+//            stackView.axis = .horizontal
+//            stackView.spacing = 66
+//        } else {
+//            stackView.axis = .vertical
+//            stackView.spacing = 0
+//        }
+//    }
     
-    @IBOutlet var EmailBtn: UIButton!
+//    @IBOutlet var EmailBtn: UIButton!
     @IBOutlet var AdminLbl: UILabel!
     @IBOutlet var AdminPic: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("full name: \"\(selectedAdmin.fullName)\"")
+        print("image: \"\(selectedAdmin.imgStr!)\"")
         AdminLbl.text = "\(selectedAdmin.fullName), \(selectedAdmin.adminTypeDetailed)"
         AdminPic.image = UIImage(named: selectedAdmin.imgStr!)
-        rotation()
+        //rotation()
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func email(_ sender: Any) {
-        if MFMailComposeViewController.canSendMail() {
-            let message = MFMailComposeViewController()
-            message.delegate = self
-            let mailTo = AdminLbl.text!
-            
-            let index = mailTo.index(after: mailTo.firstIndex(of: " ")!)
-            let address = String(mailTo[mailTo.startIndex]) + mailTo[index..<mailTo.endIndex] + "@coppellisd.com"
-            //print(address)
-            message.setToRecipients([address])
-            present(UINavigationController(rootViewController: message), animated: true)
-            
-        } else {
-            let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
-            present(alertController, animated: true, completion: nil)
-        }
-        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-            controller.dismiss(animated: true)
-        }
-    }
+//    @IBAction func email(_ sender: Any) {
+//        if MFMailComposeViewController.canSendMail() {
+//            let message = MFMailComposeViewController()
+//            message.delegate = self
+//            let mailTo = AdminLbl.text!
+//
+//            let index = mailTo.index(after: mailTo.firstIndex(of: " ")!)
+//            let address = String(mailTo[mailTo.startIndex]) + mailTo[index..<mailTo.endIndex] + "@coppellisd.com"
+//            //print(address)
+//            message.setToRecipients([address])
+//            present(UINavigationController(rootViewController: message), animated: true)
+//
+//        } else {
+//            let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
+//            alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+//            present(alertController, animated: true, completion: nil)
+//        }
+//        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+//            controller.dismiss(animated: true)
+//        }
+//    }
     @IBOutlet var requestInp: UITextField!
     
     @IBAction func requestButPress(_ sender: UIButton) {
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
             message.delegate = self
-            let mailTo = AdminLbl.text!
-            
-            let index = mailTo.index(after: mailTo.firstIndex(of: " ")!)
-            let address = String(mailTo[mailTo.startIndex]) + mailTo[index..<mailTo.endIndex] + "@coppellisd.com"
+            let address = selectedAdmin.email
+//            
+//            let index = mailTo.index(after: mailTo.firstIndex(of: " ")!)
+//            let address = String(mailTo[mailTo.startIndex]) + mailTo[index..<mailTo.endIndex] + "@coppellisd.com"
             //print(address)
             message.setToRecipients([address])
             message.setMessageBody("Student Request: \n \(requestInp.text!)", isHTML: false)
-            present(UINavigationController(rootViewController: message), animated: true)
+            present(message, animated: true)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
