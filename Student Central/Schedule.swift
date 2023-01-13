@@ -29,6 +29,12 @@ class ClassScheduleViewController: UIViewController {
     @IBOutlet var start37: UILabel!
     @IBOutlet var class48: UITextField!
     @IBOutlet var teacher48: UITextField!
+        
+    @IBOutlet var p15: UILabel!
+    @IBOutlet var p26: UILabel!
+    @IBOutlet var p37: UILabel!
+    @IBOutlet var p48: UILabel!
+    
     
     var isA: Bool = true
     var archiveURLs: [URL] = []
@@ -167,6 +173,22 @@ class ClassScheduleViewController: UIViewController {
         return
     }
     
+    // Change Period Column Labels for B Day
+    
+    func setPeriodTextA(){
+        p15.text = "1"
+        p26.text = "2"
+        p37.text = "3"
+        p48.text = "4"
+    }
+    
+    func setPeriodTextB(){
+        p15.text = "5"
+        p26.text = "6"
+        p37.text = "7"
+        p48.text = "8"
+    }
+
     func reloadDataAB() {
         var lunchType = ""
         if isA {
@@ -241,6 +263,15 @@ class ClassScheduleViewController: UIViewController {
         class6C.text = classesC[5]
         class7C.text = classesC[6]
         class8C.text = classesC[7]
+        
+        teachersC[0] = teachersA[0]
+        teachersC[1] = teachersA[1]
+        teachersC[2] = teachersA[2]
+        teachersC[3] = teachersA[3]
+        teachersC[4] = teachersB[0]
+        teachersC[5] = teachersB[1]
+        teachersC[6] = teachersB[2]
+        teachersC[7] = teachersB[3]
         
         teacher1C.text = teachersC[0]
         teacher2C.text = teachersC[1]
@@ -463,11 +494,13 @@ class ClassScheduleViewController: UIViewController {
         case 0:
             isA = true
             viewContainer.bringSubviewToFront(svView2)
+            setPeriodTextA()
             reloadDataAB()
             break;
         case 1:
             isA = false
             viewContainer.bringSubviewToFront(svView2)
+            setPeriodTextB()
             reloadDataAB()
             break;
         case 2:
