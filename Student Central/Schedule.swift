@@ -107,17 +107,17 @@ class ClassScheduleViewController: UIViewController {
         
         switch(action.title) {
         case "A Lunch":
-            lunchStart.text = "12:05 PM"
+            lunchStart.text = "12:00 PM"
             lunchEnd.text = "12:35 PM"
             start37.text = "12:40 PM"
             break;
         case "B Lunch":
-            lunchStart.text = "12:45 PM"
+            lunchStart.text = "12:40 PM"
             lunchEnd.text = "1:15 PM"
             start37.text = "1:20 PM"
             break;
         default:
-            lunchStart.text = "1:25 PM"
+            lunchStart.text = "1:20 PM"
             lunchEnd.text = "1:55 PM"
             start37.text = "2:00 PM"
             break;
