@@ -87,6 +87,7 @@ class ClassScheduleViewController: UIViewController {
     
     // A & B Day Closures
     lazy var placeholderClosureAB = { [self](action: UIAction) in
+        print("link")
         self.lunchDropdown.setTitleColor(.link, for: .normal)
 
         lunchStart.text = "--------"
@@ -191,7 +192,7 @@ class ClassScheduleViewController: UIViewController {
     }
 
     func reloadDataAB() {
-        var lunchType = ""
+        var lunchType = "Select Lunch"
         if isA {
             class15.text = classesA[0]
             class26.text = classesA[1]
@@ -202,6 +203,7 @@ class ClassScheduleViewController: UIViewController {
             teacher26.text = teachersA[1]
             teacher37.text = teachersA[2]
             teacher48.text = teachersA[3]
+            
             reloadDataC()
             
             lunchType = lunchTypeA
@@ -223,7 +225,7 @@ class ClassScheduleViewController: UIViewController {
         
         var actionArr: [UIAction] = []
         if "Select Lunch" != lunchType {
-            actionArr.append(UIAction(title: "Select Lunch", handler: placeholderClosureC))
+            actionArr.append(UIAction(title: "Select Lunch", handler: placeholderClosureAB))
         }
         if "A Lunch" != lunchType {
             actionArr.append(UIAction(title: "A Lunch", handler: optionClosureAB))
@@ -423,88 +425,34 @@ class ClassScheduleViewController: UIViewController {
             updateDataB()
         }
     }
-    
-    @IBAction func class1CEdited(_ sender: UITextField) {
-        classesC[0] = class1C.text!
-        updateDataC()
-    }
-    @IBAction func class5CEdited(_ sender: UITextField) {
-        classesC[4] = class5C.text!
-        updateDataC()
-    }
-    @IBAction func class2CEdited(_ sender: UITextField) {
-        classesC[1] = class2C.text!
-        updateDataC()
-    }
-    @IBAction func class6CEdited(_ sender: UITextField) {
-        classesC[5] = class6C.text!
-        updateDataC()
-    }
-    @IBAction func class3CEdited(_ sender: UITextField) {
-        classesC[2] = class3C.text!
-        updateDataC()
-    }
-    @IBAction func class7CEdited(_ sender: UITextField) {
-        classesC[6] = class7C.text!
-        updateDataC()
-    }
-    @IBAction func class4CEdited(_ sender: UITextField) {
-        classesC[3] = class4C.text!
-        updateDataC()
-    }
-    @IBAction func class8CEdited(_ sender: UITextField) {
-        classesC[7] = class8C.text!
-        updateDataC()
-    }
-    
-    @IBAction func teacher1CEdited(_ sender: UITextField) {
-        teachersC[0] = teacher1C.text!
-        updateDataC()
-    }
-    @IBAction func teacher5CEdited(_ sender: UITextField) {
-        teachersC[4] = teacher5C.text!
-        updateDataC()
-    }
-    @IBAction func teacher2CEdited(_ sender: UITextField) {
-        teachersC[1] = teacher2C.text!
-        updateDataC()
-    }
-    @IBAction func teacher6CEdited(_ sender: UITextField) {
-        teachersC[5] = teacher6C.text!
-        updateDataC()
-    }
-    @IBAction func teacher3CEdited(_ sender: UITextField) {
-        teachersC[2] = teacher3C.text!
-        updateDataC()
-    }
-    @IBAction func teacher7CEdited(_ sender: UITextField) {
-        teachersC[6] = teacher7C.text!
-        updateDataC()
-    }
-    @IBAction func teacher4CEdited(_ sender: UITextField) {
-        teachersC[3] = teacher4C.text!
-        updateDataC()
-    }
-    @IBAction func teacher8CEdited(_ sender: UITextField) {
-        teachersC[7] = teacher8C.text!
-        updateDataC()
-    }
-    
+        
     @IBAction func seguePressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
+            svView1.isOpaque = true
+            svView1.isHidden = true
+            svView2.isOpaque = false
+            svView2.isHidden = false
             isA = true
             viewContainer.bringSubviewToFront(svView2)
             setPeriodTextA()
             reloadDataAB()
             break;
         case 1:
+            svView1.isOpaque = true
+            svView1.isHidden = true
+            svView2.isOpaque = false
+            svView2.isHidden = false
             isA = false
             viewContainer.bringSubviewToFront(svView2)
             setPeriodTextB()
             reloadDataAB()
             break;
         case 2:
+            svView1.isOpaque = false
+            svView1.isHidden = false
+            svView2.isOpaque = true
+            svView2.isHidden = true
             isA = false
             viewContainer.bringSubviewToFront(svView1)
             reloadDataAB()
@@ -517,6 +465,8 @@ class ClassScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewContainer.bringSubviewToFront(svView2)
+        svView1.isOpaque = true
+        svView1.isHidden = true
         
         classesA = ["Class 1", "Class 2", "Class 3", "Class 4"]
         teachersA = ["Teacher 1", "Teacher 2", "Teacher 3", "Teacher 4"]
