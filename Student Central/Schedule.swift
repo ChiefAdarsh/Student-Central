@@ -78,6 +78,8 @@ class ClassScheduleViewController: UIViewController {
     var teachersC: [String]!
     var lunchTypeC: String!
     
+    
+    @IBOutlet var lunchLabelC: UILabel!
     struct Day: Codable {
         let type: String
         let classes: [String]
@@ -115,12 +117,12 @@ class ClassScheduleViewController: UIViewController {
         case "B Lunch":
             lunchStart.text = "12:40 PM"
             lunchEnd.text = "1:15 PM"
-            start37.text = "1:20 PM"
+            start37.text = "12:10 PM"
             break;
         default:
             lunchStart.text = "1:20 PM"
             lunchEnd.text = "1:55 PM"
-            start37.text = "2:00 PM"
+            start37.text = "12:10 PM"
             break;
         }
         
@@ -137,43 +139,43 @@ class ClassScheduleViewController: UIViewController {
     
     
     // C Day Closures
-    lazy var placeholderClosureC = { [self](action: UIAction) in
-        self.lunchDropdownC.setTitleColor(.link, for: .normal)
-        
-        lunchStartC.text = "--------"
-        lunchEndC.text = "--------"
-        start3C.text = "12:10 PM"
-        lunchTypeC = "Select Lunch"
-        updateDataC()
-        
-        return
-    }
-    lazy var optionClosureC = { [self](action: UIAction) in
-        self.lunchDropdownC.setTitleColor(.black, for: .normal)
-        
-        switch(action.title) {
-        case "A Lunch":
-            lunchStartC.text = "12:05 PM"
-            lunchEndC.text = "12:35 PM"
-            start3C.text = "12:35 PM"
-            break;
-        case "B Lunch":
-            lunchStartC.text = "12:40 PM"
-            lunchEndC.text = "1:10 PM"
-            start3C.text = "1:10 PM"
-            break;
-        default:
-            lunchStartC.text = "1:15 PM"
-            lunchEndC.text = "1:45 PM"
-            start3C.text = "1:45 PM"
-            break;
-        }
-        
-        lunchTypeC = action.title
-        updateDataC()
-        
-        return
-    }
+//    lazy var placeholderClosureC = { [self](action: UIAction) in
+//        self.lunchDropdownC.setTitleColor(.link, for: .normal)
+//
+//        lunchStartC.text = "--------"
+//        lunchEndC.text = "--------"
+//        start3C.text = "12:10 PM"
+//        lunchTypeC = "Select Lunch"
+//        updateDataC()
+//
+//        return
+//    }
+//    lazy var optionClosureC = { [self](action: UIAction) in
+//        self.lunchDropdownC.setTitleColor(.black, for: .normal)
+//
+//        switch(action.title) {
+//        case "A Lunch":
+//            lunchStartC.text = "12:05 PM"
+//            lunchEndC.text = "12:35 PM"
+//            start3C.text = "12:35 PM"
+//            break;
+//        case "B Lunch":
+//            lunchStartC.text = "12:40 PM"
+//            lunchEndC.text = "1:10 PM"
+//            start3C.text = "1:10 PM"
+//            break;
+//        default:
+//            lunchStartC.text = "1:15 PM"
+//            lunchEndC.text = "1:45 PM"
+//            start3C.text = "1:45 PM"
+//            break;
+//        }
+//
+//        lunchTypeC = action.title
+//        updateDataC()
+//
+//        return
+//    }
     
     // Change Period Column Labels for B Day
     
@@ -189,6 +191,26 @@ class ClassScheduleViewController: UIViewController {
         p26.text = "6"
         p37.text = "7"
         p48.text = "8"
+    }
+    
+    func updateLunchC(){
+        lunchLabelC.text = lunchTypeA
+        
+        if lunchLabelC.text == "A Lunch"{
+            lunchStartC.text = "12:05 PM"
+            lunchEndC.text = "12:35 PM"
+            start3C.text = "12:40 PM"
+        }
+        else if lunchLabelC.text == "B Lunch"{
+            lunchStartC.text = "12:40 PM"
+            lunchEndC.text = "1:10 PM"
+            start3C.text = "12:10 PM"
+        }
+        else{
+            lunchStartC.text = "1:15 PM"
+            lunchEndC.text = "1:45 PM"
+            start3C.text = "12:10 PM"
+        }
     }
 
     func reloadDataAB() {
@@ -284,31 +306,32 @@ class ClassScheduleViewController: UIViewController {
         teacher6C.text = teachersC[5]
         teacher7C.text = teachersC[6]
         teacher8C.text = teachersC[7]
-        
-        var actionArr: [UIAction] = []
-        if "Select Lunch" != lunchTypeC {
-            actionArr.append(UIAction(title: "Select Lunch", handler: placeholderClosureC))
-        }
-        if "A Lunch" != lunchTypeC {
-            actionArr.append(UIAction(title: "A Lunch", handler: optionClosureC))
-        }
-        if "B Lunch" != lunchTypeC {
-            actionArr.append(UIAction(title: "B Lunch", handler: optionClosureC))
-        }
-        if "C Lunch" != lunchTypeC {
-            actionArr.append(UIAction(title: "C Lunch", handler: optionClosureC))
-        }
-        
-        let newAction = UIAction(title: lunchTypeC, state: .on, handler: lunchTypeC == "Select Lunch" ? placeholderClosureC : optionClosureC)
-        actionArr.append(newAction)
-        lunchDropdownC.menu = UIMenu(children: actionArr)
-        
-        if(lunchTypeC == "Select Lunch") {
-            placeholderClosureC(newAction)
-        } else {
-            optionClosureC(newAction)
-        }
     }
+//
+//        var actionArr: [UIAction] = []
+//        if "Select Lunch" != lunchTypeC {
+//            actionArr.append(UIAction(title: "Select Lunch", handler: placeholderClosureC))
+//        }
+//        if "A Lunch" != lunchTypeC {
+//            actionArr.append(UIAction(title: "A Lunch", handler: optionClosureC))
+//        }
+//        if "B Lunch" != lunchTypeC {
+//            actionArr.append(UIAction(title: "B Lunch", handler: optionClosureC))
+//        }
+//        if "C Lunch" != lunchTypeC {
+//            actionArr.append(UIAction(title: "C Lunch", handler: optionClosureC))
+//        }
+//
+//        let newAction = UIAction(title: lunchTypeC, state: .on, handler: lunchTypeC == "Select Lunch" ? placeholderClosureC : optionClosureC)
+//        actionArr.append(newAction)
+//        lunchDropdownC.menu = UIMenu(children: actionArr)
+//
+//        if(lunchTypeC == "Select Lunch") {
+//            placeholderClosureC(newAction)
+//        } else {
+//            optionClosureC(newAction)
+//        }
+//    }
     
     func updateDataA() {
         let newDay = Day(type: "A", classes: classesA, teachers: teachersA, lunchType: lunchTypeA)
@@ -454,6 +477,7 @@ class ClassScheduleViewController: UIViewController {
             svView2.isOpaque = true
             svView2.isHidden = true
             isA = false
+            updateLunchC()
             viewContainer.bringSubviewToFront(svView1)
             reloadDataAB()
             break;
@@ -478,7 +502,7 @@ class ClassScheduleViewController: UIViewController {
         
         classesC = ["Class 1", "Class 2", "Class 3", "Class 4", "Class 5", "Class 6", "Class 7", "Class 8"]
         teachersC = ["Teacher 1", "Teacher 2", "Teacher 3", "Teacher 4", "Teacher 5", "Teacher 6", "Teacher 7", "Teacher 8"]
-        lunchTypeC = "Select Lunch"
+        //lunchTypeC = "Select Lunch"
         
         // A & B Day Lunch Dropdown
         
@@ -493,14 +517,14 @@ class ClassScheduleViewController: UIViewController {
         
         // C Day Lunch Dropdown
         
-        lunchDropdownC.showsMenuAsPrimaryAction = true
-        lunchDropdownC.changesSelectionAsPrimaryAction = true
-        lunchDropdownC.menu = UIMenu(children: [
-            UIAction(title: "Select Lunch", state: .on, handler: placeholderClosureC),
-            UIAction(title: "A Lunch", handler: optionClosureC),
-            UIAction(title: "B Lunch", handler: optionClosureC),
-            UIAction(title: "C Lunch", handler: optionClosureC)
-        ])
+//        lunchDropdownC.showsMenuAsPrimaryAction = true
+//        lunchDropdownC.changesSelectionAsPrimaryAction = true
+//        lunchDropdownC.menu = UIMenu(children: [
+//            UIAction(title: "Select Lunch", state: .on, handler: placeholderClosureC),
+//            UIAction(title: "A Lunch", handler: optionClosureC),
+//            UIAction(title: "B Lunch", handler: optionClosureC),
+//            UIAction(title: "C Lunch", handler: optionClosureC)
+//        ])
         
         for i in 0..<3 {
             let url = documentsDirectory.appendingPathComponent("day\(i + 1)")
