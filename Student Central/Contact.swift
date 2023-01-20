@@ -209,10 +209,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailOne.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -260,10 +260,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailTwo.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -310,10 +310,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailThree.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -360,10 +360,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailFour.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -410,10 +410,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailFive.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -460,10 +460,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailSix.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -510,10 +510,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailSeven.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -560,10 +560,10 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
         }
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let mailTo = mailEight.text!
             message.setToRecipients([mailTo])
-            present(message, animated: true)
+            self.present(message, animated: true, completion: nil)
             
         } else {
             let alertController = UIAlertController(title: "Mail Not Enabled", message: "Your device is not configured to send email", preferredStyle: .alert)
@@ -573,7 +573,20 @@ class TeacherViewController: UIViewController, UINavigationControllerDelegate, M
     }
     
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true)
+        controller.dismiss(animated: true, completion: nil)
+        
+        switch result{
+        case .sent:
+            print("sent")
+        case .saved:
+            print("saved")
+        case .failed:
+            print("failed")
+        case .cancelled:
+            print("cancelled")
+        default:
+            break
+        }
     }
     
     @IBOutlet var view1: UIView!
