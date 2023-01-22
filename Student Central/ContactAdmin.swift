@@ -18,11 +18,6 @@ class CounselorContactsTableViewController: UITableViewController, MFMailCompose
         super.viewDidLoad()
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return counselorList.count
@@ -90,6 +85,10 @@ class AdminInfoViewController: UIViewController, UINavigationControllerDelegate 
         AdminPic.image = UIImage(named: selectedAdmin.imgStr!)
         //rotation()
         // Do any additional setup after loading the view.
+        
+        // Keyboard move up and down when UI Text Field is clicked
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
 //    @IBAction func email(_ sender: Any) {
@@ -137,6 +136,27 @@ class AdminInfoViewController: UIViewController, UINavigationControllerDelegate 
             controller.dismiss(animated: true)
         }
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        print("Hello")
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height-0.5 * requestInp.frame.height
+
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+
 }
 
 class RequestItemsViewController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
