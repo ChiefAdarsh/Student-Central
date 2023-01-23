@@ -59,7 +59,7 @@ class CounselorContactsTableViewController: UITableViewController, MFMailCompose
     }
 }
 
-class AdminInfoViewController: UIViewController, UINavigationControllerDelegate {
+class AdminInfoViewController: UIViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
     var backTitle: String!
     //@IBOutlet var stackView: UIStackView!
     
