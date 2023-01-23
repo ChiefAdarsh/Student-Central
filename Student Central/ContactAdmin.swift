@@ -117,7 +117,7 @@ class AdminInfoViewController: UIViewController, UINavigationControllerDelegate 
     @IBAction func requestButPress(_ sender: UIButton) {
         if MFMailComposeViewController.canSendMail() {
             let message = MFMailComposeViewController()
-            message.delegate = self
+            message.mailComposeDelegate = self
             let address = selectedAdmin.email
 //            
 //            let index = mailTo.index(after: mailTo.firstIndex(of: " ")!)
@@ -132,10 +132,25 @@ class AdminInfoViewController: UIViewController, UINavigationControllerDelegate 
             alertController.addAction(UIAlertAction(title: "Ok", style: .default))
             present(alertController, animated: true, completion: nil)
         }
-        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-            controller.dismiss(animated: true)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+        
+        switch result{
+        case .sent:
+            print("sent")
+        case .saved:
+            print("saved")
+        case .failed:
+            print("failed")
+        case .cancelled:
+            print("cancelled")
+        default:
+            break
         }
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
