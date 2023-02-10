@@ -23,6 +23,7 @@
 		65D3F2BA293548D500B00B91 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B2293548D500B00B91 /* Contact.swift */; };
 		65D3F2BB293548D500B00B91 /* Student Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D3F2B3293548D500B00B91 /* Student Help.swift */; };
 		65F16259294B9C5E0090C3C3 /* ContactAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F16258294B9C5E0090C3C3 /* ContactAdmin.swift */; };
+		69405222299614EA0070F823 /* TeacherLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69405221299614EA0070F823 /* TeacherLists.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		65D3F2B2293548D500B00B91 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		65D3F2B3293548D500B00B91 /* Student Help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Student Help.swift"; sourceTree = "<group>"; };
 		65F16258294B9C5E0090C3C3 /* ContactAdmin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAdmin.swift; sourceTree = "<group>"; };
+		69405221299614EA0070F823 /* TeacherLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLists.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				65D3F2AF293548D500B00B91 /* Maps.swift */,
 				65D3F2AD293548D500B00B91 /* Schedule.swift */,
 				65D3F2B2293548D500B00B91 /* Contact.swift */,
+				69405221299614EA0070F823 /* TeacherLists.swift */,
 				65D3F2AE293548D500B00B91 /* Quick Links.swift */,
 				65F16258294B9C5E0090C3C3 /* ContactAdmin.swift */,
 				65D3F2B3293548D500B00B91 /* Student Help.swift */,
@@ -176,6 +179,7 @@
 				65D3F2BA293548D500B00B91 /* Contact.swift in Sources */,
 				65D3F2B4293548D500B00B91 /* Notifications.swift in Sources */,
 				65D3F2892935345600B00B91 /* ViewController.swift in Sources */,
+				69405222299614EA0070F823 /* TeacherLists.swift in Sources */,
 				65D3F2B8293548D500B00B91 /* Settings.swift in Sources */,
 				65D3F2B7293548D500B00B91 /* Maps.swift in Sources */,
 				65D3F2B9293548D500B00B91 /* Home.swift in Sources */,
