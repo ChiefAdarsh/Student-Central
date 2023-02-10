@@ -6603,10 +6603,10 @@ Cg
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="gOR-c1-fFx">
-                                <rect key="frame" x="0.0" y="0.0" width="1112" height="1536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6B-Ad-XAQ">
-                                <rect key="frame" x="497" y="734.5" width="118.5" height="60"/>
+                                <rect key="frame" x="624" y="222.5" width="118.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118.5" id="HsZ-hd-rIh"/>
                                     <constraint firstAttribute="height" constant="60" id="t6Q-9S-G6i"/>
@@ -6616,7 +6616,7 @@ Cg
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NUa-3h-15g">
-                                <rect key="frame" x="263" y="824.5" width="586" height="32"/>
+                                <rect key="frame" x="390" y="312.5" width="586" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="5kM-AI-gFj"/>
                                     <constraint firstAttribute="width" constant="586" id="BRe-nl-jQi"/>
@@ -6630,10 +6630,10 @@ Cg
                                 </connections>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="LFH-0K-vXX">
-                                <rect key="frame" x="109" y="926" width="894" height="545"/>
+                                <rect key="frame" x="109" y="414" width="1148" height="545"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3mD-zI-fab">
-                                        <rect key="frame" x="0.0" y="0.0" width="895" height="545"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1149.5" height="545"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
@@ -6650,7 +6650,7 @@ Cg
                                 <viewLayoutGuide key="frameLayoutGuide" id="W5I-ei-exE"/>
                             </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="R5H-St-eKi">
-                                <rect key="frame" x="462" y="870.5" width="188" height="30"/>
+                                <rect key="frame" x="589" y="358.5" width="188" height="30"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.draw.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f3X-dE-Gk3">
                                         <rect key="frame" x="0.0" y="1.5" width="21" height="28"/>
