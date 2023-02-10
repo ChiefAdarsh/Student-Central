@@ -10,7 +10,12 @@ import UIKit
 class HelpViewController: UIViewController {
 
     @IBOutlet var stackView: UIStackView!
+    @IBOutlet var policeTipline: UIButton!
     
+    
+    @IBAction func STOPitLink(_ sender: Any) {
+        UIApplication.shared.open(URL(string: "https://www.coppellisd.com/tipline")! as URL, options: [:], completionHandler: nil)
+    }
     
 override func viewDidLoad() {
     super.viewDidLoad()

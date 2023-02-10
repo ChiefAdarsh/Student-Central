@@ -1658,13 +1658,23 @@ Cg
                                 </connections>
                             </button>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jBF-y0-p1M">
-                                <rect key="frame" x="253" y="155" width="860" height="150"/>
+                                <rect key="frame" x="143" y="155" width="1080" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ayd-rg-8H2">
-                                        <rect key="frame" x="0.0" y="0.0" width="420" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="640" height="150"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTv-2x-wvj">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hg-JX-ZHf">
                                                 <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Tipline Report" cornerStyle="small">
+                                                    <color key="baseBackgroundColor" red="0.63529411764705879" green="0.20000000000000001" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="STOPitLink:" destination="Fkw-mr-P6m" eventType="touchUpInside" id="Z6l-Hx-idd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTv-2x-wvj">
+                                                <rect key="frame" x="220" y="0.0" width="200" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="IFV-DA-eJz"/>
                                                     <constraint firstAttribute="height" constant="150" id="wtO-Ub-Uo3"/>
@@ -1678,7 +1688,7 @@ Cg
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXo-ll-2DL">
-                                                <rect key="frame" x="220" y="0.0" width="200" height="150"/>
+                                                <rect key="frame" x="440" y="0.0" width="200" height="150"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="KM4-jn-sH6"/>
                                                     <constraint firstAttribute="width" constant="200" id="boJ-at-4Og"/>
@@ -1693,39 +1703,34 @@ Cg
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bhX-cw-6hT">
-                                        <rect key="frame" x="440" y="0.0" width="420" height="150"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5c-XV-Nd5">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="rGn-un-n5a"/>
-                                                    <constraint firstAttribute="width" constant="200" id="ssf-EW-i9U"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Medical Care" cornerStyle="small">
-                                                    <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="87q-no-FLH" kind="show" id="mVV-OD-e5X"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvA-gB-3TA">
-                                                <rect key="frame" x="220" y="0.0" width="200" height="150"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="150" id="HUK-yf-3pn"/>
-                                                    <constraint firstAttribute="width" constant="200" id="naF-39-1gc"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Shelters" cornerStyle="small">
-                                                    <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="bk7-L1-0lr" kind="show" id="63X-P3-n4i"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z5c-XV-Nd5">
+                                        <rect key="frame" x="660" y="0.0" width="200" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="rGn-un-n5a"/>
+                                            <constraint firstAttribute="width" constant="200" id="ssf-EW-i9U"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Medical Care" cornerStyle="small">
+                                            <color key="baseBackgroundColor" red="0.63529413940000001" green="0.20000001789999999" blue="0.2235293984" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="87q-no-FLH" kind="show" id="mVV-OD-e5X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvA-gB-3TA">
+                                        <rect key="frame" x="880" y="0.0" width="200" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="HUK-yf-3pn"/>
+                                            <constraint firstAttribute="width" constant="200" id="naF-39-1gc"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Shelters" cornerStyle="small">
+                                            <color key="baseBackgroundColor" red="0.63529411764705879" green="0.20000000000000001" blue="0.22352941176470587" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="bk7-L1-0lr" kind="show" id="63X-P3-n4i"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Help" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tqd-2D-4lG">
@@ -1798,6 +1803,7 @@ Cg
                     </view>
                     <navigationItem key="navigationItem" id="za5-Xh-7LC"/>
                     <connections>
+                        <outlet property="policeTipline" destination="6hg-JX-ZHf" id="5Ls-cb-DBz"/>
                         <outlet property="stackView" destination="jBF-y0-p1M" id="y4q-La-DHz"/>
                     </connections>
                 </viewController>
@@ -7802,7 +7808,7 @@ Cg
         <!--Call Admin In School-->
         <scene sceneID="FFW-cN-TfV">
             <objects>
-                <viewController storyboardIdentifier="adminInSchool" title="Call Admin In School" id="bZu-cW-Dg6" customClass="CallAdminInSchoolController" customModule="Crisis_Management" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="adminInSchool" title="Call Admin In School" id="bZu-cW-Dg6" customClass="CallAdminInSchoolController" customModule="Student_Central" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ejk-dz-c60">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
