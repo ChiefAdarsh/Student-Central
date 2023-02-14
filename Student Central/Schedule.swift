@@ -553,11 +553,11 @@ class ClassShuttleViewController: UIViewController{
         
         @IBAction func switchPressed(_ sender: UISwitch) {
             if sender.isOn {
-                shuttleView.isHidden = true
-                classScheduleView.isHidden = false
-            } else {
                 shuttleView.isHidden = false
                 classScheduleView.isHidden = true
+            } else {
+                shuttleView.isHidden = true
+                classScheduleView.isHidden = false
             }
         }
         
