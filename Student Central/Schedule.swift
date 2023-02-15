@@ -15,6 +15,8 @@ class ClassShuttleViewController: UIViewController{
     @IBOutlet var svView1: UIView!
     @IBOutlet var svView2: UIView!
     
+    @IBOutlet var classScheduleButton: UIButton!
+    @IBOutlet var shuttleScheduleButton: UIButton!
     
     // A-B day elements
     @IBOutlet var class15: UITextField!
@@ -512,55 +514,63 @@ class ClassShuttleViewController: UIViewController{
       reloadDataC()
   }
     // Shuttle Schedule Information
-        @IBOutlet var route1: UILabel!
-        //@IBOutlet var sv: UIStackView!
-        @IBOutlet var svShuttle: UIStackView!
-        @IBOutlet var route2: UILabel!
-        @IBOutlet var scheduleSwitch: UISegmentedControl!
-        @IBAction func switchController(_ sender: Any) {
-            
+    @IBOutlet var route1: UILabel!
+    //@IBOutlet var sv: UIStackView!
+    @IBOutlet var svShuttle: UIStackView!
+    @IBOutlet var route2: UILabel!
+
+    // Periods
+    @IBOutlet var period1: UILabel!
+    @IBOutlet var period2: UILabel!
+    @IBOutlet var period3: UILabel!
+    @IBOutlet var period4: UILabel!
+    @IBOutlet var period5: UILabel!
+    @IBOutlet var period6: UILabel!
+    @IBOutlet var period7: UILabel!
+    @IBOutlet var period8: UILabel!
+    
+    // Departure Times
+    @IBOutlet var departure1: UILabel!
+    @IBOutlet var departure2: UILabel!
+    @IBOutlet var departure3: UILabel!
+    @IBOutlet var departure4: UILabel!
+    @IBOutlet var departure5: UILabel!
+    @IBOutlet var departure6: UILabel!
+    @IBOutlet var departure7: UILabel!
+    @IBOutlet var departure8: UILabel!
+    
+    @IBOutlet var mainView: UIView!
+    @IBOutlet var shuttleView: UIView!
+    @IBOutlet var classScheduleView: UIView!
+    
+    @IBOutlet var shuttleViewIsVisibleConstraint: NSLayoutConstraint!
+    @IBOutlet var shuttleViewIsHiddenConstraint: NSLayoutConstraint!
+    
+    @IBOutlet var scheduleToggle: UISwitch!
+    
+    
+    @IBAction func switchPressed(_ sender: UISwitch) {
+        if sender.isOn {
+            shuttleView.isHidden = false
+            classScheduleView.isHidden = true
+        } else {
+            shuttleView.isHidden = true
+            classScheduleView.isHidden = false
         }
-        // Periods
-        @IBOutlet var period1: UILabel!
-        @IBOutlet var period2: UILabel!
-        @IBOutlet var period3: UILabel!
-        @IBOutlet var period4: UILabel!
-        @IBOutlet var period5: UILabel!
-        @IBOutlet var period6: UILabel!
-        @IBOutlet var period7: UILabel!
-        @IBOutlet var period8: UILabel!
-        
-        // Departure Times
-        @IBOutlet var departure1: UILabel!
-        @IBOutlet var departure2: UILabel!
-        @IBOutlet var departure3: UILabel!
-        @IBOutlet var departure4: UILabel!
-        @IBOutlet var departure5: UILabel!
-        @IBOutlet var departure6: UILabel!
-        @IBOutlet var departure7: UILabel!
-        @IBOutlet var departure8: UILabel!
-        
-        @IBOutlet var mainView: UIView!
-        @IBOutlet var shuttleView: UIView!
-        @IBOutlet var classScheduleView: UIView!
-        @IBOutlet var toggleView: UIView!
-        
-        @IBOutlet var shuttleViewIsVisibleConstraint: NSLayoutConstraint!
-        @IBOutlet var shuttleViewIsHiddenConstraint: NSLayoutConstraint!
-        
-        @IBOutlet var scheduleToggle: UISwitch!
-        
-        
-        @IBAction func switchPressed(_ sender: UISwitch) {
-            if sender.isOn {
-                shuttleView.isHidden = false
-                classScheduleView.isHidden = true
-            } else {
-                shuttleView.isHidden = true
-                classScheduleView.isHidden = false
-            }
-        }
-        
+    }
+    
+    
+    @IBAction func cSButtonClicked(_ sender: Any) {
+        shuttleView.isHidden = false
+        classScheduleView.isHidden = true
+    }
+    
+    
+    @IBAction func sSButtonClicked(_ sender: Any) {
+        shuttleView.isHidden = true
+        classScheduleView.isHidden = false
+    }
+    
     
     
     //    func showView() {
